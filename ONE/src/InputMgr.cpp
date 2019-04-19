@@ -272,20 +272,20 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	if(mid == OIS::MB_Left && lmbDown == false)
 	{
-		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
-
-		std::vector<Entity381*> ent = engine->entityMgr->entities;
-
-		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
-		{
-			std::pair<bool, float> result = mouseRay.intersects(
-					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
-
-			if(result.first)
-			{
-				engine->entityMgr->SelectEntity(iter);
-			}
-		}
+//		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+//
+//		std::vector<Entity381*> ent = engine->entityMgr->entities;
+//
+//		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
+//		{
+//			std::pair<bool, float> result = mouseRay.intersects(
+//					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
+//
+//			if(result.first)
+//			{
+//				engine->entityMgr->SelectEntity(iter);
+//			}
+//		}
 
 
 		lmbDown = true;
@@ -293,67 +293,67 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	else if (mid == OIS::MB_Right)
 	{
-		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
-
-		std::vector<Entity381*> ent = engine->entityMgr->entities;
-		Ogre::Plane* plane = engine->gameMgr->plane;
-
-		bool intercept = false;
-
-		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
-		{
-			//mouseray intersects the entity
-			std::pair<bool, float> entRes = mouseRay.intersects(
-					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
-
-			if(entRes.first)
-			{
-				//get target entity
-				Entity381* target = engine->entityMgr->entities[iter];
-
-				//get target coordinates
-				Ogre::Vector3 targetPoint = target->position;
-
-				//add intercept command with those coordinates
-				UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-				if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-				{
-					uai->AddCommand("INTERCEPT", targetPoint, target);
-				}
-				else
-				{
-					uai->SetCommand("INTERCEPT", targetPoint, target);
-				}
-
-//				std::cout << "INTERCEPT COMMAND" << std::endl;
-
-				intercept = true;
-				break;
-			}
-		}
-		//mouseray intersects the plane
-		std::pair<bool, float> terrRes = mouseRay.intersects(*plane);
-		if(terrRes.first && !intercept)
-		{
-			//get point coordinates
-			Ogre::Vector3 worldPoint = mouseRay.getPoint(terrRes.second);
-//				std::cout << "WORLD POINT: " << worldPoint << std::endl;
-
-			//add moveTo command with those coordinates
-			UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-
-			if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-			{
-				uai->AddCommand("MOVETO", worldPoint, NULL);
-			}
-			else
-			{
-				uai->SetCommand("MOVETO", worldPoint, NULL);
-			}
-//			std::cout << "MOVETO COMMAND" << std::endl;
-
-			intercept = false;
-		}
+//		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+//
+//		std::vector<Entity381*> ent = engine->entityMgr->entities;
+//		Ogre::Plane* plane = engine->gameMgr->plane;
+//
+//		bool intercept = false;
+//
+//		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
+//		{
+//			//mouseray intersects the entity
+//			std::pair<bool, float> entRes = mouseRay.intersects(
+//					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
+//
+//			if(entRes.first)
+//			{
+//				//get target entity
+//				Entity381* target = engine->entityMgr->entities[iter];
+//
+//				//get target coordinates
+//				Ogre::Vector3 targetPoint = target->position;
+//
+//				//add intercept command with those coordinates
+//				UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
+//				if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
+//				{
+//					uai->AddCommand("INTERCEPT", targetPoint, target);
+//				}
+//				else
+//				{
+//					uai->SetCommand("INTERCEPT", targetPoint, target);
+//				}
+//
+////				std::cout << "INTERCEPT COMMAND" << std::endl;
+//
+//				intercept = true;
+//				break;
+//			}
+//		}
+//		//mouseray intersects the plane
+//		std::pair<bool, float> terrRes = mouseRay.intersects(*plane);
+//		if(terrRes.first && !intercept)
+//		{
+//			//get point coordinates
+//			Ogre::Vector3 worldPoint = mouseRay.getPoint(terrRes.second);
+////				std::cout << "WORLD POINT: " << worldPoint << std::endl;
+//
+//			//add moveTo command with those coordinates
+//			UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
+//
+//			if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
+//			{
+//				uai->AddCommand("MOVETO", worldPoint, NULL);
+//			}
+//			else
+//			{
+//				uai->SetCommand("MOVETO", worldPoint, NULL);
+//			}
+////			std::cout << "MOVETO COMMAND" << std::endl;
+//
+//			intercept = false;
+//		}
 
 
 

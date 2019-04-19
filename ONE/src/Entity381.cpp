@@ -104,7 +104,7 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->minSpeed = 0;
 	this->maxSpeed = 30.0f;//meters per second...
 	this->acceleration = 5.0f; // slow
-	this->turnRate = 30.0f; //2 degrees per second
+	this->turnRate = 300.0f; //2 degrees per second
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);
 }
@@ -117,8 +117,8 @@ SpeedBoat::~SpeedBoat(){
 Frigate::Frigate(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
 		Entity381(engine, meshfname, pos, ident){
 	this->minSpeed = 0;
-	this->maxSpeed = 15.0f;//meters per second...
-	this->acceleration = 5.0f; // slow
+	this->maxSpeed = 200.0f;//meters per second...
+	this->acceleration = 100.0f; // slow
 	this->turnRate = 20.0f; //2 degrees per second
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);

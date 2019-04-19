@@ -14,6 +14,8 @@
 #include <Aspect.h>
 #include <Utils.h>
 #include <OgreNode.h>
+#include <stdlib.h>
+#include <time.h>
 
 
 struct Command

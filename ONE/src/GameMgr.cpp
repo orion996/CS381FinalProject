@@ -39,12 +39,6 @@ void GameMgr::LoadLevel(){
 	  Ogre::Light* light = engine->gfxMgr->mSceneMgr->createLight("MainLight");
 	  light->setPosition(20.0, 80.0, 50.0);
 
-	  // a fixed point in the ocean so you can see relative motion
-
-//	  Ogre::Entity* ogreEntityFixed = engine->gfxMgr->mSceneMgr->createEntity("robot.mesh");
-//	  Ogre::SceneNode* sceneNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode(Ogre::Vector3(0, 100, -200));
-//	  sceneNode->attachObject(ogreEntityFixed);
-//	  sceneNode->showBoundingBox(true);
 
 	  // A node to attach the camera to so we can move the camera node instead of the camera.
 	  cameraNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode();
@@ -57,19 +51,8 @@ void GameMgr::LoadLevel(){
 }
 
 void GameMgr::MakeEntities(){
-	Ogre::Vector3 pos = Ogre::Vector3(-1000, 0, 0);
-	engine->entityMgr->CreateEntityOfTypeAtPosition(DDG51Type, pos);
-	pos.x += 500;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(CarrierType, pos);
-	pos.x += 500;
+	Ogre::Vector3 pos = Ogre::Vector3(0, 0, 0);
 	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos);
-	pos.x += 500;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(FrigateType, pos);
-	pos.x += 500;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(AlienType, pos);
-
-	pos.x += 500;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(BansheeType, pos);
 
 	engine->entityMgr->SelectNextEntity(); //sets selection
 }
@@ -82,7 +65,7 @@ void GameMgr::MakeGround(){
 	    "ground",
 	    Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME,
 	    *plane,
-	    15000, 15000, 20, 20,
+	    1500, 1500, 20, 20,
 	    true,
 	    1, 5, 5,
 	    Ogre::Vector3::UNIT_Z);
