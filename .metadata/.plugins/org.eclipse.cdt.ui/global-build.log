@@ -1,0 +1,83 @@
+06:27:28 **** Clean-only build of configuration Debug for project ONE ****
+make clean 
+rm -rf  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o  ./src/Aspect.d ./src/Engine.d ./src/Entity381.d ./src/EntityMgr.d ./src/GameMgr.d ./src/GfxMgr.d ./src/InputMgr.d ./src/Mgr.d ./src/Physics2D.d ./src/Physics3D.d ./src/UnitAI.d ./src/Utils.d ./src/main.d  As6
+ 
+06:27:28 **** Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Aspect.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Aspect.d" -MT"src/Aspect.d" -o "src/Aspect.o" "../src/Aspect.cpp"
+Finished building: ../src/Aspect.cpp
+ 
+Building file: ../src/Engine.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Engine.d" -MT"src/Engine.d" -o "src/Engine.o" "../src/Engine.cpp"
+Finished building: ../src/Engine.cpp
+ 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/EntityMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/EntityMgr.d" -MT"src/EntityMgr.d" -o "src/EntityMgr.o" "../src/EntityMgr.cpp"
+Finished building: ../src/EntityMgr.cpp
+ 
+Building file: ../src/GameMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
+Finished building: ../src/GameMgr.cpp
+ 
+Building file: ../src/GfxMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GfxMgr.d" -MT"src/GfxMgr.d" -o "src/GfxMgr.o" "../src/GfxMgr.cpp"
+Finished building: ../src/GfxMgr.cpp
+ 
+Building file: ../src/InputMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
+../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
+../src/InputMgr.cpp:271:25: warning: unused variable ‘ms’ [-Wunused-variable]
+  const OIS::MouseState &ms = mMouse->getMouseState();
+                         ^
+Finished building: ../src/InputMgr.cpp
+ 
+Building file: ../src/Mgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Mgr.d" -MT"src/Mgr.d" -o "src/Mgr.o" "../src/Mgr.cpp"
+Finished building: ../src/Mgr.cpp
+ 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+Finished building: ../src/Physics2D.cpp
+ 
+Building file: ../src/Physics3D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics3D.d" -MT"src/Physics3D.d" -o "src/Physics3D.o" "../src/Physics3D.cpp"
+Finished building: ../src/Physics3D.cpp
+ 
+Building file: ../src/UnitAI.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UnitAI.d" -MT"src/UnitAI.d" -o "src/UnitAI.o" "../src/UnitAI.cpp"
+Finished building: ../src/UnitAI.cpp
+ 
+Building file: ../src/Utils.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Utils.d" -MT"src/Utils.d" -o "src/Utils.o" "../src/Utils.cpp"
+Finished building: ../src/Utils.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+06:28:18 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
