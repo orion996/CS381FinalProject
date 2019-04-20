@@ -1,4 +1,4 @@
-19:32:30 **** Incremental Build of configuration Debug for project ONE ****
+19:52:42 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 Building file: ../src/GameMgr.cpp
 Invoking: GCC C++ Compiler
@@ -10,6 +10,6 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-19:32:37 **** Incremental Build of configuration Debug for project ONE ****
+19:52:47 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.

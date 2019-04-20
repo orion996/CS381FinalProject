@@ -9,6 +9,8 @@
 #define GAMEMGR_H_
 
 #include <Mgr.h>
+#include <stdlib.h>
+#include <time.h>
 
 //#include <OgreOverlay.h>
 //#include <OgreSceneNode.h>

@@ -52,11 +52,29 @@ void GameMgr::LoadLevel(){
 
 void GameMgr::MakeEntities(){
 	Ogre::Vector3 pos = Ogre::Vector3(0, 50, 0);
+
+	srand(time(NULL));
+
 	int index = 0;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
-	index++;
-	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
-	index++;
+	for(int i = 0 ; i < 5 ; i++)
+	{
+		float temp = rand()%2;
+		bool hat = false;
+		if(temp)
+			hat = true;
+		else
+			hat = false;
+
+		engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
+
+		if(hat)
+		{
+			index++;
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
+		}
+		pos.x += 30;
+		index++;
+	}
 
 
 	engine->entityMgr->SelectNextEntity(); //sets selection
