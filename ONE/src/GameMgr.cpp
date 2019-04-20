@@ -51,13 +51,10 @@ void GameMgr::LoadLevel(){
 }
 
 void GameMgr::MakeEntities(){
-	Ogre::Vector3 pos = Ogre::Vector3(0, 0, 0);
+	Ogre::Vector3 pos = Ogre::Vector3(0, 50, 0);
 	int index = 0;
 	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
 	index++;
-
-	pos = Ogre::Vector3(0, 10, 0);
-	if(index > 0)
 	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
 	index++;
 

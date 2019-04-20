@@ -40,6 +40,10 @@ void Renderable::Tick(float dt){
 
 	entity->sceneNode->yaw(Ogre::Degree(-entity->heading));
 	entity->sceneNode->roll(Ogre::Degree(entity->altitude));
+
+	if(entity->meshfilename == "blueSkin_blackShirt.mesh" || entity->meshfilename == "blackHat.mesh")
+		entity->sceneNode->pitch(Ogre::Degree(-90));//meeples were on there side for some reason
+
 	//bounding boxes are rendered so...
 	if(entity->isSelected)
 		entity->sceneNode->showBoundingBox(true);

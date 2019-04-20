@@ -37,7 +37,12 @@ void EntityMgr::CreateCarrier(Ogre::Vector3 pos){
 }
 
 void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body){
-	SpeedBoat *ent = new SpeedBoat(this->engine, "cigarette.mesh", pos, count, isHat, body);
+	SpeedBoat *ent;
+	if(!isHat)
+		ent = new SpeedBoat(this->engine, "blueSkin_blackShirt.mesh", pos, count, isHat, body);
+	else
+		ent = new SpeedBoat(this->engine, "blackHat.mesh", pos, count, isHat, body);
+
 	count++;
 	entities.push_back((Entity381 *) ent);
 }

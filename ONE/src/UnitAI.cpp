@@ -80,6 +80,7 @@ void UnitAI::Tick(float dt)
 
 		Ogre::Vector3 worldPoint = Ogre::Vector3(rand()%500 * neg, 0, rand()%500 * neg);
 		this->SetCommand("MOVETO", worldPoint, NULL);
+//		return;
 	}
 	if(commands.empty() && entity->mIsHat)
 	{

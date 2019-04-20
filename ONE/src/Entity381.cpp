@@ -108,7 +108,7 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->acceleration = 5.0f; // slow
 	this->turnRate = 300.0f; //2 degrees per second
 	this->mIsHat = isHat;
-//	this->bodyForHat = new Entity381(engine, "fred", pos, ident);
+	this->sceneNode->scale(5,5,5);
 	this->bodyForHat = body;
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);
