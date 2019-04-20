@@ -36,8 +36,8 @@ void EntityMgr::CreateCarrier(Ogre::Vector3 pos){
 	entities.push_back((Entity381 *) ent);
 }
 
-void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos){
-	SpeedBoat *ent = new SpeedBoat(this->engine, "cigarette.mesh", pos, count);
+void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body){
+	SpeedBoat *ent = new SpeedBoat(this->engine, "cigarette.mesh", pos, count, isHat, body);
 	count++;
 	entities.push_back((Entity381 *) ent);
 }
@@ -82,35 +82,40 @@ void EntityMgr::SelectEntity(int id)
 }
 
 
-void EntityMgr::CreateEntityOfTypeAtPosition(EntityTypes entType, Ogre::Vector3 pos){
+void EntityMgr::CreateEntityOfTypeAtPosition(EntityTypes entType, Ogre::Vector3 pos, bool isHat, Entity381* body){
 
-	switch(entType){
-	case DDG51Type:
-		CreateDDG51(pos);
-		break;
-	case CarrierType:
-		CreateCarrier(pos);
-		break;
-	case SpeedBoatType:
-		CreateSpeedBoat(pos);
-		break;
-	case FrigateType:
-		CreateFrigate(pos);
-		break;
-	case AlienType:
-		CreateAlien(pos);
-		break;
-	case BansheeType:
-		CreateBanshee(pos);
-		break;
-	default:
-		CreateEntity("robot.mesh", pos);
-		break;
-	}
+//	switch(entType){
+//	case DDG51Type:
+//		CreateDDG51(pos);
+//		break;
+//	case CarrierType:
+//		CreateCarrier(pos);
+//		break;
+//	case SpeedBoatType:
+		CreateSpeedBoat(pos, isHat, body);
+//		break;
+//	case FrigateType:
+//		CreateFrigate(pos);
+//		break;
+//	case AlienType:
+//		CreateAlien(pos);
+//		break;
+//	case BansheeType:
+//		CreateBanshee(pos);
+//		break;
+//	default:
+//		CreateEntity("robot.mesh", pos);
+//		break;
+//	}
 }
 
 void EntityMgr::Tick(float dt){
 	for(int i = 0; i < count; i++){
 		entities[i]->Tick(dt);
 	}
+}
+
+Entity381* EntityMgr::GetEntityAt(int id)
+{
+	return entities[id];
 }

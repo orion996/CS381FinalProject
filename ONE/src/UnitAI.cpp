@@ -67,7 +67,7 @@ void UnitAI::Tick(float dt)
 
 
 	//seg fault if the list is empty, so return instead
-	if(commands.empty())
+	if(commands.empty() && !entity->mIsHat)
 	{
 		float temp = rand()%2;
 		int neg = 1;
@@ -80,6 +80,10 @@ void UnitAI::Tick(float dt)
 
 		Ogre::Vector3 worldPoint = Ogre::Vector3(rand()%500 * neg, 0, rand()%500 * neg);
 		this->SetCommand("MOVETO", worldPoint, NULL);
+	}
+	if(commands.empty() && entity->mIsHat)
+	{
+		return;
 	}
 
 	if(commands.front()->type == "MOVETO")
