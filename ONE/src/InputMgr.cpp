@@ -26,6 +26,8 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	mRayScnQuery = 0;
 	mCameraMan = 0;
 	mTrayMgr = 0;
+	mTextBox = 0;
+	mLabel = 0;
 	lmbDown = rmbDown = false;
 	followMode = false;
 }
