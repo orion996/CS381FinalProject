@@ -55,6 +55,8 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->climbRate = 0;
 	this->altitude = this->desiredAltitude = 0;
 
+
+
 }
 
 Entity381::~Entity381(){
@@ -99,12 +101,15 @@ Carrier::~Carrier(){
 }
 //-------------------------------------------------------------------------------------------------------------------------------
 
-SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool isHat, Entity381* body):
 		Entity381(engine, meshfname, pos, ident){
 	this->minSpeed = 0;
 	this->maxSpeed = 30.0f;//meters per second...
 	this->acceleration = 5.0f; // slow
 	this->turnRate = 300.0f; //2 degrees per second
+	this->mIsHat = isHat;
+	this->sceneNode->scale(5,5,5);
+	this->bodyForHat = body;
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);
 }

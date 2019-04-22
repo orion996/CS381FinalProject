@@ -11,7 +11,7 @@
 
 UnitAI::UnitAI(Entity381* ent) : Aspect(ent)
 {
-
+//	srand(time(NULL));
 }
 
 UnitAI::~UnitAI()
@@ -67,8 +67,9 @@ void UnitAI::Tick(float dt)
 
 
 	//seg fault if the list is empty, so return instead
-	if(commands.empty())
+	if(commands.empty() && !entity->mIsHat)
 	{
+
 		float temp = rand()%2;
 		int neg = 1;
 		if(temp)
@@ -76,10 +77,22 @@ void UnitAI::Tick(float dt)
 		else
 			neg = -1;
 
-		srand(time(NULL));
+//		srand(time(NULL));
+		Ogre::Vector3 worldPoint;
+		worldPoint.y = 0;
 
-		Ogre::Vector3 worldPoint = Ogre::Vector3(rand()%500 * neg, 0, rand()%500 * neg);
+//		srand(time(NULL));
+		worldPoint.x = rand()%500 * neg;
+
+//		srand(time(NULL));
+		worldPoint.z = rand()%500 * neg;
+
 		this->SetCommand("MOVETO", worldPoint, NULL);
+//		return;
+	}
+	if(commands.empty() && entity->mIsHat)
+	{
+		return;
 	}
 
 	if(commands.front()->type == "MOVETO")

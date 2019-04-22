@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="20" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="743" maximized="true" width="1018" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -36,42 +36,53 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.cpp" partName="GameMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/GameMgr.cpp" title="GameMgr.cpp" tooltip="ONE/src/GameMgr.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.cpp" partName="GameMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/GameMgr.cpp" title="GameMgr.cpp" tooltip="ONE/src/GameMgr.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/GameMgr.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1457" selectionTopPixel="123"/>
+<editorState selectionHorizontalPixel="27" selectionLength="0" selectionOffset="1439" selectionTopPixel="617"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.cpp" partName="InputMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/InputMgr.cpp" title="InputMgr.cpp" tooltip="ONE/src/InputMgr.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/InputMgr.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="241" selectionOffset="9783" selectionTopPixel="4845"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Entity381.cpp" title="Entity381.cpp" tooltip="ONE/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Entity381.cpp" title="Entity381.cpp" tooltip="ONE/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Entity381.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3039" selectionTopPixel="1457"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3151" selectionTopPixel="1365"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" partName="EntityMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/EntityMgr.cpp" title="EntityMgr.cpp" tooltip="ONE/src/EntityMgr.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/EntityMgr.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1070" selectionTopPixel="195"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" partName="Aspect.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Aspect.cpp" title="Aspect.cpp" tooltip="ONE/src/Aspect.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Aspect.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="789" selectionTopPixel="92"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="UnitAI.cpp" partName="UnitAI.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/UnitAI.cpp" title="UnitAI.cpp" tooltip="ONE/src/UnitAI.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/UnitAI.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1557" selectionTopPixel="757"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="191" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="UnitAI.h" partName="UnitAI.h" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h" title="UnitAI.h" tooltip="ONE/inc/UnitAI.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/inc/UnitAI.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="278" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="37" selectionOffset="241" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" partName="Entity381.h" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h" title="Entity381.h" tooltip="ONE/inc/Entity381.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/inc/Entity381.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="405" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.h" partName="GameMgr.h" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h" title="GameMgr.h" tooltip="ONE/inc/GameMgr.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/inc/GameMgr.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="168" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view" partName="Disassembly">
+<viewState disassembly.syncActiveContext="true" disassembly.trackExpression="false"/>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Errors (3 items)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (4 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -81,15 +92,22 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.cdt.visualizer.view" partName="Multicore Visualizer">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
-<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="213" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="350" org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="512" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.priorityField="35" org.eclipse.ui.ide.resourceField="105"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
@@ -99,9 +117,15 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState/>
 </view>
 </views>
 <perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
@@ -138,47 +162,32 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.TaskList"/>
-<fastViewBars>
-<fastViewBar fastViewLocation="16384" id="bottomLeft" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
-<fastViews>
-<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<fastViewBars>&#x0A;<fastViewBar fastViewLocation="16384" id="bottomLeft" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">&#x0A;<fastViews>&#x0A;<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@5b5caf08" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5b5caf08" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.659375" ratioLeft="422" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.659375" ratioLeft="422" ratioRight="218" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="320" ratioRight="320" relationship="4" relative="topLeft">
-<folder appearance="2" expanded="0">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="320" ratioRight="320" relationship="4" relative="topLeft">&#x0A;<folder appearance="2" expanded="0">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
@@ -231,12 +240,10 @@
 <new_wizard_action id="org.eclipse.cdt.ui.wizards.NewClassCreationWizard"/>
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars>
 <fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="0">
 <fastViews>
@@ -244,6 +251,12 @@
 <view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
 <view id="org.eclipse.ui.console.ConsoleView" ratio="0.29924813"/>
 <view id="org.eclipse.ui.views.PropertySheet" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="topRight" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
+<fastViews>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.cdt.make.ui.views.MakeView" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -269,7 +282,7 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.15348837" ratioLeft="198" ratioRight="1092" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.75" ratioLeft="501" ratioRight="167" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="0">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
@@ -278,15 +291,122 @@
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.74920636" ratioLeft="708" ratioRight="237" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.make.ui.views.MakeView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="Debug"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.SignalsView"/>
+<show_view_action id="org.eclipse.debug.ui.RegisterView"/>
+<show_view_action id="org.eclipse.debug.ui.ModuleView"/>
+<show_view_action id="org.eclipse.debug.ui.MemoryView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.executablesView"/>
+<show_view_action id="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser"/>
+<show_view_action id="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view"/>
+<show_view_action id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<show_view_action id="org.eclipse.cdt.visualizer.view"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.jdt.debug.ui.DisplayView"/>
+<perspective_action id="org.eclipse.cdt.ui.CPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaPerspective"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.debug.ui.commands.RunToLine"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.TaskList"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.cdt.dsf.debug.ui.disassembly.view"/>
+<view id="org.eclipse.cdt.visualizer.view"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.7494199" ratioLeft="969" ratioRight="324" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74887216" ratioLeft="498" ratioRight="167" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
+<page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.4497992" ratioLeft="224" ratioRight="274" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7494199" ratioLeft="969" ratioRight="324" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.cdt.visualizer.view" label="Multicore Visualizer"/>
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.4996133" ratioLeft="646" ratioRight="647" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
+<info part="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" ratio="0.5" ratioLeft="323" ratioRight="323" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 </mainWindow>
 </layout>
 </perspective>
@@ -294,169 +414,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Aspect.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Aspect.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/ONE/resources.cfg"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/GameMgr.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Types381.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/InputMgr.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/InputMgr.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/GameMgr.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/EntityMgr.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Aspect.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/UnitAI.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/UnitAI.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Entity381.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Entity381.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/UnitAI.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Aspect.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/UnitAI.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/GameMgr.h"/>
 </editors>
-<item historyLabel="Aspect.h" index="1">
-<position info="not_deleted" x="65" y="0"/>
+<item historyLabel="UnitAI.cpp" index="4">
+<position info="not_deleted" x="1554" y="0"/>
 </item>
-<item historyLabel="Aspect.cpp" index="0">
-<position/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="880" y="0"/>
 </item>
-<item historyLabel="resources.cfg" index="2">
-<position info="not_deleted" x="2264" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1249" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1175" y="0"/>
+<item historyLabel="UnitAI.cpp" index="4">
+<position info="not_deleted" x="1554" y="0"/>
 </item>
-<item historyLabel="Aspect.cpp" index="0">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="880" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1175" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1267" y="0"/>
 </item>
-<item historyLabel="Types381.h" index="4">
-<position/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="3041" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1175" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="3041" y="0"/>
 </item>
-<item historyLabel="Types381.h" index="4">
-<position info="not_deleted" x="91" y="13"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1249" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="3013" y="0"/>
 </item>
-<item historyLabel="InputMgr.h" index="5">
-<position info="not_deleted" x="1305" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1239" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="UnitAI.cpp" index="4">
+<position info="not_deleted" x="1708" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="6">
-<position info="not_deleted" x="9783" y="241"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1239" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="880" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="6">
-<position info="not_deleted" x="9783" y="241"/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="788" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="Entity381.h" index="5">
+<position info="not_deleted" x="849" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="788" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="689" y="0"/>
 </item>
-<item historyLabel="GameMgr.h" index="8">
-<position info="not_deleted" x="3" y="0"/>
+<item historyLabel="EntityMgr.cpp" index="2">
+<position info="not_deleted" x="2137" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1378" y="0"/>
 </item>
-<item historyLabel="EntityMgr.cpp" index="9">
-<position info="not_deleted" x="2539" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2763" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="3">
-<position info="not_deleted" x="1457" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1378" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="1990" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2763" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1689" y="0"/>
+<item historyLabel="EntityMgr.cpp" index="2">
+<position info="not_deleted" x="2137" y="0"/>
 </item>
-<item historyLabel="UnitAI.h" index="11">
-<position info="not_deleted" x="278" y="0"/>
+<item historyLabel="EntityMgr.cpp" index="2">
+<position info="not_deleted" x="1070" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1689" y="0"/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="2763" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1689" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1201" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position/>
+<item historyLabel="Entity381.cpp" index="1">
+<position info="not_deleted" x="3151" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position/>
+<item historyLabel="EntityMgr.cpp" index="2">
+<position info="not_deleted" x="1070" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position/>
+<item historyLabel="Aspect.cpp" index="3">
+<position info="not_deleted" x="789" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="3557" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1201" y="0"/>
 </item>
-<item historyLabel="UnitAI.h" index="11">
-<position info="not_deleted" x="278" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1207" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="3557" y="0"/>
+<item historyLabel="Entity381.cpp" index="6">
+<position info="not_deleted" x="3151" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="2929" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1405" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="6">
-<position info="not_deleted" x="9783" y="241"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="3557" y="0"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="480" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1689" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="8" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="2929" y="0"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="480" y="0"/>
 </item>
-<item historyLabel="Entity381.h" index="12">
-<position info="not_deleted" x="405" y="0"/>
+<item historyLabel="Aspect.h" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1689" y="0"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="480" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1473" y="0"/>
+<item historyLabel="UnitAI.h" index="9">
+<position info="not_deleted" x="241" y="37"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1633" y="0"/>
+<item historyLabel="GameMgr.h" index="10">
+<position info="not_deleted" x="168" y="0"/>
 </item>
-<item historyLabel="Entity381.h" index="12">
-<position info="not_deleted" x="405" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="8" y="0"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="3408" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1159" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1161" y="0"/>
 </item>
-<item historyLabel="UnitAI.h" index="11">
-<position info="not_deleted" x="278" y="0"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="1494" y="82"/>
 </item>
-<item historyLabel="UnitAI.h" index="11">
-<position info="not_deleted" x="278" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1143" y="18"/>
 </item>
-<item historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="3408" y="0"/>
+<item historyLabel="UnitAI.cpp" index="7">
+<position info="not_deleted" x="191" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="10">
-<position info="not_deleted" x="1557" y="0"/>
+<item historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1143" y="18"/>
 </item>
-<item active="true" historyLabel="Entity381.cpp" index="7">
-<position info="not_deleted" x="3408" y="0"/>
+<item active="true" historyLabel="GameMgr.cpp" index="0">
+<position info="not_deleted" x="1400" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -464,8 +582,8 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="bottomLeft"/>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="topRight"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -474,41 +592,34 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.intro.impl.presentations.IntroLaunchBar"/>
 <trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="ONE/inc/Entity381.h">
-<persistable path="/ONE/inc/Entity381.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.h" tooltip="ONE/inc/GameMgr.h">
+<persistable path="/ONE/inc/GameMgr.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UnitAI.h" tooltip="ONE/inc/UnitAI.h">
 <persistable path="/ONE/inc/UnitAI.h"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.h" tooltip="ONE/inc/Aspect.h">
+<persistable path="/ONE/inc/Aspect.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="UnitAI.cpp" tooltip="ONE/src/UnitAI.cpp">
 <persistable path="/ONE/src/UnitAI.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="ONE/src/Entity381.cpp">
-<persistable path="/ONE/src/Entity381.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.h" tooltip="ONE/inc/Entity381.h">
+<persistable path="/ONE/inc/Entity381.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" tooltip="ONE/src/Aspect.cpp">
+<persistable path="/ONE/src/Aspect.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" tooltip="ONE/src/EntityMgr.cpp">
 <persistable path="/ONE/src/EntityMgr.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.h" tooltip="ONE/inc/GameMgr.h">
-<persistable path="/ONE/inc/GameMgr.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.cpp" tooltip="ONE/src/InputMgr.cpp">
-<persistable path="/ONE/src/InputMgr.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.h" tooltip="ONE/inc/InputMgr.h">
-<persistable path="/ONE/inc/InputMgr.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Types381.h" tooltip="ONE/inc/Types381.h">
-<persistable path="/ONE/inc/Types381.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" tooltip="ONE/src/Aspect.cpp">
-<persistable path="/ONE/src/Aspect.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" tooltip="ONE/src/Entity381.cpp">
+<persistable path="/ONE/src/Entity381.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.cpp" tooltip="ONE/src/GameMgr.cpp">
 <persistable path="/ONE/src/GameMgr.cpp"/>
@@ -516,8 +627,20 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="resources.cfg" tooltip="ONE/resources.cfg">
 <persistable path="/ONE/resources.cfg"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.h" tooltip="ONE/inc/Aspect.h">
-<persistable path="/ONE/inc/Aspect.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="ONE/src/main.cpp">
+<persistable path="/ONE/src/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics2D.cpp" tooltip="ONE/src/Physics2D.cpp">
+<persistable path="/ONE/src/Physics2D.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics2D.h" tooltip="ONE/inc/Physics2D.h">
+<persistable path="/ONE/inc/Physics2D.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.h" tooltip="ONE/inc/EntityMgr.h">
+<persistable path="/ONE/inc/EntityMgr.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.cpp" tooltip="ONE/src/InputMgr.cpp">
+<persistable path="/ONE/src/InputMgr.cpp"/>
 </file>
 </mruList>
 </workbench>

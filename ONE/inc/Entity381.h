@@ -33,6 +33,9 @@ public:
   float desiredHeading, desiredSpeed, desiredAltitude;
   float heading, speed, altitude;
 
+  bool mIsHat;
+  Entity381* bodyForHat;
+
   std::vector<Aspect* > aspects;
 
   void Tick(float dt);
@@ -58,7 +61,7 @@ public:
 
 class SpeedBoat: Entity381 {
 public:
-	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity);
+	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body);
 	virtual ~SpeedBoat();
 
 };

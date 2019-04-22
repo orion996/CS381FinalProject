@@ -52,6 +52,8 @@ public:
 	OgreBites::SdkTrayManager* mTrayMgr;
 	OgreBites::SdkCameraMan* mCameraMan;
 	OgreBites::InputContext mInputContext;
+	OgreBites::TextBox* mTextBox;
+	OgreBites::Label* mLabel;
 
 	bool followMode;
 
