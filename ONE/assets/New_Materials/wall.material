@@ -1,0 +1,14 @@
+material Texture/Walls
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          texture wall.jpg
+          scale .75 .75
+        }
+      } 
+    }
+  }
