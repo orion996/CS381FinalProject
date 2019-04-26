@@ -122,5 +122,5 @@ void EntityMgr::Tick(float dt){
 
 Entity381* EntityMgr::GetEntityAt(int id)
 {
-	return entities[id];
+	return entities.at(id);
 }

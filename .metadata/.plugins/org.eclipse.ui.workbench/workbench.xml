@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="25" version="2.0">
+<workbench progressCount="21" version="2.0">
 <workbenchAdvisor/>
 <window height="743" maximized="true" width="1018" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -43,7 +43,7 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.cpp" partName="GameMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/GameMgr.cpp" title="GameMgr.cpp" tooltip="ONE/src/GameMgr.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/GameMgr.cpp"/>
-<editorState selectionHorizontalPixel="27" selectionLength="0" selectionOffset="1439" selectionTopPixel="617"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1161" selectionTopPixel="555"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Entity381.cpp" partName="Entity381.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Entity381.cpp" title="Entity381.cpp" tooltip="ONE/src/Entity381.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Entity381.cpp"/>
@@ -80,8 +80,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Warnings (4 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>

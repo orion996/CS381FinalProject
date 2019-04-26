@@ -250,6 +250,7 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h
 
@@ -782,6 +783,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
 

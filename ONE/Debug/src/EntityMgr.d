@@ -125,6 +125,7 @@ src/EntityMgr.d: ../src/EntityMgr.cpp \
  /usr/local/include/OGRE/OgreNameGenerator.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h
 
@@ -383,6 +384,8 @@ src/EntityMgr.d: ../src/EntityMgr.cpp \
 /usr/local/include/OGRE/OgreVector3.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
 

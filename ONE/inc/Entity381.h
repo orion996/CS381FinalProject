@@ -5,6 +5,7 @@
 #include <OgreSceneManager.h>
 #include <OgreVector3.h>
 #include <Aspect.h>
+#include <Description.h>
 
 #include <Engine.h>
 
@@ -35,6 +36,11 @@ public:
 
   bool mIsHat;
   Entity381* bodyForHat;
+
+  bool isTarget;
+
+  Description entityDescription;
+  void setDescription(std::string type);
 
   std::vector<Aspect* > aspects;
 

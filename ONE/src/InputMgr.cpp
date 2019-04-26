@@ -87,8 +87,17 @@ void InputMgr::Init(){
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
+	   static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Green Shirt", "Purple Shirt", "Yellow Shirt"};
+	   static const std::string HatStrings[] = {"No Hat", "Black Hat", "Yellow Hat", "Red Hat", "Purple Hat"};
+	   static const std::string SkinStrings[] = {"White Skin", "Black Skin", "Red Skin", "Orange Skin", "Blue Skin"};
 
-	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);	
+//	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);
+	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n" +
+			   ShirtStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dShirt] + "\n" +
+			   HatStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dHat] + "\n" +
+			   SkinStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dSkin],
+			   250, 100);
+
 	   mLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
 	   mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
 

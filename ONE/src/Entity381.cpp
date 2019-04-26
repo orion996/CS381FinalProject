@@ -34,6 +34,9 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 
 	name = meshfname + IntToString(identity);
 
+
+	//TODO Add some function here that sets mesh file based on the description
+
 	ogreEntity = engine->gfxMgr->mSceneMgr->createEntity(meshfilename);
 	sceneNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode(pos);
 	sceneNode->attachObject(ogreEntity);
@@ -110,6 +113,16 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->mIsHat = isHat;
 	this->sceneNode->scale(5,5,5);
 	this->bodyForHat = body;
+
+	this->setDescription("SHIRT");
+	this->setDescription("HAT");
+	this->setDescription("SKIN");
+
+//	this->entityDescription.dShirt = BlueShirt;
+
+
+
+
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);
 }
@@ -166,3 +179,83 @@ Banshee::~Banshee(){
 }
 //--------------------------------------------------------------------------------------
 
+
+void Entity381::setDescription(std::string type)
+{
+//	srand(time(NULL));
+
+	int randNum;
+	if(type == "SHIRT")
+	{
+		randNum = rand() % 5;
+		switch(randNum)
+		{
+			case 0:
+				this->entityDescription.dShirt = RedShirt;
+				break;
+			case 1:
+				this->entityDescription.dShirt = BlueShirt;
+				break;
+			case 2:
+				this->entityDescription.dShirt = GreenShirt;
+				break;
+			case 3:
+				this->entityDescription.dShirt = PurpleShirt;
+				break;
+			case 4:
+				this->entityDescription.dShirt = YellowShirt;
+				break;
+		}
+	}
+	else if(type == "HAT")
+	{
+		randNum = rand() % 5;
+		switch(randNum)
+		{
+			case 0:
+				this->entityDescription.dHat = NoHat;
+				break;
+			case 1:
+				this->entityDescription.dHat = BlackHat;
+				break;
+			case 2:
+				this->entityDescription.dHat = RedHat;
+				break;
+			case 3:
+				this->entityDescription.dHat = YellowHat;
+				break;
+			case 4:
+				this->entityDescription.dHat = PurpleHat;
+				break;
+		}
+	}
+	else if(type == "SKIN")
+	{
+		randNum = rand() % 5;
+		switch(randNum)
+		{
+			case 0:
+				this->entityDescription.dSkin = WhiteSkin;
+				break;
+			case 1:
+				this->entityDescription.dSkin = BlackSkin;
+				break;
+			case 2:
+				this->entityDescription.dSkin = RedSkin;
+				break;
+			case 3:
+				this->entityDescription.dSkin = OrangeSkin;
+				break;
+			case 4:
+				this->entityDescription.dSkin = BlueSkin;
+				break;
+		}
+	}
+	else
+	{
+		this->entityDescription.dSkin = RedSkin;
+		this->entityDescription.dHat = RedHat;
+		this->entityDescription.dShirt = RedShirt;
+	}
+
+}

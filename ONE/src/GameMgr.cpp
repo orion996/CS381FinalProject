@@ -28,11 +28,6 @@ GameMgr::~GameMgr() {
 }
 
 void GameMgr::Init(){
-
-}
-
-void GameMgr::LoadLevel(){
-
 	  engine->gfxMgr->mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
 
 	  engine->gfxMgr->mCamera->lookAt(Ogre::Vector3(0, 0, 0));
@@ -48,6 +43,26 @@ void GameMgr::LoadLevel(){
 	  MakeGround();
 	  MakeSky();
 	  MakeEntities();
+
+}
+
+void GameMgr::LoadLevel(){
+
+//	  engine->gfxMgr->mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+//
+//	  engine->gfxMgr->mCamera->lookAt(Ogre::Vector3(0, 0, 0));
+//	  Ogre::Light* light = engine->gfxMgr->mSceneMgr->createLight("MainLight");
+//	  light->setPosition(20.0, 80.0, 50.0);
+//
+//
+//	  // A node to attach the camera to so we can move the camera node instead of the camera.
+//	  cameraNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode();
+//	  cameraNode->setPosition(0, 200, 500);
+//	  cameraNode->attachObject(engine->gfxMgr->mCamera);
+//
+//	  MakeGround();
+//	  MakeSky();
+//	  MakeEntities();
 }
 
 void GameMgr::MakeEntities(){
@@ -75,6 +90,8 @@ void GameMgr::MakeEntities(){
 		pos.x += 30;
 		index++;
 	}
+
+	engine->entityMgr->GetEntityAt(0)->isTarget = true;
 
 
 	engine->entityMgr->SelectNextEntity(); //sets selection

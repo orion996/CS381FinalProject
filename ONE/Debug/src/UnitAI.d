@@ -127,6 +127,7 @@ src/UnitAI.d: ../src/UnitAI.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
@@ -386,5 +387,7 @@ src/UnitAI.d: ../src/UnitAI.cpp \
 /usr/local/include/OGRE/OgreConfigOptionMap.h:
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:

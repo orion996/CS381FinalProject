@@ -229,6 +229,7 @@ src/Entity381.d: ../src/Entity381.cpp \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics3D.h \
@@ -719,6 +720,8 @@ src/Entity381.d: ../src/Entity381.cpp \
 /usr/local/include/OGRE/OgreSceneManager.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
 
