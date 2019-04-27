@@ -246,7 +246,7 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
- /usr/local/include/OGRE/OgreNode.h \
+ /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
@@ -777,6 +777,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:
+
+/usr/local/include/OGRE/OgreCamera.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
 

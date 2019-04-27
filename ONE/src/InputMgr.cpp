@@ -202,59 +202,59 @@ void InputMgr::UpdateCamera(float dt){
 }
 
 void InputMgr::UpdateVelocityAndSelection(float dt){
-	keyboardTimer -= dt;
-	UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_I)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredSpeed += deltaDesiredSpeed;
-		uai->clearCommands();
-	}
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_K)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredSpeed -= deltaDesiredSpeed;
-		uai->clearCommands();
-	}
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_J)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredHeading -= deltaDesiredHeading;
-		uai->clearCommands();
-	//turn left is decreasing degrees, turn right is increasing degrees because increasing degrees gives us the +ive Z axis
-	}
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_L)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredHeading += deltaDesiredHeading;
-		uai->clearCommands();
-	}
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_U))
-	{
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredAltitude += deltaDesiredAltitude;
-		uai->clearCommands();
-	}
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_O))
-	{
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->desiredAltitude -= deltaDesiredAltitude;
-		uai->clearCommands();
-	}
-	engine->entityMgr->selectedEntity->desiredHeading = FixAngle(engine->entityMgr->selectedEntity->desiredHeading);
-	engine->entityMgr->selectedEntity->desiredAltitude = FixAngle(engine->entityMgr->selectedEntity->desiredAltitude);
-
-	//Set velocity to zero....
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_SPACE)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->selectedEntity->velocity = Ogre::Vector3::ZERO;
-		engine->entityMgr->selectedEntity->desiredSpeed = engine->entityMgr->selectedEntity->speed = 0;
-		engine->entityMgr->selectedEntity->desiredHeading = engine->entityMgr->selectedEntity->heading;
-		uai->clearCommands();
-	}
-
-	//tab handling
-	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_TAB)){
-		keyboardTimer = keyTime;
-		engine->entityMgr->SelectNextEntity();
-	}
+//	keyboardTimer -= dt;
+//	UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
+//
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_I)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredSpeed += deltaDesiredSpeed;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_K)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredSpeed -= deltaDesiredSpeed;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_J)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredHeading -= deltaDesiredHeading;
+//		uai->clearCommands();
+//	//turn left is decreasing degrees, turn right is increasing degrees because increasing degrees gives us the +ive Z axis
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_L)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredHeading += deltaDesiredHeading;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_U))
+//	{
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredAltitude += deltaDesiredAltitude;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_O))
+//	{
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredAltitude -= deltaDesiredAltitude;
+//		uai->clearCommands();
+//	}
+//	engine->entityMgr->selectedEntity->desiredHeading = FixAngle(engine->entityMgr->selectedEntity->desiredHeading);
+//	engine->entityMgr->selectedEntity->desiredAltitude = FixAngle(engine->entityMgr->selectedEntity->desiredAltitude);
+//
+//	//Set velocity to zero....
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_SPACE)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->velocity = Ogre::Vector3::ZERO;
+//		engine->entityMgr->selectedEntity->desiredSpeed = engine->entityMgr->selectedEntity->speed = 0;
+//		engine->entityMgr->selectedEntity->desiredHeading = engine->entityMgr->selectedEntity->heading;
+//		uai->clearCommands();
+//	}
+//
+//	//tab handling
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_TAB)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->SelectNextEntity();
+//	}
 }
 
 void InputMgr::LoadLevel(){
@@ -294,11 +294,6 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 			if(result.first)
 			{
-//					engine->entityMgr->SelectEntity(iter);
-//
-//					if(engine->entityMgr->selectedEntity->mIsHat)
-//						engine->entityMgr->SelectEntity(iter - 1);
-
 					if((engine->entityMgr->GetEntityAt(iter)->isTarget) && !(engine->entityMgr->GetEntityAt(iter)->mIsHat))
 					{
 						//win
@@ -307,6 +302,9 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 							engine->entityMgr->DestroyEntity(1);
 
 						engine->entityMgr->DestroyEntity(0);
+
+						//TODO Add win function
+						mLabel->setCaption("Target Eliminated");
 					}
 					else if((engine->entityMgr->GetEntityAt(iter - 1)->isTarget) && (engine->entityMgr->GetEntityAt(iter)->mIsHat))
 					{
@@ -314,6 +312,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						std::cout << " *** Target Hit 2! ***" << std::endl;
 						engine->entityMgr->DestroyEntity(iter);
 						engine->entityMgr->DestroyEntity(iter - 1);
+						mLabel->setCaption("Target Eliminated");
 					}
 					else
 					{
@@ -339,6 +338,8 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
 
 						//add a command that tell the target to follow the camera pos
+						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
+						mLabel->setCaption("You've Been Spotted!");
 					}
 
 			}
