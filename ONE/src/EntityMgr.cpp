@@ -128,7 +128,7 @@ Entity381* EntityMgr::GetEntityAt(int id)
 
 void EntityMgr::DestroyEntity(int index)
 {
-	entities.at(index)->aspects.clear();
+//	entities.at(index)->aspects.clear();
 
 	entities.at(index)->sceneNode->removeAndDestroyAllChildren();
 	engine->gfxMgr->mSceneMgr->destroyMovableObject(entities.at(index)->ogreEntity);

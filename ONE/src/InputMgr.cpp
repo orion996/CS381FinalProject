@@ -98,7 +98,7 @@ void InputMgr::Init(){
 			   SkinStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dSkin],
 			   250, 100);
 
-	   mLabel = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
+	   mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
 	   mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
 
 }
@@ -281,7 +281,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	const OIS::MouseState &ms = mMouse->getMouseState();
 
-	if(mid == OIS::MB_Left && lmbDown == false)
+	if(mid == OIS::MB_Left && lmbDown == false && !bulletFired)
 	{
 		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
 
@@ -303,7 +303,10 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 					{
 						//win
 						std::cout << " *** Target Hit! ***" << std::endl;
-						engine->entityMgr->DestroyEntity(iter);
+						if(engine->entityMgr->GetEntityAt(1)->mIsHat)
+							engine->entityMgr->DestroyEntity(1);
+
+						engine->entityMgr->DestroyEntity(0);
 					}
 					else if((engine->entityMgr->GetEntityAt(iter - 1)->isTarget) && (engine->entityMgr->GetEntityAt(iter)->mIsHat))
 					{
@@ -330,6 +333,8 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 			}
 		}
 
+		mLabel2->setCaption("Bullets: 0/1");
+		bulletFired = true;
 
 		lmbDown = true;
 	}

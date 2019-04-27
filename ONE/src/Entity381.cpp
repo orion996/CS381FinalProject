@@ -32,12 +32,17 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	identity = ident;
 	isSelected = false;
 
-	name = meshfname + IntToString(identity);
+	this->setDescription("SHIRT");
+	this->setDescription("HAT");
+	this->setDescription("SKIN");
+
+	this->entityDescription.dHat = NoHat;
 
 
 	//TODO Add some function here that sets mesh file based on the description
 
 	ogreEntity = engine->gfxMgr->mSceneMgr->createEntity(meshfilename);
+	name = meshfname + IntToString(identity);
 	sceneNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode(pos);
 	sceneNode->attachObject(ogreEntity);
 
@@ -113,15 +118,6 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->mIsHat = isHat;
 	this->sceneNode->scale(5,5,5);
 	this->bodyForHat = body;
-
-	this->setDescription("SHIRT");
-	this->setDescription("HAT");
-	this->setDescription("SKIN");
-
-	this->entityDescription.dHat = NoHat;
-
-
-
 
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);

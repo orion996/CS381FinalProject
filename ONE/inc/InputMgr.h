@@ -54,6 +54,8 @@ public:
 	OgreBites::InputContext mInputContext;
 	OgreBites::TextBox* mTextBox;
 	OgreBites::Label* mLabel;
+	OgreBites::Label* mLabel2;
+	bool bulletFired = false;
 
 	bool followMode;
 
