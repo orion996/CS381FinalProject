@@ -87,9 +87,9 @@ void InputMgr::Init(){
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
-	   static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Green Shirt", "Purple Shirt", "Yellow Shirt"};
+	   static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Black Shirt", "White Shirt", "Orange Shirt"};
 	   static const std::string HatStrings[] = {"No Hat", "Black Hat", "Yellow Hat", "Red Hat", "Purple Hat"};
-	   static const std::string SkinStrings[] = {"White Skin", "Black Skin", "Red Skin", "Orange Skin", "Blue Skin"};
+	   static const std::string SkinStrings[] = {"Purple Skin", "Green Skin", "Red Skin", "Yellow Skin", "Blue Skin"};
 
 //	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);
 	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n" +
@@ -320,10 +320,21 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						//target comes after you
 						std::cout << " *** you Lose ***" << std::endl;
 
-						for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+						if(engine->entityMgr->GetEntityAt(1)->mIsHat)
 						{
-							engine->entityMgr->DestroyEntity(i);
+							for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+							{
+								engine->entityMgr->DestroyEntity(i);
+							}
 						}
+						else
+						{
+							for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+							{
+								engine->entityMgr->DestroyEntity(i);
+							}
+						}
+
 
 						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
 

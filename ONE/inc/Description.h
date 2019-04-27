@@ -11,9 +11,9 @@
 enum Shirt {
 	RedShirt,
 	BlueShirt,
-	GreenShirt,
-	PurpleShirt,
-	YellowShirt
+	BlackShirt,
+	WhiteShirt,
+	OrangeShirt
 
 };
 enum Hat {
@@ -25,10 +25,10 @@ enum Hat {
 
 };
 enum Skin {
-	WhiteSkin,
-	BlackSkin,
+	PurpleSkin,
+	GreenSkin,
 	RedSkin,
-	OrangeSkin,
+	YellowSkin,
 	BlueSkin
 };
 

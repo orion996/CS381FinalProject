@@ -235,7 +235,9 @@ src/Entity381.d: ../src/Entity381.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics3D.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
- /usr/local/include/OGRE/OgreNode.h
+ /usr/local/include/OGRE/OgreNode.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
 
@@ -734,3 +736,7 @@ src/Entity381.d: ../src/Entity381.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:

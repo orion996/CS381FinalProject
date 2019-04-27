@@ -88,12 +88,19 @@ void GameMgr::MakeEntities(){
 			neg = -1;
 
 		pos = Ogre::Vector3(rand()%500 * neg, 50, rand()%500 * neg);
-		engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
 
 		if(hat)
 		{
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, true);
 			index++;
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1), false);
+//			engine->entityMgr->GetEntityAt(i)->hasHat = true;
+		}
+		else
+		{
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false);
+//			engine->entityMgr->GetEntityAt(i)->hasHat = false;
+
 		}
 		pos.x += 30;
 		index++;

@@ -11,6 +11,7 @@
 #include <Physics2D.h>
 #include <Physics3D.h>
 #include <UnitAI.h>
+#include <EntityMgr.h>
 
 std::string IntToString(int x){
 	char tmp[10000];
@@ -18,7 +19,7 @@ std::string IntToString(int x){
 	return std::string(tmp);
 }
 
-Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident){
+Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool hasHat, bool isHat, Entity381* bfh){
 
 	this->engine = engine;
 
@@ -36,10 +37,25 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->setDescription("HAT");
 	this->setDescription("SKIN");
 
-	this->entityDescription.dHat = NoHat;
+	if((hasHat) == false)
+	{
+		this->hasHat = false;
+		this->entityDescription.dHat = NoHat;
+	}
+	else
+	{
+		this->hasHat = true;
+	}
 
+	if(isHat)
+		this->mIsHat = true;
+	else
+		this->mIsHat = false;
+
+	this->bodyForHat = bfh;
 
 	//TODO Add some function here that sets mesh file based on the description
+	this->setMeshWithDescription();
 
 	ogreEntity = engine->gfxMgr->mSceneMgr->createEntity(meshfilename);
 	name = meshfname + IntToString(identity);
@@ -78,46 +94,46 @@ void Entity381::Tick(float dt){
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------
-DDG51::DDG51(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
-		Entity381(engine, meshfname, pos, ident){
-	this->minSpeed = 0;
-	this->maxSpeed = 16.0f;//meters per second...
-	this->acceleration = 5.0f; // fast
-	this->turnRate = 20.0f; //4 degrees per second
-	std::cout << "Created: " << this->name << std::endl;
-	Physics2D* phx2d = new Physics2D(this);
-		aspects.push_back((Aspect*) phx2d);
-}
-
-DDG51::~DDG51(){
-
-}
+//DDG51::DDG51(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+//		Entity381(engine, meshfname, pos, ident){
+//	this->minSpeed = 0;
+//	this->maxSpeed = 16.0f;//meters per second...
+//	this->acceleration = 5.0f; // fast
+//	this->turnRate = 20.0f; //4 degrees per second
+//	std::cout << "Created: " << this->name << std::endl;
+//	Physics2D* phx2d = new Physics2D(this);
+//		aspects.push_back((Aspect*) phx2d);
+//}
+//
+//DDG51::~DDG51(){
+//
+//}
 
 //-------------------------------------------------------------------------------------------------------------------------------
-Carrier::Carrier(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
-		Entity381(engine, meshfname, pos, ident){
-	this->minSpeed = 0;
-	this->maxSpeed = 20.0f;//meters per second...
-	this->acceleration = 1.0f; // slow
-	this->turnRate = 10.0f; //2 degrees per second
-	Physics2D* phx2d = new Physics2D(this);
-		aspects.push_back((Aspect*) phx2d);
-}
-
-Carrier::~Carrier(){
-
-}
+//Carrier::Carrier(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+//		Entity381(engine, meshfname, pos, ident){
+//	this->minSpeed = 0;
+//	this->maxSpeed = 20.0f;//meters per second...
+//	this->acceleration = 1.0f; // slow
+//	this->turnRate = 10.0f; //2 degrees per second
+//	Physics2D* phx2d = new Physics2D(this);
+//		aspects.push_back((Aspect*) phx2d);
+//}
+//
+//Carrier::~Carrier(){
+//
+//}
 //-------------------------------------------------------------------------------------------------------------------------------
 
-SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool isHat, Entity381* body):
-		Entity381(engine, meshfname, pos, ident){
+SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool isHat, Entity381* body, bool hasHat):
+		Entity381(engine, meshfname, pos, ident, hasHat, isHat, body){
 	this->minSpeed = 0;
 	this->maxSpeed = 30.0f;//meters per second...
 	this->acceleration = 5.0f; // slow
 	this->turnRate = 300.0f; //2 degrees per second
 	this->mIsHat = isHat;
 	this->sceneNode->scale(5,5,5);
-	this->bodyForHat = body;
+//	this->bodyForHat = body;
 
 	Physics2D* phx2d = new Physics2D(this);
 		aspects.push_back((Aspect*) phx2d);
@@ -128,51 +144,51 @@ SpeedBoat::~SpeedBoat(){
 }
 //-------------------------------------------------------------------------------------------------------------------------------
 
-Frigate::Frigate(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
-		Entity381(engine, meshfname, pos, ident){
-	this->minSpeed = 0;
-	this->maxSpeed = 200.0f;//meters per second...
-	this->acceleration = 100.0f; // slow
-	this->turnRate = 20.0f; //2 degrees per second
-	Physics2D* phx2d = new Physics2D(this);
-		aspects.push_back((Aspect*) phx2d);
-}
-
-Frigate::~Frigate(){
-
-}
+//Frigate::Frigate(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+//		Entity381(engine, meshfname, pos, ident){
+//	this->minSpeed = 0;
+//	this->maxSpeed = 200.0f;//meters per second...
+//	this->acceleration = 100.0f; // slow
+//	this->turnRate = 20.0f; //2 degrees per second
+//	Physics2D* phx2d = new Physics2D(this);
+//		aspects.push_back((Aspect*) phx2d);
+//}
+//
+//Frigate::~Frigate(){
+//
+//}
 
 //-------------------------------------------------------------------------------------------------------------------------------
-Alien::Alien(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
-		Entity381(engine, meshfname, pos, ident){
-	this->minSpeed = 0;
-	this->maxSpeed = 50.0f;//meters per second...
-	this->acceleration = 10.0f; // slow
-	this->turnRate = 40.0f; //2 degrees per second
-	this->climbRate = 40.0f;
-	Physics3D* phx3d = new Physics3D(this);
-		aspects.push_back((Aspect*) phx3d);
-}
-
-Alien::~Alien(){
-
-}
+//Alien::Alien(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+//		Entity381(engine, meshfname, pos, ident){
+//	this->minSpeed = 0;
+//	this->maxSpeed = 50.0f;//meters per second...
+//	this->acceleration = 10.0f; // slow
+//	this->turnRate = 40.0f; //2 degrees per second
+//	this->climbRate = 40.0f;
+//	Physics3D* phx3d = new Physics3D(this);
+//		aspects.push_back((Aspect*) phx3d);
+//}
+//
+//Alien::~Alien(){
+//
+//}
 //-------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------
-Banshee::Banshee(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
-		Entity381(engine, meshfname, pos, ident){
-	this->minSpeed = 0;
-	this->maxSpeed = 50.0f;//meters per second...
-	this->acceleration = 10.0f; // slow
-	this->turnRate = 40.0f; //2 degrees per second
-	this->climbRate = 40.0f;
-	Physics3D* phx3d = new Physics3D(this);
-		aspects.push_back((Aspect*) phx3d);
-}
-
-Banshee::~Banshee(){
-
-}
+//Banshee::Banshee(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident):
+//		Entity381(engine, meshfname, pos, ident){
+//	this->minSpeed = 0;
+//	this->maxSpeed = 50.0f;//meters per second...
+//	this->acceleration = 10.0f; // slow
+//	this->turnRate = 40.0f; //2 degrees per second
+//	this->climbRate = 40.0f;
+//	Physics3D* phx3d = new Physics3D(this);
+//		aspects.push_back((Aspect*) phx3d);
+//}
+//
+//Banshee::~Banshee(){
+//
+//}
 //--------------------------------------------------------------------------------------
 
 
@@ -193,19 +209,19 @@ void Entity381::setDescription(std::string type)
 				this->entityDescription.dShirt = BlueShirt;
 				break;
 			case 2:
-				this->entityDescription.dShirt = GreenShirt;
+				this->entityDescription.dShirt = BlackShirt;
 				break;
 			case 3:
-				this->entityDescription.dShirt = PurpleShirt;
+				this->entityDescription.dShirt = WhiteShirt;
 				break;
 			case 4:
-				this->entityDescription.dShirt = YellowShirt;
+				this->entityDescription.dShirt = OrangeShirt;
 				break;
 		}
 	}
 	else if(type == "HAT")
 	{
-		randNum = rand() % 5;
+		randNum = (rand() % 4) + 1;
 		switch(randNum)
 		{
 			case 0:
@@ -231,16 +247,16 @@ void Entity381::setDescription(std::string type)
 		switch(randNum)
 		{
 			case 0:
-				this->entityDescription.dSkin = WhiteSkin;
+				this->entityDescription.dSkin = PurpleSkin;
 				break;
 			case 1:
-				this->entityDescription.dSkin = BlackSkin;
+				this->entityDescription.dSkin = GreenSkin;
 				break;
 			case 2:
 				this->entityDescription.dSkin = RedSkin;
 				break;
 			case 3:
-				this->entityDescription.dSkin = OrangeSkin;
+				this->entityDescription.dSkin = YellowSkin;
 				break;
 			case 4:
 				this->entityDescription.dSkin = BlueSkin;
@@ -253,5 +269,32 @@ void Entity381::setDescription(std::string type)
 		this->entityDescription.dHat = RedHat;
 		this->entityDescription.dShirt = RedShirt;
 	}
+
+}
+
+void Entity381::setMeshWithDescription()
+{
+	std::string shirts[] = {"redShirt", "lightblueShirt", "blackShirt", "whiteShirt", "orangeShirt"};
+	std::string hats[] = {"noHat", "blackHat", "yellowHat", "redHat", "purpleHat"};
+	std::string skins[] = {"purpleSkin", "greenSkin", "redSkin", "yellowSkin", "blueSkin"};
+
+	if(this->mIsHat)
+	{
+		Entity381* ent = this->bodyForHat;
+
+		this->meshfilename = hats[ent->entityDescription.dHat] + ".mesh";
+	}
+
+	else
+	{
+//		std::cout << "*** " << skins[this->entityDescription.dSkin] <<
+//				"_" <<
+//				shirts[this->entityDescription.dShirt] <<
+//				".mesh" <<
+//				std::endl;
+
+		this->meshfilename = skins[this->entityDescription.dSkin] + "_" + shirts[this->entityDescription.dShirt] + ".mesh";
+	}
+
 
 }

@@ -12,7 +12,7 @@
 class Entity381
 {
 public:
-  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity);
+  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool hasHat, bool isHat, Entity381* bfh);
   virtual ~Entity381();
 
   Engine *engine;
@@ -35,12 +35,14 @@ public:
   float heading, speed, altitude;
 
   bool mIsHat;
+  bool hasHat;
   Entity381* bodyForHat;
 
   bool isTarget;
 
   Description entityDescription;
   void setDescription(std::string type);
+  void setMeshWithDescription();
 
   std::vector<Aspect* > aspects;
 
@@ -67,7 +69,7 @@ public:
 
 class SpeedBoat: Entity381 {
 public:
-	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body);
+	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body, bool hasHat);
 	virtual ~SpeedBoat();
 
 };
