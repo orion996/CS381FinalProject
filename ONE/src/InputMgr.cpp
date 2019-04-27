@@ -283,20 +283,52 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	if(mid == OIS::MB_Left && lmbDown == false)
 	{
-//		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+
+		std::vector<Entity381*> ent = engine->entityMgr->entities;
+
+		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
+		{
+			std::pair<bool, float> result = mouseRay.intersects(
+					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
+
+			if(result.first)
+			{
+//					engine->entityMgr->SelectEntity(iter);
 //
-//		std::vector<Entity381*> ent = engine->entityMgr->entities;
-//
-//		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
-//		{
-//			std::pair<bool, float> result = mouseRay.intersects(
-//					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
-//
-//			if(result.first)
-//			{
-//				engine->entityMgr->SelectEntity(iter);
-//			}
-//		}
+//					if(engine->entityMgr->selectedEntity->mIsHat)
+//						engine->entityMgr->SelectEntity(iter - 1);
+
+					if((engine->entityMgr->GetEntityAt(iter)->isTarget) && !(engine->entityMgr->GetEntityAt(iter)->mIsHat))
+					{
+						//win
+						std::cout << " *** Target Hit! ***" << std::endl;
+						engine->entityMgr->DestroyEntity(iter);
+					}
+					else if((engine->entityMgr->GetEntityAt(iter - 1)->isTarget) && (engine->entityMgr->GetEntityAt(iter)->mIsHat))
+					{
+						//win
+						std::cout << " *** Target Hit 2! ***" << std::endl;
+						engine->entityMgr->DestroyEntity(iter);
+						engine->entityMgr->DestroyEntity(iter - 1);
+					}
+					else
+					{
+						//target comes after you
+						std::cout << " *** you Lose ***" << std::endl;
+
+						for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+						{
+							engine->entityMgr->DestroyEntity(i);
+						}
+
+						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
+
+						//add a command that tell the target to follow the camera pos
+					}
+
+			}
+		}
 
 
 		lmbDown = true;

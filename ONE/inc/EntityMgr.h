@@ -27,6 +27,8 @@ public:
 
   void Tick(float dt);
 
+  void DestroyEntity(int index);
+
 protected:
 
 private:

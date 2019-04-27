@@ -7,6 +7,7 @@
 
 #include <EntityMgr.h>
 #include <Engine.h>
+#include <GfxMgr.h>
 
 EntityMgr::EntityMgr(Engine *eng): Mgr(eng){
 	selectedEntity = 0;
@@ -39,7 +40,7 @@ void EntityMgr::CreateCarrier(Ogre::Vector3 pos){
 void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body){
 	SpeedBoat *ent;
 	if(!isHat)
-		ent = new SpeedBoat(this->engine, "blueSkin_blackShirt.mesh", pos, count, isHat, body);
+		ent = new SpeedBoat(this->engine, "blueSkin_lightblueShirt.mesh", pos, count, isHat, body);
 	else
 		ent = new SpeedBoat(this->engine, "blackHat.mesh", pos, count, isHat, body);
 
@@ -123,4 +124,13 @@ void EntityMgr::Tick(float dt){
 Entity381* EntityMgr::GetEntityAt(int id)
 {
 	return entities.at(id);
+}
+
+void EntityMgr::DestroyEntity(int index)
+{
+	entities.at(index)->aspects.clear();
+
+	entities.at(index)->sceneNode->removeAndDestroyAllChildren();
+	engine->gfxMgr->mSceneMgr->destroyMovableObject(entities.at(index)->ogreEntity);
+//	engine->gfxMgr->mSceneMgr->destroySceneNode(entities.at(index)->sceneNode);
 }

@@ -1,15 +1,6 @@
-15:02:48 **** Incremental Build of configuration Debug for project ONE ****
+19:44:24 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/Entity381.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
-Finished building: ../src/Entity381.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
+make: Nothing to be done for 'all'.
 
-15:02:52 Build Finished (took 3s.417ms)
+19:44:25 Build Finished (took 411ms)
 

@@ -118,7 +118,7 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->setDescription("HAT");
 	this->setDescription("SKIN");
 
-//	this->entityDescription.dShirt = BlueShirt;
+	this->entityDescription.dHat = NoHat;
 
 
 

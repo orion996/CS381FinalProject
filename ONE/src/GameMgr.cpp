@@ -66,35 +66,42 @@ void GameMgr::LoadLevel(){
 }
 
 void GameMgr::MakeEntities(){
-	Ogre::Vector3 pos = Ogre::Vector3(0, 50, 0);
 
 	srand(time(NULL));
-
+	Ogre::Vector3 pos;
 	int index = 0;
+
 	for(int i = 0 ; i < 5 ; i++)
 	{
-		float temp = rand()%2;
+		float hatTemp = rand()%2;
 		bool hat = false;
-		if(temp)
+		if(hatTemp)
 			hat = true;
 		else
 			hat = false;
 
+		float negTemp = rand()%2;
+		int neg = 1;
+		if(negTemp)
+			neg = 1;
+		else
+			neg = -1;
+
+		pos = Ogre::Vector3(rand()%500 * neg, 50, rand()%500 * neg);
 		engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
 
-		if(hat)
-		{
-			index++;
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
-		}
+//		if(hat)
+//		{
+//			index++;
+//			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
+//		}
 		pos.x += 30;
 		index++;
 	}
-
-	engine->entityMgr->GetEntityAt(0)->isTarget = true;
-
-
 	engine->entityMgr->SelectNextEntity(); //sets selection
+	engine->entityMgr->GetEntityAt(0)->isTarget = true;
+	for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
+		engine->entityMgr->GetEntityAt(i)->isTarget = false;
 }
 
 void GameMgr::MakeGround(){
