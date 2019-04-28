@@ -6,6 +6,7 @@
  */
 
 #include <EntityMgr.h>
+#include <SoundMgr.h>
 #include <Engine.h>
 
 EntityMgr::EntityMgr(Engine *eng): Mgr(eng){

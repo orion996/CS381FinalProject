@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <Mgr.h>
+#include <SoundMgr.h>
 #include <Entity381.h>
 #include <Types381.h>
 

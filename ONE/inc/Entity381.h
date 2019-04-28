@@ -5,7 +5,7 @@
 #include <OgreSceneManager.h>
 #include <OgreVector3.h>
 #include <Aspect.h>
-
+#include <SoundMgr.h>
 #include <Engine.h>
 
 class Entity381
@@ -29,9 +29,15 @@ public:
   //dynamic data
   Ogre::Vector3 position;
   Ogre::Vector3 velocity;
-  bool isSelected;
   float desiredHeading, desiredSpeed, desiredAltitude;
   float heading, speed, altitude;
+
+  //Selection and sound
+  bool isSelected;
+  bool didSelectSoundPlay;
+  std::string soundFile;
+  bool playSound;
+  unsigned int auioId;
 
   bool mIsHat;
   Entity381* bodyForHat;
