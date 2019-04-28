@@ -1,60 +1,32 @@
-16:59:21 **** Incremental Build of configuration Debug for project ONE ****
+17:08:23 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/GameMgr.cpp
+Building file: ../src/InputMgr.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
-../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
-../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
-                 ^
-Finished building: ../src/GameMgr.cpp
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
+In file included from ../src/InputMgr.cpp:10:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:58:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
+../src/InputMgr.cpp:324:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+                         ^
+../src/InputMgr.cpp:331:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+                         ^
+../src/InputMgr.cpp:282:25: warning: unused variable ‘ms’ [-Wunused-variable]
+  const OIS::MouseState &ms = mMouse->getMouseState();
+                         ^
+Finished building: ../src/InputMgr.cpp
  
 Building target: ONE
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-16:59:25 **** Incremental Build of configuration Debug for project ONE ****
+17:08:30 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.
-17:00:00 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/GameMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
-../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
-../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
-                 ^
-Finished building: ../src/GameMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-17:00:12 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-make: Nothing to be done for 'all'.
-17:00:21 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-make: Nothing to be done for 'all'.
-17:00:49 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/GameMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
-../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
-../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
-                 ^
-Finished building: ../src/GameMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-17:00:59 **** Incremental Build of configuration Debug for project ONE ****
+17:08:49 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.

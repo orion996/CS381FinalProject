@@ -131,7 +131,7 @@ void InputMgr::Tick(float dt){
 }
 
 void InputMgr::UpdateCamera(float dt){
-	float move = 100.0f;
+	float move = 400.0f;
 	float rotate = 0.1f;
 
 	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;

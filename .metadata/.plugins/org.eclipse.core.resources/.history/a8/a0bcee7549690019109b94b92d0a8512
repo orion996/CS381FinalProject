@@ -131,7 +131,7 @@ void InputMgr::Tick(float dt){
 }
 
 void InputMgr::UpdateCamera(float dt){
-	float move = 100.0f;
+	float move = 400.0f;
 	float rotate = 0.1f;
 
 	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
@@ -173,21 +173,21 @@ void InputMgr::UpdateCamera(float dt){
 //	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(-5 * rotate));
 
 	  //follow Mode
-//	  keyboardTimer -= dt;
-//	  if ((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_C))
-//	  {
-//		  keyboardTimer = .5;
-//
-//		  if(!followMode)
-//			  followMode = true;
-//		  else if(followMode)
-//		  {
-//			  engine->gfxMgr->mCamera->setPosition(0, 0, 80);
-//			  engine->gfxMgr->mCamera->lookAt(0, 0, -300);
-//			  followMode = false;
-//		  }
-//
-//	  }
+	  keyboardTimer -= dt;
+	  if ((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_C))
+	  {
+		  keyboardTimer = .5;
+
+		  if(!followMode)
+			  followMode = true;
+		  else if(followMode)
+		  {
+			  engine->gfxMgr->mCamera->setPosition(0, 0, 80);
+			  engine->gfxMgr->mCamera->lookAt(0, 0, -300);
+			  followMode = false;
+		  }
+
+	  }
 
 	  if(followMode)
 	  {
