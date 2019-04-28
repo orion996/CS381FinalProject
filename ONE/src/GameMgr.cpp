@@ -71,7 +71,7 @@ void GameMgr::MakeEntities(){
 	Ogre::Vector3 pos;
 	int index = 0;
 
-	for(int i = 0 ; i < 5 ; i++)
+	for(int i = 0 ; i < 30 ; i++)
 	{
 		float hatTemp = rand()%2;
 		bool hat = false;
@@ -87,7 +87,7 @@ void GameMgr::MakeEntities(){
 		else
 			neg = -1;
 
-		pos = Ogre::Vector3(rand()%500 * neg, 50, rand()%500 * neg);
+		pos = Ogre::Vector3(rand()%500 * neg, 20, rand()%500 * neg);
 
 		if(hat)
 		{
@@ -129,7 +129,7 @@ void GameMgr::MakeGround(){
 	  groundEntity->setCastShadows(false);
 	  //groundEntity->setMaterialName("Ocean2_HLSL_GLSL");
 	  //groundEntity->setMaterialName("OceanHLSL_GLSL");
-	  groundEntity->setMaterialName("Ocean2_Cg");
+	  groundEntity->setMaterialName("Texture/Flooring");
 	  //groundEntity->setMaterialName("NavyCg");
 }
 
