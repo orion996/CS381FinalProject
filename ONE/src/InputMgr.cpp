@@ -100,6 +100,8 @@ void InputMgr::Init(){
 
 	   mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
 	   mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
+	   mTrayMgr->createButton(OgreBites::TL_CENTER, "MyButton", "Play");
+	   mTrayMgr->showBackdrop("Texture/Flooring");
 
 }
 
@@ -119,6 +121,8 @@ void InputMgr::Tick(float dt){
 	//Must capture both every tick for buffered input to work
 	mMouse->capture();
 	mKeyboard->capture();
+
+	mTrayMgr->refreshCursor();
 
 	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
 		engine->keepRunning = false;
@@ -420,6 +424,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 		rmbDown = true;
 	}
 
+	if (this->mTrayMgr->injectMouseDown(me, mid)){std::cout << "***Button Hit***" << std::endl;}
 	return true;
 }
 
@@ -434,5 +439,15 @@ bool InputMgr::mouseReleased(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 		lmbDown = false;
 	}
 
+	if (this->mTrayMgr->injectMouseUp(me, mid)) return true;
+
 	return true;
+}
+
+void InputMgr::buttonHit(OgreBites::Button *b)
+{
+//	std::cout << "***Button Hit***" << std::endl;
+
+		b->hide();
+		mTrayMgr->hideBackdrop();
 }
