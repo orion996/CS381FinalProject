@@ -55,8 +55,10 @@ public:
 	OgreBites::TextBox* mTextBox;
 	OgreBites::Label* mLabel;
 	OgreBites::Label* mLabel2;
+	OgreBites::Label* mTitle;
 	OgreBites::Button* mButton;
 	bool bulletFired = false;
+	bool gameStarted = false;
 
 	bool followMode;
 

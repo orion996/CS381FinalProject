@@ -82,26 +82,15 @@ void InputMgr::Init(){
 	   mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName",
 			   engine->gfxMgr->mWindow,
 			   mInputContext,
-			   engine->gfxMgr);
+			   this);
 //	   mTrayMgr->hideCursor(); //DO NOT HIDE CURSOR!!!
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
-	   static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Black Shirt", "White Shirt", "Orange Shirt"};
-	   static const std::string HatStrings[] = {"No Hat", "Black Hat", "Yellow Hat", "Red Hat", "Purple Hat"};
-	   static const std::string SkinStrings[] = {"Purple Skin", "Green Skin", "Red Skin", "Yellow Skin", "Blue Skin"};
+	   mTitle = mTrayMgr->createLabel(OgreBites::TL_CENTER, "Title", "ONE", 750);
 
-//	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);
-	   mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n" +
-			   ShirtStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dShirt] + "\n" +
-			   HatStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dHat] + "\n" +
-			   SkinStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dSkin],
-			   250, 100);
-
-	   mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
-	   mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
-	   mTrayMgr->createButton(OgreBites::TL_CENTER, "MyButton", "Play");
-	   mTrayMgr->showBackdrop("Texture/Flooring");
+	   mTrayMgr->createButton(OgreBites::TL_CENTER, "MyButton", "Play", 250);
+//	   mTrayMgr->showBackdrop("Texture/Flooring");
 
 }
 
@@ -266,6 +255,7 @@ void InputMgr::LoadLevel(){
 }
 
 bool InputMgr::keyPressed(const OIS::KeyEvent& ke){
+
 	return true;
 }
 
@@ -285,7 +275,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	const OIS::MouseState &ms = mMouse->getMouseState();
 
-	if(mid == OIS::MB_Left && lmbDown == false && !bulletFired)
+	if(mid == OIS::MB_Left && lmbDown == false && !bulletFired && gameStarted)
 	{
 		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
 
@@ -357,70 +347,6 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	else if (mid == OIS::MB_Right)
 	{
-//		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
-//
-//		std::vector<Entity381*> ent = engine->entityMgr->entities;
-//		Ogre::Plane* plane = engine->gameMgr->plane;
-//
-//		bool intercept = false;
-//
-//		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
-//		{
-//			//mouseray intersects the entity
-//			std::pair<bool, float> entRes = mouseRay.intersects(
-//					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
-//
-//			if(entRes.first)
-//			{
-//				//get target entity
-//				Entity381* target = engine->entityMgr->entities[iter];
-//
-//				//get target coordinates
-//				Ogre::Vector3 targetPoint = target->position;
-//
-//				//add intercept command with those coordinates
-//				UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-//				if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-//				{
-//					uai->AddCommand("INTERCEPT", targetPoint, target);
-//				}
-//				else
-//				{
-//					uai->SetCommand("INTERCEPT", targetPoint, target);
-//				}
-//
-////				std::cout << "INTERCEPT COMMAND" << std::endl;
-//
-//				intercept = true;
-//				break;
-//			}
-//		}
-//		//mouseray intersects the plane
-//		std::pair<bool, float> terrRes = mouseRay.intersects(*plane);
-//		if(terrRes.first && !intercept)
-//		{
-//			//get point coordinates
-//			Ogre::Vector3 worldPoint = mouseRay.getPoint(terrRes.second);
-////				std::cout << "WORLD POINT: " << worldPoint << std::endl;
-//
-//			//add moveTo command with those coordinates
-//			UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
-//
-//			if(mKeyboard->isKeyDown(OIS::KC_LSHIFT))
-//			{
-//				uai->AddCommand("MOVETO", worldPoint, NULL);
-//			}
-//			else
-//			{
-//				uai->SetCommand("MOVETO", worldPoint, NULL);
-//			}
-////			std::cout << "MOVETO COMMAND" << std::endl;
-//
-//			intercept = false;
-//		}
-
-
-
 		rmbDown = true;
 	}
 
@@ -448,6 +374,31 @@ void InputMgr::buttonHit(OgreBites::Button *b)
 {
 //	std::cout << "***Button Hit***" << std::endl;
 
+	if(b->getName() == "MyButton")
+	{
+		mTrayMgr->removeWidgetFromTray("MyButton");
+		mTrayMgr->removeWidgetFromTray("Title");
+		mTitle->hide();
 		b->hide();
-		mTrayMgr->hideBackdrop();
+//		mTrayMgr->hideBackdrop();
+		this->gameStarted = true;
+		mTrayMgr->setListener(engine->gfxMgr);
+
+
+		static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Black Shirt", "White Shirt", "Orange Shirt"};
+	    static const std::string HatStrings[] = {"No Hat", "Black Hat", "Yellow Hat", "Red Hat", "Purple Hat"};
+	    static const std::string SkinStrings[] = {"Purple Skin", "Green Skin", "Red Skin", "Yellow Skin", "Blue Skin"};
+
+//	    mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);
+	    mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n" +
+			   ShirtStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dShirt] + "\n" +
+			   HatStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dHat] + "\n" +
+			   SkinStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dSkin],
+			   250, 100);
+
+	    mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
+	    mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
+
+	    engine->gameMgr->cameraNode->setPosition(0, 20, 0);
+	}
 }
