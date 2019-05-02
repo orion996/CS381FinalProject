@@ -8,8 +8,12 @@
 #ifndef UTILS_H_
 #define UTILS_H_
 
+#include <OgreVector3.h>
+#include <cmath>
+
 float FixAngle(float angle);
 float Clamp(float min, float max, float val);
+float Distance(Ogre::Vector3, Ogre::Vector3);
 
 
 

@@ -32,6 +32,7 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	velocity = Ogre::Vector3(0, 0, 0);
 	identity = ident;
 	isSelected = false;
+	collisionRadius = 18;
 
 	this->setDescription("SHIRT");
 	this->setDescription("HAT");

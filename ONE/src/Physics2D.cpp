@@ -9,6 +9,9 @@
 #include <Physics2D.h>
 #include <Entity381.h>
 #include <Utils.h>
+#include <EntityMgr.h>
+#include <UnitAI.h>
+#include <InputMgr.h>
 
 Physics2D::Physics2D(Entity381* ent):Aspect(ent){
 
@@ -55,10 +58,46 @@ void Physics2D::Tick(float dt){
 
 		//This does not change!
 		entity->position = entity->position + entity->velocity * dt;
+
+		this->checkForCollisions(dt);
 	}
 	else
 	{
 		entity->position = entity->bodyForHat->position;
 		entity->position.y += 10;
+	}
+}
+
+void Physics2D::checkForCollisions(float dt)
+{
+	collisionTimer -= dt;
+
+	for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+	{
+		if(Distance(entity->engine->entityMgr->entities.at(i)->position, entity->position) != 0 && !(entity->engine->entityMgr->entities.at(i)->mIsHat) && collisionTimer < 0)
+		{
+			if(Distance(entity->engine->entityMgr->entities.at(i)->position, entity->position) < (entity->engine->entityMgr->entities.at(i)->collisionRadius + entity->collisionRadius))
+			{
+				UnitAI* uaiThis = (UnitAI*) entity->aspects.at(1);
+				UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+
+				Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
+
+				if(!uaiThis->commands.empty())
+				{
+//					entity->desiredSpeed = entity->speed = (entity->speed/2);
+					worldPoint = uaiThis->commands.front()->point;
+					worldPoint.x *= -1;
+					worldPoint.z *= -1;
+					uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+				}
+				else
+				{
+					entity->desiredSpeed = entity->speed = 0;
+				}
+
+				collisionTimer = 1;
+			}
+		}
 	}
 }

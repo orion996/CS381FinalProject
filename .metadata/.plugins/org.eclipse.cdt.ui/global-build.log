@@ -1,65 +1,1026 @@
-13:33:31 **** Incremental Build of configuration Debug for project ONE ****
+18:03:23 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/InputMgr.cpp
+Building file: ../src/Entity381.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:329:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:336:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:287:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:91:19: warning: variable ‘worldPoint’ set but not used [-Wunused-but-set-variable]
+     Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
+                   ^
+Finished building: ../src/Physics2D.cpp
  
 Building target: ONE
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-13:33:37 **** Incremental Build of configuration Debug for project ONE ****
+18:03:31 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.
-13:34:06 **** Incremental Build of configuration Debug for project ONE ****
+18:04:07 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/InputMgr.cpp
+Building file: ../src/Entity381.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:329:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
                          ^
-../src/InputMgr.cpp:336:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:287:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
+Finished building: ../src/Entity381.cpp
  
 Building target: ONE
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-13:36:05 **** Incremental Build of configuration Debug for project ONE ****
+18:05:14 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:91:19: warning: variable ‘worldPoint’ set but not used [-Wunused-but-set-variable]
+     Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
+                   ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:06:29 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:07:13 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:09:59 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:11:16 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:12:09 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:12:42 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:17:10 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:17:54 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:85:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:18:29 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:19:05 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:85:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:19:21 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:85:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:19:56 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:21:02 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:78:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:85:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:21:28 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:77:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:84:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:23:21 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:77:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:84:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:34:14 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:77:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:84:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:34:43 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:37:30 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:77:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:84:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:38:34 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+18:39:10 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:39:53 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:40:43 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:41:09 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < ents.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) ents.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:42:41 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:43:08 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:43:41 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:44:30 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:44:42 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+18:46:16 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:46:42 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/UnitAI.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UnitAI.d" -MT"src/UnitAI.d" -o "src/UnitAI.o" "../src/UnitAI.cpp"
+In file included from ../src/UnitAI.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+Finished building: ../src/UnitAI.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:47:00 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:47:34 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:49:54 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Entity381.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Entity381.d" -MT"src/Entity381.d" -o "src/Entity381.o" "../src/Entity381.cpp"
+In file included from ../src/Entity381.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+Finished building: ../src/Entity381.cpp
+ 
+Building file: ../src/GameMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
+../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
+../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
+                 ^
+Finished building: ../src/GameMgr.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:50:23 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+18:50:43 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:52:17 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:52:47 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:53:08 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:53:49 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 Building file: ../src/GameMgr.cpp
 Invoking: GCC C++ Compiler
@@ -75,176 +1036,111 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-13:37:12 **** Incremental Build of configuration Debug for project ONE ****
+18:54:55 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/GameMgr.cpp
+Building file: ../src/Physics2D.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
-../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
-../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
-                 ^
-Finished building: ../src/GameMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:38:50 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/InputMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:316:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
                          ^
-../src/InputMgr.cpp:323:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:274:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:39:51 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/InputMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:316:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:323:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:274:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:40:15 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-make: Nothing to be done for 'all'.
-13:40:54 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/InputMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:316:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:323:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:274:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:42:24 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/InputMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:59:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:316:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:323:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:274:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
- 
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:45:45 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/Engine.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Engine.d" -MT"src/Engine.d" -o "src/Engine.o" "../src/Engine.cpp"
-In file included from ../src/Engine.cpp:12:0:
+In file included from ../src/Physics2D.cpp:14:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-Finished building: ../src/Engine.cpp
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
  
-Building file: ../src/InputMgr.cpp
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:55:31 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:318:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:56:26 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
                          ^
-../src/InputMgr.cpp:325:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+18:57:43 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
                          ^
-../src/InputMgr.cpp:276:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
  
 Building file: ../src/UnitAI.cpp
 Invoking: GCC C++ Compiler
@@ -263,61 +1159,81 @@ Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
-13:46:09 **** Incremental Build of configuration Debug for project ONE ****
+18:58:44 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/InputMgr.cpp
+Building file: ../src/Physics2D.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:318:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:325:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:276:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
  
-Building target: ONE
-Invoking: GCC C++ Linker
-g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
-Finished building target: ONE
- 
-13:46:35 **** Incremental Build of configuration Debug for project ONE ****
-make all 
-Building file: ../src/InputMgr.cpp
+Building file: ../src/UnitAI.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
-In file included from ../src/InputMgr.cpp:10:0:
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UnitAI.d" -MT"src/UnitAI.d" -o "src/UnitAI.o" "../src/UnitAI.cpp"
+In file included from ../src/UnitAI.cpp:11:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:318:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:325:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
-                         ^
-../src/InputMgr.cpp:276:25: warning: unused variable ‘ms’ [-Wunused-variable]
-  const OIS::MouseState &ms = mMouse->getMouseState();
-                         ^
-Finished building: ../src/InputMgr.cpp
+Finished building: ../src/UnitAI.cpp
  
 Building target: ONE
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
 Finished building target: ONE
  
+18:59:03 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+18:59:25 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/Physics2D.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Physics2D.d" -MT"src/Physics2D.d" -o "src/Physics2D.o" "../src/Physics2D.cpp"
+In file included from ../src/Physics2D.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:23:25: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float collisionTimer = 0.0;
+                         ^
+In file included from ../src/Physics2D.cpp:14:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:60:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:61:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+../src/Physics2D.cpp: In member function ‘void Physics2D::checkForCollisions(float)’:
+../src/Physics2D.cpp:75:18: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
+                  ^
+../src/Physics2D.cpp:82:13: warning: unused variable ‘uaiOther’ [-Wunused-variable]
+     UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
+             ^
+Finished building: ../src/Physics2D.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+19:00:04 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.

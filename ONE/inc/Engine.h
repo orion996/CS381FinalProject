@@ -29,6 +29,7 @@ public:
 	void Cleanup();
 
 	bool keepRunning;
+	bool gameStart;
 };
 
 #endif /* ENGINE_H_ */

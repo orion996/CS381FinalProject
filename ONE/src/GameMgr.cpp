@@ -68,10 +68,10 @@ void GameMgr::LoadLevel(){
 void GameMgr::MakeEntities(){
 
 	srand(time(NULL));
-	Ogre::Vector3 pos;
+	Ogre::Vector3 pos = Ogre::Vector3(0,20,0);
 	int index = 0;
 
-	for(int i = 0 ; i < 15 ; i++)
+	for(int i = 0 ; i < 20 ; i++)
 	{
 		float hatTemp = rand()%2;
 		bool hat = false;
@@ -102,7 +102,7 @@ void GameMgr::MakeEntities(){
 //			engine->entityMgr->GetEntityAt(i)->hasHat = false;
 
 		}
-		pos.x += 30;
+		pos.x += 20;
 		index++;
 	}
 	engine->entityMgr->SelectNextEntity(); //sets selection

@@ -18,6 +18,7 @@ Engine::Engine() {
 	inputMgr  = 0;
 
 	keepRunning = true;
+	gameStart = false;
 
 }
 
@@ -42,6 +43,8 @@ void Engine::Init(){
 	gfxMgr->LoadLevel();
 	inputMgr->LoadLevel();
 	gameMgr->LoadLevel();
+
+	gameStart = true;
 }
 
 

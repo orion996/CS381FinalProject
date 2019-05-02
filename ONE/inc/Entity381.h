@@ -25,7 +25,7 @@ public:
   Ogre::Entity*    ogreEntity;
   float acceleration, turnRate, climbRate;
   float minSpeed, maxSpeed;
-  bool isFlying;
+  float collisionRadius;
 
   //dynamic data
   Ogre::Vector3 position;
