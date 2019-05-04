@@ -41,12 +41,12 @@ void Renderable::Tick(float dt){
 	entity->sceneNode->yaw(Ogre::Degree(-entity->heading));
 	entity->sceneNode->roll(Ogre::Degree(entity->altitude));
 
-	if(entity->meshfilename == "blueSkin_blackShirt.mesh" || entity->meshfilename == "blackHat.mesh")
-		entity->sceneNode->pitch(Ogre::Degree(-90));//meeples were on there side for some reason
+	entity->sceneNode->pitch(Ogre::Degree(-90));//meeples were on there side for some reason
+
 
 	//bounding boxes are rendered so...
 	if(entity->isSelected)
-		entity->sceneNode->showBoundingBox(true);
+		entity->sceneNode->showBoundingBox(false);
 	else
 		entity->sceneNode->showBoundingBox(false); //or we could do this in the entity mgr every time tab is pressed....
 

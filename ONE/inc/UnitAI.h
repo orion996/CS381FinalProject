@@ -16,6 +16,7 @@
 #include <OgreNode.h>
 #include <stdlib.h>
 #include <time.h>
+#include <OgreCamera.h>
 
 
 struct Command
@@ -43,7 +44,9 @@ public:
 	void clearCommands();
 	void deleteCurrentCommand();
 
-	static const float boundConst = 10.0;
+	const float boundConst = 10.0;
+
+	Ogre::Camera* camNode;
 };
 
 

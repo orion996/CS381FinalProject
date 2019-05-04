@@ -12,12 +12,16 @@ class EntityMgr;
 class GameMgr;
 class GfxMgr;
 class InputMgr;
+#include <SoundMgr.h>
+
 
 class Engine {
+private:
 public:
 	Engine();
 	virtual ~Engine();
 
+	OgreSND::SoundMgr* soundMgr;
 	EntityMgr *entityMgr;
 	GameMgr   *gameMgr;
 	GfxMgr    *gfxMgr;
@@ -29,6 +33,7 @@ public:
 	void Cleanup();
 
 	bool keepRunning;
+	bool gameStart;
 };
 
 #endif /* ENGINE_H_ */

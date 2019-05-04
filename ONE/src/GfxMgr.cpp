@@ -15,7 +15,7 @@
 #include <OgreRenderWindow.h>
 #include <OgreConfigFile.h>
 #include <OgreException.h>
-#include <SoundMgr.h>
+
 #include <Engine.h>
 #include <GfxMgr.h>
 

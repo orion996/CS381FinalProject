@@ -22,15 +22,15 @@
 #include <alc.h>
 #include <Mgr.h>
 
-class Entity381;
-class EntityMgr;
-class GFxMgr;
+#include <Entity381.h>
+
+#include <Engine.h>
 
 namespace OgreSND {
     const int soundPerEnt = 3;      // max different sounds to randomly choose per entity
 	const int maxAudioBuffers = 63; // + 1 for background music
 	const int maxAudioSources = 15; // + 1 for background music
-	const std::string backgroundMusicFilename = "data/watercraft/sounds/backgroundMusic.wav";
+	const std::string backgroundMusicFilename = "backgroundMusic.wav";
 	///home/sushil/workspace/fe1/
 
 
@@ -87,9 +87,9 @@ namespace OgreSND {
 		//default methods
 		void initialize();
 		void crosslink();
-		void init();
-		void loadLevel();
-		void tick(double dtime);
+		void Init();
+		void LoadLevel();
+		void Tick(float dtime);
 		void releaseLevel();
 		void cleanup ();
                 

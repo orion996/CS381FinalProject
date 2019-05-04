@@ -13,7 +13,7 @@
 
 # include <SdkTrays.h>
 #include <OgreVector3.h>
-#include <SoundMgr.h>
+
 #include <Mgr.h>
 
 

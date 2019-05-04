@@ -28,11 +28,6 @@ GameMgr::~GameMgr() {
 }
 
 void GameMgr::Init(){
-
-}
-
-void GameMgr::LoadLevel(){
-
 	  engine->gfxMgr->mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
 
 	  engine->gfxMgr->mCamera->lookAt(Ogre::Vector3(0, 0, 0));
@@ -48,36 +43,72 @@ void GameMgr::LoadLevel(){
 	  MakeGround();
 	  MakeSky();
 	  MakeEntities();
+
+}
+
+void GameMgr::LoadLevel(){
+
+//	  engine->gfxMgr->mSceneMgr->setAmbientLight(Ogre::ColourValue(0.5, 0.5, 0.5));
+//
+//	  engine->gfxMgr->mCamera->lookAt(Ogre::Vector3(0, 0, 0));
+//	  Ogre::Light* light = engine->gfxMgr->mSceneMgr->createLight("MainLight");
+//	  light->setPosition(20.0, 80.0, 50.0);
+//
+//
+//	  // A node to attach the camera to so we can move the camera node instead of the camera.
+//	  cameraNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode();
+//	  cameraNode->setPosition(0, 200, 500);
+//	  cameraNode->attachObject(engine->gfxMgr->mCamera);
+//
+//	  MakeGround();
+//	  MakeSky();
+//	  MakeEntities();
 }
 
 void GameMgr::MakeEntities(){
-	Ogre::Vector3 pos = Ogre::Vector3(0, 50, 0);
 
 	srand(time(NULL));
-
+	Ogre::Vector3 pos = Ogre::Vector3(0,20,0);
 	int index = 0;
-	for(int i = 0 ; i < 5 ; i++)
+
+	for(int i = 0 ; i < 20 ; i++)
 	{
-		float temp = rand()%2;
+		float hatTemp = rand()%2;
 		bool hat = false;
-		if(temp)
+		if(hatTemp)
 			hat = true;
 		else
 			hat = false;
 
-		engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL);
+		float negTemp = rand()%2;
+		int neg = 1;
+		if(negTemp)
+			neg = 1;
+		else
+			neg = -1;
+
+		pos = Ogre::Vector3(rand()%500 * neg, 20, rand()%500 * neg);
 
 		if(hat)
 		{
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, true);
 			index++;
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1));
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1), false);
+//			engine->entityMgr->GetEntityAt(i)->hasHat = true;
 		}
-		pos.x += 30;
+		else
+		{
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false);
+//			engine->entityMgr->GetEntityAt(i)->hasHat = false;
+
+		}
+		pos.x += 20;
 		index++;
 	}
-
-
 	engine->entityMgr->SelectNextEntity(); //sets selection
+	engine->entityMgr->GetEntityAt(0)->isTarget = true;
+	for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
+		engine->entityMgr->GetEntityAt(i)->isTarget = false;
 }
 
 void GameMgr::MakeGround(){
@@ -98,7 +129,7 @@ void GameMgr::MakeGround(){
 	  groundEntity->setCastShadows(false);
 	  //groundEntity->setMaterialName("Ocean2_HLSL_GLSL");
 	  //groundEntity->setMaterialName("OceanHLSL_GLSL");
-	  groundEntity->setMaterialName("Ocean2_Cg");
+	  groundEntity->setMaterialName("Texture/Flooring");
 	  //groundEntity->setMaterialName("NavyCg");
 }
 

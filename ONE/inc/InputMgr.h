@@ -54,6 +54,11 @@ public:
 	OgreBites::InputContext mInputContext;
 	OgreBites::TextBox* mTextBox;
 	OgreBites::Label* mLabel;
+	OgreBites::Label* mLabel2;
+	OgreBites::Label* mTitle;
+	OgreBites::Button* mButton;
+	bool bulletFired = false;
+	bool gameStarted = false;
 
 	bool followMode;
 
@@ -64,9 +69,10 @@ public:
 	void Stop();
 	void Tick(float dt);
 	void LoadLevel();
+	void buttonHit(OgreBites::Button *b);
 
 	float keyboardTimer;
-	const static float keyTime = 0.2f;
+	const float keyTime = 0.2f;
 	float deltaDesiredSpeed, deltaDesiredHeading, deltaDesiredAltitude;
 	void UpdateCamera(float dt);
 	void UpdateVelocityAndSelection(float dt);

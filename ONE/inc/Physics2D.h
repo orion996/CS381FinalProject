@@ -17,6 +17,10 @@ public:
 	~Physics2D();
 
 	void Tick(float dt);
+
+	void checkForCollisions(float dt);
+
+	float collisionTimer = 0.0;
 };
 
 

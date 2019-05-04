@@ -8,15 +8,16 @@
 #include <SoundMgr.h>
 #include <stdlib.h>
 #include <Engine.h>
+#include <GfxMgr.h>
+#include <Entity381.h>
+#include <EntityMgr.h>
 
 using namespace OgreSND;
 
-class Entity381;
-class EntityMgr;
-class GfxMgr;
 
 SoundMgr::SoundMgr(Engine *eng): Mgr(eng){
 	this->engine = eng;
+
 }
 
 SoundMgr::~SoundMgr(){
@@ -52,7 +53,7 @@ SoundMgr::~SoundMgr(){
 	std::cout << "Bye audio. ....   Sounds good, bye" << std::endl;
 }
 
-void SoundMgr::init(){
+void SoundMgr::Init(){
 	initialize();
 }
 
@@ -102,7 +103,7 @@ void SoundMgr::initialize(void){
 
 	unsigned int sid;
         //background music
-	std::string filename = "/home/enriques/Desktop/samba-home/CS381FinalProject/ONE/assets/backgroundMusic.wav";
+	std::string filename = "backgroundMusic.wav";
 	if (this->reserveAudio(filename, true, sid)){
 		std::cout << "background music loaded" << std::endl;
                 backgroundMusicSource = sourceInfo[sid].source;
@@ -126,11 +127,11 @@ void SoundMgr::initialize(void){
 
 bool SoundMgr::initWatercraftSounds(){
         //registering all sounds
-		std::string selectionFilename = "/home/enriques/Desktop/samba-home/CS381FinalProject/ONE/assets/takeYourOrder.wav";
-        std::string selection2Filename = "/home/enriques/Desktop/samba-home/CS381FinalProject/ONE/assets/GoodDay.wav";
+		std::string selectionFilename = "takeYourOrder.wav";
+        std::string selection2Filename = "GoodDay.wav";
         //std::string createShipFilename = "data/watercraft/sounds/boatMoving.wav";
         //std::string createBuildingFilename = "data/watercraft/sounds/clong.wav";
-        for(std::list<Entity381 *>::const_iterator et = engine->entityMgr->entities.begin(); et != engine->entityMgr->entities.end(); ++et)
+        for(std::vector<Entity381 *>::const_iterator et = engine->entityMgr->entities.begin(); et != engine->entityMgr->entities.end(); ++et)
         	{
             //this->registerBattleSound(et, battleFilename);
             if (true){
@@ -206,7 +207,7 @@ void SoundMgr::syncListenerToCamera(){
 
 bool SoundMgr::frameRenderingQueued(const Ogre::FrameEvent& evt)
 {
-	tick(evt.timeSinceLastFrame);
+	Tick(evt.timeSinceLastFrame);
 	return true;
 }
 bool SoundMgr::frameStarted(const Ogre::FrameEvent& evt){
@@ -223,7 +224,7 @@ void SoundMgr::crosslink(void){
 	return;
 }
 
-void SoundMgr::loadLevel(void){
+void SoundMgr::LoadLevel(void){
 	syncListenerToCamera();
 	//load sounds, bind buffers, start background music
 	//read sound files
@@ -243,16 +244,16 @@ void SoundMgr::attachSelectedNodeToSoundIndex(Entity381 *ent, unsigned int index
                 return;
         
         this->playAudio(this->sourceInfo[index].source, true);  //second argument is added as true since it was causing nonresponsiveness when method is called again before the sound ends
-	Ogre::Vector3 pos = ent->pos;
+	Ogre::Vector3 pos = ent->position;
 	setSoundPosition(this->sourceInfo[index].source, pos);
 }
 
-void SoundMgr::tick(double dtime){
+void SoundMgr::Tick(float dtime){
 
 	syncListenerToCamera();
         
         //selection sound
-		for(std::list<Entity381 *>::const_iterator it = engine->entityMgr->entities.begin(); it != engine->entityMgr->entities.end(); ++it){
+		for(std::vector<Entity381 *>::const_iterator it = engine->entityMgr->entities.begin(); it != engine->entityMgr->entities.end(); ++it){
            if ((*it)->isSelected && !(*it)->didSelectSoundPlay){
         	   playSelectionSound(*(*it));
         	   (*it)->didSelectSoundPlay = true;
@@ -280,7 +281,7 @@ void SoundMgr::tick(double dtime){
 //}
 
 bool SoundMgr::playSelectionSound(Entity381 et){
-        Ogre::Vector3 pos = et.pos;
+        Ogre::Vector3 pos = et.position;
         
         if (et.soundFile == ""){
             std::cout << "There is no registered selection sounds for this entity type" << std::endl;

@@ -5,13 +5,14 @@
 #include <OgreSceneManager.h>
 #include <OgreVector3.h>
 #include <Aspect.h>
-#include <SoundMgr.h>
+#include <Description.h>
+
 #include <Engine.h>
 
 class Entity381
 {
 public:
-  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity);
+  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool hasHat, bool isHat, Entity381* bfh);
   virtual ~Entity381();
 
   Engine *engine;
@@ -24,23 +25,31 @@ public:
   Ogre::Entity*    ogreEntity;
   float acceleration, turnRate, climbRate;
   float minSpeed, maxSpeed;
-  bool isFlying;
+  float collisionRadius;
 
   //dynamic data
   Ogre::Vector3 position;
   Ogre::Vector3 velocity;
+  bool isSelected;
   float desiredHeading, desiredSpeed, desiredAltitude;
   float heading, speed, altitude;
 
-  //Selection and sound
-  bool isSelected;
+  bool mIsHat;
+  bool hasHat;
+  Entity381* bodyForHat;
+
+  //sound data
   bool didSelectSoundPlay;
   std::string soundFile;
   bool playSound;
   unsigned int auioId;
 
-  bool mIsHat;
-  Entity381* bodyForHat;
+
+  bool isTarget;
+
+  Description entityDescription;
+  void setDescription(std::string type);
+  void setMeshWithDescription();
 
   std::vector<Aspect* > aspects;
 
@@ -67,7 +76,7 @@ public:
 
 class SpeedBoat: Entity381 {
 public:
-	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body);
+	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body, bool hasHat);
 	virtual ~SpeedBoat();
 
 };

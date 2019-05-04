@@ -25,4 +25,9 @@ float Clamp(float min, float max, float val){
 	return val;
 }
 
+float Distance(Ogre::Vector3 ptA, Ogre::Vector3 ptB)
+{
+  return sqrt(((ptB.x - ptA.x) * (ptB.x - ptA.x)) + ((ptB.z - ptA.z) * (ptB.z - ptA.z)));
+}
+
 

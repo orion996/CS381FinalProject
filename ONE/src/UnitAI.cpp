@@ -7,11 +7,14 @@
 
 #include <UnitAI.h>
 #include <Entity381.h>
+#include <GfxMgr.h>
+#include <InputMgr.h>
 
 
 UnitAI::UnitAI(Entity381* ent) : Aspect(ent)
 {
 //	srand(time(NULL));
+	this->camNode = entity->engine->gfxMgr->mCamera;
 }
 
 UnitAI::~UnitAI()
@@ -118,7 +121,9 @@ void UnitAI::Tick(float dt)
 	else if(commands.front()->type == "INTERCEPT")
 	{
 		//update the point to the target's position
-		commands.front()->point = commands.front()->target->position;
+		commands.front()->point.x = this->camNode->getRealPosition().x;
+		commands.front()->point.z = this->camNode->getRealPosition().z;
+		commands.front()->point.y = 0;
 
 		//update point bounds
 		commands.front()->lowerBound.x = commands.front()->point.x - boundConst;

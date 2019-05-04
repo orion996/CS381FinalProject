@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <Mgr.h>
-#include <SoundMgr.h>
 #include <Entity381.h>
 #include <Types381.h>
 
@@ -21,12 +20,14 @@ public:
 
   //Ogre::SceneManager *sceneMgr;
 
-  void CreateEntityOfTypeAtPosition(EntityTypes type, Ogre::Vector3 pos, bool isHat, Entity381* body);
+  void CreateEntityOfTypeAtPosition(EntityTypes type, Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat);
   void SelectNextEntity();
   void SelectEntity(int id);
   Entity381* GetEntityAt(int id);
 
   void Tick(float dt);
+
+  void DestroyEntity(int index);
 
 protected:
 
@@ -34,7 +35,7 @@ private:
   void CreateEntity(std::string meshfilename, Ogre::Vector3 pos);
   void CreateDDG51(Ogre::Vector3 pos);
   void CreateCarrier(Ogre::Vector3 pos);
-  void CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body);
+  void CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat);
   void CreateFrigate(Ogre::Vector3 pos);
   void CreateAlien(Ogre::Vector3 pos);
   void CreateBanshee(Ogre::Vector3 pos);
