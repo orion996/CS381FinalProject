@@ -1,4 +1,4 @@
-src/main.d: ../src/main.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h
+src/main.o: ../src/main.cpp \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h:

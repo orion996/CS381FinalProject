@@ -1,4 +1,4 @@
-src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
+src/GfxMgr.o: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
  /usr/local/include/OGRE/OgreConfig.h \
@@ -124,8 +124,8 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreRenderWindow.h \
  /usr/local/include/OGRE/OgreConfigFile.h \
  /usr/local/include/OGRE/OgreException.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
@@ -232,7 +232,7 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h
 
 /usr/local/include/OGRE/OgreEntity.h:
 
@@ -490,9 +490,9 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
 
 /usr/local/include/OGRE/OgreException.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -724,4 +724,4 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h:

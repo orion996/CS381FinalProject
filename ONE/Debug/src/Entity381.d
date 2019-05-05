@@ -1,5 +1,5 @@
-src/Entity381.d: ../src/Entity381.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+src/Entity381.o: ../src/Entity381.cpp \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -224,22 +224,22 @@ src/Entity381.d: ../src/Entity381.cpp \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics3D.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Aspect.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Description.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Physics2D.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Physics3D.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/UnitAI.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Types381.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -713,32 +713,32 @@ src/Entity381.d: ../src/Entity381.cpp \
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Aspect.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Description.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Physics2D.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics3D.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Physics3D.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/UnitAI.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/EntityMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Types381.h:

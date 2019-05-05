@@ -44,7 +44,7 @@ public:
 	void clearCommands();
 	void deleteCurrentCommand();
 
-	static const float boundConst = 10.0;
+	float boundConst = 10.0;
 
 	Ogre::Camera* camNode;
 };

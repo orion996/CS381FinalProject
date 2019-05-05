@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- exporter: blender2ogre 0.7.0 -->
-<!-- export_time: Fri, 26 Apr 2019 20:53:29 +0000 -->
+<!-- export_time: Sun, 05 May 2019 01:33:27 +0000 -->
 <scene author="dmitri" formatVersion="1.1" >
   <nodes >
-    <node name="Plane" >
-      <position x="-0.523336" y="-0.939885" z="0.302478" />
+    <node name="Sphere" >
+      <position x="0.479106" y="-0.160843" z="1.495087" />
       <rotation qw="1.000000" qx="0.000000" qy="0.000000" qz="0.000000" />
-      <scale x="1.000000" y="1.000000" z="1.000000" />
-      <entity meshFile="Plane.mesh" name="Plane" >
+      <scale x="0.450000" y="0.450000" z="0.450000" />
+      <entity meshFile="Sphere.mesh" name="Sphere" >
         <userData >
           <property data="1.0" name="mass" type="float" />
           <property data="1.0" name="mass_radius" type="float" />
@@ -53,10 +53,10 @@
   </nodes>
   <externals >
     <item type="material" >
-      <file name="Material.007" />
+      <file name="Material.005" />
     </item>
     <item type="material" >
-      <file name="Material.000" />
+      <file name="Material.007" />
     </item>
   </externals>
   <environment >

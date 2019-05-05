@@ -1,5 +1,5 @@
-src/Utils.d: ../src/Utils.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
+src/Utils.o: ../src/Utils.cpp \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Utils.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -15,7 +15,7 @@ src/Utils.d: ../src/Utils.cpp \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 

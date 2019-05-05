@@ -1,8 +1,8 @@
-src/GameMgr.d: ../src/GameMgr.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+src/GameMgr.o: ../src/GameMgr.cpp \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -125,11 +125,11 @@ src/GameMgr.d: ../src/GameMgr.cpp \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Aspect.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Description.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Types381.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GameMgr.h \
+ /home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
@@ -238,13 +238,13 @@ src/GameMgr.d: ../src/GameMgr.cpp \
  /usr/local/include/OGRE/Overlay/OgreOverlay.h \
  /usr/local/include/OGRE/OgreMeshManager.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/EntityMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Mgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
 
@@ -494,15 +494,15 @@ src/GameMgr.d: ../src/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Aspect.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Description.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/Types381.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GameMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+/home/dmitri/eclipse-workspace/FINAL/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
