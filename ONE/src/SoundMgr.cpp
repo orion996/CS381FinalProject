@@ -11,6 +11,7 @@
 #include <GfxMgr.h>
 #include <Entity381.h>
 #include <EntityMgr.h>
+#include <InputMgr.h>
 
 using namespace OgreSND;
 
@@ -101,7 +102,7 @@ void SoundMgr::initialize(void){
         }
 
 
-	unsigned int sid;
+	unsigned int sid =1;
         //background music
 	std::string filename = "SpyFunk.wav";
 	if (this->reserveAudio(filename, true, sid)){
@@ -110,16 +111,18 @@ void SoundMgr::initialize(void){
                 this->loadStartBackground();
         }
 	std::cout << "background music loaded" << std::endl;
-        
-        initWatercraftSounds();
-  
-        //filename = "data/watercraft/sounds/explosion.wav";
-        //default explosion sound for all entities
-        if (this->reserveAudio(filename, false, sid)){
-            battleSoundSource = sourceInfo[sid].source;
-            alSourcei(this->battleSoundSource, AL_REFERENCE_DISTANCE, 2000.0f);
-            alSourcei(this->battleSoundSource, AL_MAX_DISTANCE, 8000.0f);
+
+	releaseSourceIndex(sid);
+
+	//Gun stuff
+	unsigned int sid2 =2;
+	std::string filename2 = "GUN.wav";
+	if (this->reserveAudio(filename2, false, sid2)){
+		std::cout << "Gunshot Loaded" << std::endl;
+			gunshotSource = sourceInfo[sid2].source;
         }
+	std::cout << "Gunshot loaded" << std::endl;
+  
 
 	return;
 
@@ -252,111 +255,14 @@ void SoundMgr::Tick(float dtime){
 
 	syncListenerToCamera();
         
-        //selection sound
-		for(std::vector<Entity381 *>::const_iterator it = engine->entityMgr->entities.begin(); it != engine->entityMgr->entities.end(); ++it){
-           if ((*it)->isSelected && !(*it)->didSelectSoundPlay){
-        	   playSelectionSound(*(*it));
-        	   (*it)->didSelectSoundPlay = true;
-           }
-           else if (!(*it)->isSelected && (*it)->didSelectSoundPlay){
-        	   (*it)->didSelectSoundPlay = false;
-           }
-        }
+
 }
+
         
         //this was for moving sound but playing sound for all moving objects does not seem to be a good idea
         //copySoundState();
-        
-        
-//	tmpT += dtime;
-//	if(tmpT > 5.0 && !paused && tmpT < 6.0){
-//		this->pauseBackground();
-//		paused = true;
-//	}
-//	if(tmpT > 10.0 && paused){
-//		paused = false;
-//		this->resumeBackground();
-//	}
-//	return;
-//}
 
-bool SoundMgr::playSelectionSound(Entity381 et){
-        Ogre::Vector3 pos = et.position;
-        
-        if (et.soundFile == ""){
-            std::cout << "There is no registered selection sounds for this entity type" << std::endl;
-            return false; //there is no sound to play
-        }
-        this->playAudioSourceIndex(et.auioId);
-        setSoundPosition(sourceInfo[et.auioId].source, pos);
-        
-        return true;
-}
 
-/*bool SoundMgr::playEntityBornSound(FastEcslent::EntityType et, OgreGFX::GFXNode *gfxNode){
-        Ogre::Vector3 pos = gfxNode->node->getPosition();
-        
-        int sounds = 0;
-        int arrayIndex = 0;
-        for (int i = 0; i < soundPerEnt; i++){
-            if (creationSoundsDictionary[et][i] != -1)
-                sounds++;
-            else
-                break;
-        }
-        if (sounds == 0){
-            std::cout << "There is no registered new born sounds for this entity type" << std::endl;
-            return false; //there is no sound to play
-        }
-        else if (sounds == 1)
-            arrayIndex = 0;
-        else{
-            arrayIndex = rand() % sounds; //randomly choose
-        }
-        int sourceIndex = creationSoundsDictionary[et][arrayIndex];
-        this->playAudioSourceIndex(sourceIndex, true);
-        setSoundPosition(sourceInfo[sourceIndex].source, pos);
-        
-        return true;
-}
-
-bool SoundMgr::playExplosionSound(FastEcslent::EntityType et, OgreGFX::GFXNode *gfxNode){
-        Ogre::Vector3 pos = gfxNode->node->getPosition();
-        int sounds = 0;
-        int arrayIndex = 0;
-        for (int i = 0; i < soundPerEnt; i++){
-            if (battleSoundsDictionary[et][i] != -1)
-                sounds++;
-            else
-                break;
-        }
-        if (sounds == 0){
-            std::cout << "There is no registered battle sounds for this entity type" << std::endl;
-            return false; //there is no sound to play
-        }
-        else if (sounds == 1)
-            arrayIndex = 0;
-        else{
-            arrayIndex = rand() % sounds; //randomly choose
-        }
-        int sourceIndex = battleSoundsDictionary[et][arrayIndex];
-        this->playAudioSourceIndex(sourceIndex, true);
-        setSoundPosition(sourceInfo[sourceIndex].source, pos);
-        
-        return true;
-}
-
-bool SoundMgr::playExplosionSound(OgreGFX::GFXNode *gfxNode){
-        Ogre::Vector3 pos = gfxNode->node->getPosition();
-        
-        return false;
-
-        if (this->playAudio(battleSoundSource, true)){
-                return setSoundPosition(battleSoundSource, pos);
-        }
-        else
-            return false;
-}*/
 
 void SoundMgr::releaseLevel(void){
 	// release stuff loaded for this level
@@ -451,50 +357,6 @@ int SoundMgr::getEmptySourceIndex(){
 	return -1;
 }
 
-/*bool SoundMgr::registerCreate(FastEcslent::EntityType et, std::string filename){
-    unsigned int sid;
-    //check if that file is already assigned to a source
-    for (int j = 0; j < maxAudioSources; j++){
-        if (std::strcmp(sourceDictionary[j].c_str(), filename.c_str()) == 0){
-                int lastIndex = -1;
-                for (int i = 0; i < soundPerEnt; i++){
-                    if (this->creationSoundsDictionary[et][i] == -1){
-                        lastIndex = i;
-                        break;
-                    }
-                }
-                if (lastIndex == -1){ //all permitted number of sounds for this type are already assigned
-                    std::cout << "Could not register new sound, max allowed number per entity reached" << std::endl;
-                    return false;
-                }
-                this->creationSoundsDictionary[et][lastIndex] = j;
-                return true;
-        }
-    }
-    if (this->reserveAudio(filename, false, sid)){
-                int lastIndex = -1;
-                for (int i = 0; i < soundPerEnt; i++){
-                    if (this->creationSoundsDictionary[et][i] == -1){
-                        lastIndex = i;
-                        break;
-                    }
-                }
-                if (lastIndex == -1){ //all permitted number of sounds for this type are already assigned
-                    std::cout << "Could not register new sound, max allowed number per entity reached" << std::endl;
-                    return false;
-                }
-                this->creationSoundsDictionary[et][lastIndex] = sid;
-                alSourcei(this->sourceInfo[sid].source, AL_REFERENCE_DISTANCE, 2000.0f);
-                alSourcei(this->sourceInfo[sid].source, AL_MAX_DISTANCE, 8000.0f);
-                
-                sourceDictionary[sid] = filename;
-                return true;
-    }
-    else
-        return false;
-}
-
-*/
 bool SoundMgr::registerSelection(Entity381 et, std::string filename){
     unsigned int sid;
     if (this->reserveAudio(filename, false, sid)){
@@ -521,55 +383,7 @@ bool SoundMgr::registerSelection(Entity381 et, std::string filename){
         return false;
 }
 
-/*bool SoundMgr::registerBattleSound(FastEcslent::EntityType et, std::string filename){
-    unsigned int sid;
-    //check if that file is already assigned to a source
-    for (int j = 0; j < maxAudioSources; j++){
-        if (std::strcmp(sourceDictionary[j].c_str(), filename.c_str()) == 0){
-                int lastIndex = -1;
-                for (int i = 0; i < soundPerEnt; i++){
-                    if (this->battleSoundsDictionary[et][i] == -1){
-                        lastIndex = i;
-                        break;
-                    }
-                }
-                if (lastIndex == -1){ //all permitted number of sounds for this type are already assigned
-                    std::cout << "Could not register new sound, max allowed number per entity reached" << std::endl;
-                    return false;
-                }
-                this->battleSoundsDictionary[et][lastIndex] = j;
-                return true;
-        }
-    }
-    if (this->reserveAudio(filename, false, sid)){
-                int lastIndex = -1;
-                for (int i = 0; i < soundPerEnt; i++){
-                    if (this->battleSoundsDictionary[et][i] == -1){
-                        lastIndex = i;
-                        break;
-                    }
-                }
-                if (lastIndex == -1){ //all permitted number of sounds for this type are already assigned
-                    std::cout << "Could not register new sound, max allowed number per entity reached" << std::endl;
-                    return false;
-                }
-                
-                this->battleSoundsDictionary[et][lastIndex] = sid;
-                alSourcei(this->sourceInfo[sid].source, AL_REFERENCE_DISTANCE, 2000.0f);
-                alSourcei(this->sourceInfo[sid].source, AL_MAX_DISTANCE, 8000.0f);
-                
-                sourceDictionary[sid] = filename;
-                return true;
-    }
-    else
-        return false;
-}
 
-//specific for sound managers everywhere
-/**
- * Reserves a source name and binds it to a buffer. It returns status AND the index in sourcesInfo of this
- * sound's audioId
-  */
 bool SoundMgr::reserveAudio(std::string filename, bool loop, unsigned int &sourceInfoIndex){
 //bool SoundMgr::reserveAudio(std::string filename, bool loop){ //
 
@@ -719,18 +533,22 @@ bool SoundMgr::loadAudio(std::string filename, int index){
 	std::cout << "SoundManager Music file: " << fqfn << " is being readied" << std::endl;
 	if(fqfn == "")
 		return false;
-
+	//Good
 	this->bufferInfo[index].wave = WaveOpenFileForReading(filename.c_str());
 
 	if(!this->bufferInfo[index].wave){
 		std::cerr << "SoundMgr::loadAudio::ERROR: Cannot open wave file for reading" << std::endl;
 		return false;
 	}
+
 	int ret = WaveSeekFile(0, this->bufferInfo[index].wave);
 	if (ret) {
 		std::cerr << "SoundMgr::loadAudio::ERROR: Cannot seek" << std::endl;
 		return false;
 	}
+
+
+
 	char *tmpBuf = (char *) malloc(this->bufferInfo[index].wave->dataSize);
 	//this->backgroundBufferData = (char *) malloc(this->backgroundWaveInfo->dataSize);
 	if(!tmpBuf){
@@ -763,6 +581,7 @@ bool SoundMgr::loadAudio(std::string filename, int index){
 	this->bufferInfo[index].bufferFilename = filename;
 
 	return true;
+	std::cout << "does it get to the end"<< std::endl;
 }
 
 bool SoundMgr::loadStartBackground(){
@@ -838,6 +657,7 @@ bool SoundMgr::loadStartBackground(){
 
 // Returns true if we can play the sound. Rewinds sound if already playing and forceRestart is true,
 // false if error
+
 bool SoundMgr::playAudio(ALuint audioId, bool forceRestart ){
         if (!this->isEnabled)
                 return false;
@@ -863,6 +683,7 @@ bool SoundMgr::playAudio(ALuint audioId, bool forceRestart ){
 		return false;
 	return true;
 }
+
 
 bool SoundMgr::playAudio(ALuint audioId){
 	return playAudio(audioId, false);

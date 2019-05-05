@@ -21,6 +21,7 @@
 #include <Mgr.h>
 #include <Aspect.h>
 #include <UnitAI.h>
+#include <SoundMgr.h>
 
 class Engine;
 
@@ -57,8 +58,10 @@ public:
 	OgreBites::Label* mLabel2;
 	OgreBites::Label* mTitle;
 	OgreBites::Button* mButton;
+	OgreSND::SoundMgr* soundMgr;
 	bool bulletFired = false;
 	bool gameStarted = false;
+	bool Gunshot = true;
 
 	bool followMode;
 
