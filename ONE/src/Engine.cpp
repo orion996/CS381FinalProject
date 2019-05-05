@@ -89,5 +89,6 @@ void Engine::Cleanup(){
 	gfxMgr->Stop();
 	entityMgr->Stop();
 	gameMgr->Stop();
+	soundMgr->Stop();
 }
 

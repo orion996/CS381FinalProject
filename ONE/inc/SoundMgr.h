@@ -26,7 +26,7 @@
 
 #include <Engine.h>
 
-namespace OgreSND {
+/*namespace OgreSND {
     const int soundPerEnt = 3;      // max different sounds to randomly choose per entity
 	const int maxAudioBuffers = 63; // + 1 for background music
 	const int maxAudioSources = 15; // + 1 for background music
@@ -168,6 +168,6 @@ namespace OgreSND {
 
 
 }
-
+*/
 
 #endif /* SOUNDMANAGER_H_ */
