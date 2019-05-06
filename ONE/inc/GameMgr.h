@@ -31,6 +31,7 @@ public:
 
 	Ogre::SceneNode *cameraNode;
 	Ogre::Plane* plane;//(Ogre::Vector3::UNIT_Y, 0);
+	Ogre::Entity* gun;
 	Ogre::SceneNode* gunNode;
 
 };

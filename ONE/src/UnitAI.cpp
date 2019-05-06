@@ -112,6 +112,7 @@ void UnitAI::Tick(float dt)
 		{
 			entity->desiredSpeed = 0;
 			commands.pop_front();
+
 		}
 		else//if no, rotate entity towards the point and max speed
 		{
@@ -137,6 +138,8 @@ void UnitAI::Tick(float dt)
 
 		commands.front()->point.y = 0;
 
+		boundConst = 50;
+
 		//update point bounds
 		commands.front()->lowerBound.x = commands.front()->point.x - boundConst;
 		commands.front()->lowerBound.z = commands.front()->point.x - boundConst;
@@ -152,8 +155,7 @@ void UnitAI::Tick(float dt)
 						pos.x <= commands.front()->upperBound.x &&
 						pos.z <= commands.front()->upperBound.z)//if yes, stop moving and pop the command
 		{
-			entity->desiredSpeed = entity->speed = 0;
-			commands.pop_front();
+			entity->engine->inputMgr->loseSequence();
 		}
 		else//if no, rotate entity towards the point and max speed
 		{

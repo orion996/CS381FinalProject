@@ -115,7 +115,7 @@ void InputMgr::Tick(float dt){
 
 	mTrayMgr->refreshCursor();
 
-	if(timerStart && !lostGame)
+	if(timerStart && !lostGame && !isSpotted)
 	{
 		currentTime -= dt;
 		std::ostringstream strx;
@@ -128,6 +128,12 @@ void InputMgr::Tick(float dt){
 		{
 			loseSequence();
 		}
+	}
+
+	if(isSpotted)
+	{
+		Ogre::Vector3 tPos = engine->entityMgr->entities.at(0)->position;
+		engine->gfxMgr->mCamera->lookAt(tPos);
 	}
 
 	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
@@ -349,9 +355,10 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
 
 						//add a command that tell the target to follow the camera pos
-						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
+//						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
 						mLabel->setCaption("You've Been Spotted!");
-//						loseSequence();
+						isSpotted = true;
+						loseSequence();
 					}
 
 			}
@@ -444,6 +451,9 @@ void InputMgr::loseSequence()
 	mLabel->hide();
 	mLabel2->hide();
 	mTimer->hide();
+
+	engine->gameMgr->gunNode->removeAndDestroyAllChildren();
+	engine->gfxMgr->mSceneMgr->destroyMovableObject(engine->gameMgr->gun);
 
 	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
 	lostGame = true;

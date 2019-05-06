@@ -66,6 +66,7 @@ public:
 	bool bulletFired = false;
 	bool gameStarted = false;
 	bool timerStart = false;
+	bool isSpotted = false;
 
 	void loseSequence();
 	void winSequence();

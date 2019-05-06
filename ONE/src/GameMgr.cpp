@@ -40,7 +40,7 @@ void GameMgr::Init(){
 	  cameraNode->setPosition(0, 200, 500);
 	  cameraNode->attachObject(engine->gfxMgr->mCamera);
 
-	  Ogre::Entity* gun = engine->gfxMgr->mSceneMgr->createEntity("glock.mesh");
+	  gun = engine->gfxMgr->mSceneMgr->createEntity("glock.mesh");
 	  gunNode = cameraNode->createChildSceneNode();
 	  gunNode->attachObject(gun);
 	  gunNode->setPosition(20, -15, 10);
