@@ -252,7 +252,11 @@ src/Physics2D.d: ../src/Physics2D.cpp \
  /usr/include/OIS/OISInputManager.h /usr/include/OIS/OISFactoryCreator.h \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
- /usr/local/include/OGRE/SdkCameraMan.h
+ /usr/local/include/OGRE/SdkCameraMan.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
+ /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
+ /usr/include/AL/al.h /usr/include/AL/alc.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:
 
@@ -785,3 +789,15 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 /usr/include/OIS/OISForceFeedback.h:
 
 /usr/local/include/OGRE/SdkCameraMan.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+
+/usr/local/include/OGRE/OgreQuaternion.h:
+
+/usr/local/include/OGRE/OgreFrameListener.h:
+
+/usr/include/audio/wave.h:
+
+/usr/include/AL/al.h:
+
+/usr/include/AL/alc.h:

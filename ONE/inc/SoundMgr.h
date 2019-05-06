@@ -30,7 +30,7 @@ namespace OgreSND {
     const int soundPerEnt = 3;      // max different sounds to randomly choose per entity
 	const int maxAudioBuffers = 63; // + 1 for background music
 	const int maxAudioSources = 15; // + 1 for background music
-	const std::string backgroundMusicFilename = "SpyFunk.wav";
+	const std::string backgroundMusicFilename = "assets/Sounds/SpyFunk.wav";
 	///home/sushil/workspace/fe1/
 
 
@@ -47,6 +47,9 @@ namespace OgreSND {
 
 	class SoundMgr : public Mgr , public Ogre::FrameListener {
 	private:
+
+		SourceInfo sourceInfo[maxAudioSources];
+		BufferInfo  bufferInfo[maxAudioBuffers];
 		//OgreGFX::GraphicsInteractionManager *gim;
 		ALCdevice  *device;
 		ALCcontext *context;
@@ -56,8 +59,7 @@ namespace OgreSND {
 
 		//Buffers and Sources indices
 
-		SourceInfo sourceInfo[maxAudioSources];
-		BufferInfo  bufferInfo[maxAudioBuffers];
+		int getBufferId(std::string filename);
 
 		//Special treatment for background source and buffer
 		ALuint backgroundMusicBuffer, backgroundMusicSource;
@@ -66,7 +68,7 @@ namespace OgreSND {
 		//unsigned int scvId;
                 //unsigned int soundDictionary[FastEcslent::NENTITYTYPES];
                 std::vector <std::string> sourceDictionary;
-                
+
                 //First dimension holds types and inner one holds different sounds for that type
                 //int creationSoundsDictionary[FastEcslent::NENTITYTYPES][soundPerEnt];
                 int selectionSoundsDictionary[6][soundPerEnt];
@@ -74,11 +76,10 @@ namespace OgreSND {
 
 		//other formats with time
 		std::string getFQFNFromFilename(std::string filename);
-		int getBufferId(std::string filename);
 		//int firstIndexNotInUse(bool inUse[], int size);
 		int getEmptySourceIndex();
 		bool resetSource(ALuint sid);
-                
+
                 bool isEnabled;
 
 	public:
@@ -95,7 +96,7 @@ namespace OgreSND {
                 
                 void enable();
                 void disable();
-
+        ALuint gunshotSource;
 	    virtual bool frameRenderingQueued(const Ogre::FrameEvent& evt);
 	    virtual bool frameStarted(const Ogre::FrameEvent& evt);
 	    virtual bool frameEnded(const Ogre::FrameEvent& evt);

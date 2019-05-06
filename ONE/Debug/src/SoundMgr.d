@@ -238,7 +238,26 @@ src/SoundMgr.d: ../src/SoundMgr.cpp \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h \
+ /usr/include/OIS/OISEvents.h /usr/include/OIS/OISInputManager.h \
+ /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISMouse.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainGroup.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainPrerequisites.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrain.h \
+ /usr/local/include/OGRE/OgreAxisAlignedBox.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h \
+ /usr/local/include/OGRE/OgrePixelFormat.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainLayerBlendMap.h \
+ /usr/local/include/OGRE/OgreDataStream.h \
+ /usr/local/include/OGRE/OgreWorkQueue.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainLodManager.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h \
+ /usr/local/include/OGRE/Terrain/OgreTerrain.h \
+ /usr/local/include/OGRE/SdkCameraMan.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
+ /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
 
@@ -743,3 +762,47 @@ src/SoundMgr.d: ../src/SoundMgr.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:
+
+/usr/include/OIS/OISEvents.h:
+
+/usr/include/OIS/OISInputManager.h:
+
+/usr/include/OIS/OISKeyboard.h:
+
+/usr/include/OIS/OISMouse.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainGroup.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainPrerequisites.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrain.h:
+
+/usr/local/include/OGRE/OgreAxisAlignedBox.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h:
+
+/usr/local/include/OGRE/OgrePixelFormat.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainLayerBlendMap.h:
+
+/usr/local/include/OGRE/OgreDataStream.h:
+
+/usr/local/include/OGRE/OgreWorkQueue.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainLodManager.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h:
+
+/usr/local/include/OGRE/Terrain/OgreTerrain.h:
+
+/usr/local/include/OGRE/SdkCameraMan.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
+
+/usr/local/include/OGRE/OgreNode.h:
+
+/usr/local/include/OGRE/OgreCamera.h:

@@ -22,6 +22,7 @@
 #include <Aspect.h>
 #include <UnitAI.h>
 #include <string>
+#include <SoundMgr.h>
 
 class Engine;
 
@@ -63,6 +64,7 @@ public:
 	double currentTime;
 	double maxTime;
 	OgreBites::Button* mButton;
+	OgreSND::SoundMgr* soundMgr;
 	bool bulletFired = false;
 	bool gameStarted = false;
 	bool timerStart = false;
@@ -71,6 +73,7 @@ public:
 	void loseSequence();
 	void winSequence();
 
+	bool Gunshot = true;
 
 	bool followMode;
 

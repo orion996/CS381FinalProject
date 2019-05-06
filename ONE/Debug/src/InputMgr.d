@@ -247,10 +247,14 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
+ /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
+ /usr/include/AL/al.h /usr/include/AL/alc.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h
 
@@ -780,13 +784,25 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/OgreCamera.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+
+/usr/local/include/OGRE/OgreQuaternion.h:
+
+/usr/local/include/OGRE/OgreFrameListener.h:
+
+/usr/include/audio/wave.h:
+
+/usr/include/AL/al.h:
+
+/usr/include/AL/alc.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
 

@@ -10,8 +10,11 @@
 #include <InputMgr.h>
 #include <EntityMgr.h>
 #include <GameMgr.h>
+#include <SoundMgr.h>
 
 #include <Utils.h>
+
+using namespace OgreSND;
 
 InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 
@@ -30,6 +33,7 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	followMode = false;
 	maxTime = 60.0;
 	currentTime = 0;
+	soundMgr = 0;
 }
 
 InputMgr::~InputMgr() {
@@ -367,7 +371,12 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 		mLabel2->setCaption("Bullets: 0/1");
 		bulletFired = true;
+		if(bulletFired = true && Gunshot == true)
+		{
+			engine->soundMgr->playAudio(engine->soundMgr->gunshotSource, false);
+		}
 
+		Gunshot = false;
 		lmbDown = true;
 	}
 
