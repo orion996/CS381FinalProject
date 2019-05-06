@@ -115,7 +115,7 @@ void InputMgr::Tick(float dt){
 
 	mTrayMgr->refreshCursor();
 
-	if(timerStart && !lostGame && !isSpotted)
+	if(timerStart && !lostGame && !isSpotted && !winGame)
 	{
 		currentTime -= dt;
 		std::ostringstream strx;
@@ -152,10 +152,10 @@ void InputMgr::UpdateCamera(float dt){
 
 	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame && !winGame)
 		  dirVec.z -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_S) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_S) && !lostGame && !winGame)
 		  dirVec.z += move;
 
 //	  if (mKeyboard->isKeyDown(OIS::KC_T))
@@ -164,10 +164,10 @@ void InputMgr::UpdateCamera(float dt){
 //	  if (mKeyboard->isKeyDown(OIS::KC_G))
 //		  dirVec.y -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_A) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_A) && !lostGame && !winGame)
 		  dirVec.x -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_D) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_D) && !lostGame && !winGame)
 		  dirVec.x += move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
@@ -320,7 +320,7 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 						engine->entityMgr->DestroyEntity(0);
 
-						//TODO Add win function
+						winSequence();
 						mLabel->setCaption("Target Eliminated");
 					}
 					else if((engine->entityMgr->GetEntityAt(iter - 1)->isTarget) && (engine->entityMgr->GetEntityAt(iter)->mIsHat))
@@ -457,4 +457,23 @@ void InputMgr::loseSequence()
 
 	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
 	lostGame = true;
+}
+
+void InputMgr::winSequence()
+{
+	mTrayMgr->removeWidgetFromTray("Objective");
+	mTrayMgr->removeWidgetFromTray("BCount");
+	mTrayMgr->removeWidgetFromTray("Timer");
+	mTrayMgr->removeWidgetFromTray("TDesc");
+
+	mTextBox->hide();
+	mLabel->hide();
+	mLabel2->hide();
+	mTimer->hide();
+
+	engine->gameMgr->gunNode->removeAndDestroyAllChildren();
+	engine->gfxMgr->mSceneMgr->destroyMovableObject(engine->gameMgr->gun);
+
+	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "win", "You Win!", 750);
+	winGame = true;
 }

@@ -77,6 +77,7 @@ public:
 	bool lmbDown;
 	bool rmbDown;
 	bool lostGame = false;
+	bool winGame = false;
 
 	void Init();
 	void Stop();
