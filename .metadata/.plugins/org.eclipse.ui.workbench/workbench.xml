@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="19" version="2.0">
+<workbench progressCount="25" version="2.0">
 <workbenchAdvisor/>
 <window height="743" maximized="true" width="1018" x="65" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -44,6 +44,7 @@
 <part id="11"/>
 <part id="12"/>
 <part id="13"/>
+<part id="14"/>
 </presentation>
 </folder>
 </info>
@@ -64,9 +65,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/inc/EntityMgr.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="886" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics2D.cpp" partName="Physics2D.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Physics2D.cpp" title="Physics2D.cpp" tooltip="ONE/src/Physics2D.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Physics2D.cpp" partName="Physics2D.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Physics2D.cpp" title="Physics2D.cpp" tooltip="ONE/src/Physics2D.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Physics2D.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2050" selectionTopPixel="857"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Utils.cpp" partName="Utils.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Utils.cpp" title="Utils.cpp" tooltip="ONE/src/Utils.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Utils.cpp"/>
@@ -94,7 +95,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Engine.cpp" partName="Engine.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Engine.cpp" title="Engine.cpp" tooltip="ONE/src/Engine.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Engine.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1568" selectionTopPixel="587"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="662" selectionTopPixel="379"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="GameMgr.cpp" partName="GameMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/GameMgr.cpp" title="GameMgr.cpp" tooltip="ONE/src/GameMgr.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/GameMgr.cpp"/>
@@ -103,6 +104,10 @@
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" partName="Aspect.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Aspect.cpp" title="Aspect.cpp" tooltip="ONE/src/Aspect.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Aspect.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1012" selectionTopPixel="107"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="SoundMgr.cpp" partName="SoundMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/SoundMgr.cpp" title="SoundMgr.cpp" tooltip="ONE/src/SoundMgr.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/SoundMgr.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2374" selectionTopPixel="1067"/>
 </editor>
 </editors>
 <views>
@@ -115,9 +120,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (13 items)"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (7 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -455,16 +458,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Physics2D.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Aspect.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/GameMgr.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Engine.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/SoundMgr.cpp"/>
 </editors>
-<item historyLabel="Entity381.cpp" index="0">
-<position info="not_deleted" x="717" y="0"/>
-</item>
-<item historyLabel="Physics2D.cpp" index="1">
-<position info="not_deleted" x="2699" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="0">
-<position info="not_deleted" x="717" y="0"/>
-</item>
 <item historyLabel="Physics2D.cpp" index="1">
 <position/>
 </item>
@@ -603,8 +599,17 @@
 <item historyLabel="UnitAI.cpp" index="2">
 <position info="not_deleted" x="2668" y="0"/>
 </item>
-<item active="true" historyLabel="Physics2D.cpp" index="1">
+<item historyLabel="Physics2D.cpp" index="1">
 <position info="not_deleted" x="3060" y="0"/>
+</item>
+<item historyLabel="Physics2D.cpp" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Engine.cpp" index="6">
+<position info="not_deleted" x="662" y="0"/>
+</item>
+<item active="true" historyLabel="SoundMgr.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -627,6 +632,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SoundMgr.cpp" tooltip="ONE/src/SoundMgr.cpp">
+<persistable path="/ONE/src/SoundMgr.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Aspect.cpp" tooltip="ONE/src/Aspect.cpp">
 <persistable path="/ONE/src/Aspect.cpp"/>
 </file>
@@ -668,9 +676,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="EntityMgr.cpp" tooltip="ONE/src/EntityMgr.cpp">
 <persistable path="/ONE/src/EntityMgr.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Description.h" tooltip="ONE/inc/Description.h">
-<persistable path="/ONE/inc/Description.h"/>
 </file>
 </mruList>
 </workbench>

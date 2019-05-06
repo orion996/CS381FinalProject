@@ -1,7 +1,7 @@
 src/InputMgr.d: ../src/InputMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
- /usr/local/include/OGRE/OgreVector3.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
  /usr/local/include/OGRE/OgreConfig.h \
@@ -13,28 +13,18 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgreHeaderSuffix.h \
  /usr/local/include/OGRE/OgreMemorySTLAllocator.h \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
- /usr/local/include/OGRE/OgreMath.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
- /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
- /usr/local/include/OGRE/OgreEntity.h \
- /usr/local/include/OGRE/OgreCommon.h \
+ /usr/local/include/OGRE/OgreSingleton.h \
  /usr/local/include/OGRE/OgreString.h \
- /usr/local/include/OGRE/OgreMovableObject.h \
- /usr/local/include/OGRE/OgreRenderQueue.h \
- /usr/local/include/OGRE/OgreIteratorWrappers.h \
- /usr/local/include/OGRE/OgreIteratorWrapper.h \
- /usr/local/include/OGRE/OgreIteratorRange.h \
- /usr/local/include/OGRE/OgreAxisAlignedBox.h \
- /usr/local/include/OGRE/OgreVector3.h \
- /usr/local/include/OGRE/OgreMatrix4.h \
+ /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
+ /usr/local/include/OGRE/OgreSceneManager.h \
+ /usr/local/include/OGRE/OgreSceneNode.h \
+ /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
+ /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
+ /usr/local/include/OGRE/OgreMatrix4.h \
  /usr/local/include/OGRE/OgreVector4.h \
- /usr/local/include/OGRE/OgrePlane.h /usr/local/include/OGRE/OgreSphere.h \
- /usr/local/include/OGRE/OgreShadowCaster.h \
+ /usr/local/include/OGRE/OgrePlane.h \
  /usr/local/include/OGRE/OgreRenderable.h \
  /usr/local/include/OGRE/OgreRenderOperation.h \
  /usr/local/include/OGRE/OgreVertexIndexData.h \
@@ -53,6 +43,9 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h \
+ /usr/local/include/OGRE/OgreIteratorWrappers.h \
+ /usr/local/include/OGRE/OgreIteratorWrapper.h \
+ /usr/local/include/OGRE/OgreIteratorRange.h \
  /usr/local/include/OGRE/OgreBlendMode.h \
  /usr/local/include/OGRE/OgreGpuProgram.h \
  /usr/local/include/OGRE/OgreSerializer.h \
@@ -60,19 +53,14 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgreGpuProgramParams.h \
  /usr/local/include/OGRE/OgreAny.h \
  /usr/local/include/OGRE/OgreUserObjectBindings.h \
- /usr/local/include/OGRE/OgreFactoryObj.h \
- /usr/local/include/OGRE/OgreAnimable.h \
- /usr/local/include/OGRE/OgreVector2.h \
- /usr/local/include/OGRE/OgreStringVector.h \
- /usr/local/include/OGRE/OgreHardwareBufferManager.h \
- /usr/local/include/OGRE/OgreSingleton.h \
- /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
- /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
- /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
  /usr/local/include/OGRE/OgreMesh.h \
+ /usr/local/include/OGRE/OgreAxisAlignedBox.h \
  /usr/local/include/OGRE/OgreVertexBoneAssignment.h \
  /usr/local/include/OGRE/OgreSkeleton.h \
+ /usr/local/include/OGRE/OgreStringVector.h \
  /usr/local/include/OGRE/OgreAnimation.h \
+ /usr/local/include/OGRE/OgreAnimable.h \
+ /usr/local/include/OGRE/OgreVector2.h \
  /usr/local/include/OGRE/OgreAnimationTrack.h \
  /usr/local/include/OGRE/OgreSimpleSpline.h \
  /usr/local/include/OGRE/OgreRotationalSpline.h \
@@ -80,16 +68,15 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgrePose.h \
  /usr/local/include/OGRE/OgreAnimationState.h \
  /usr/local/include/OGRE/OgreController.h \
- /usr/local/include/OGRE/OgreResourceGroupManager.h \
- /usr/local/include/OGRE/OgreArchive.h \
- /usr/local/include/OGRE/OgreSceneManager.h \
- /usr/local/include/OGRE/OgreSceneNode.h \
- /usr/local/include/OGRE/OgreNode.h \
  /usr/local/include/OGRE/OgreSceneQuery.h \
- /usr/local/include/OGRE/OgreRay.h \
+ /usr/local/include/OGRE/OgreSphere.h /usr/local/include/OGRE/OgreRay.h \
  /usr/local/include/OGRE/OgrePlaneBoundedVolume.h \
  /usr/local/include/OGRE/OgreAutoParamDataSource.h \
  /usr/local/include/OGRE/OgreLight.h \
+ /usr/local/include/OGRE/OgreMovableObject.h \
+ /usr/local/include/OGRE/OgreRenderQueue.h \
+ /usr/local/include/OGRE/OgreShadowCaster.h \
+ /usr/local/include/OGRE/OgreFactoryObj.h \
  /usr/local/include/OGRE/OgreShadowCameraSetup.h \
  /usr/local/include/OGRE/OgreMovablePlane.h \
  /usr/local/include/OGRE/OgreRenderQueueSortingGrouping.h \
@@ -106,6 +93,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgreRadixSort.h \
  /usr/local/include/OGRE/OgreRectangle2D.h \
  /usr/local/include/OGRE/OgreSimpleRenderable.h \
+ /usr/local/include/OGRE/OgreResourceGroupManager.h \
+ /usr/local/include/OGRE/OgreArchive.h \
  /usr/local/include/OGRE/OgreShadowTextureManager.h \
  /usr/local/include/OGRE/OgreCamera.h \
  /usr/local/include/OGRE/OgreFrustum.h \
@@ -129,12 +118,6 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
- /usr/local/include/OGRE/OgreRoot.h \
- /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
- /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/OgreLodStrategyManager.h \
  /usr/local/include/OGRE/OgreLodStrategy.h \
  /usr/local/include/OGRE/OgreWorkQueue.h \
@@ -147,6 +130,10 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/OgreControllerManager.h \
  /usr/local/include/OGRE/OgrePredefinedControllers.h \
  /usr/local/include/OGRE/OgreEntity.h \
+ /usr/local/include/OGRE/OgreHardwareBufferManager.h \
+ /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
+ /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
+ /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
  /usr/local/include/OGRE/OgreGpuProgramManager.h \
  /usr/local/include/OGRE/OgreHardwarePixelBuffer.h \
  /usr/local/include/OGRE/OgreHardwareOcclusionQuery.h \
@@ -237,6 +224,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
+ /usr/local/include/OGRE/OgreVector3.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h \
  /usr/include/OIS/OISEvents.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISMouse.h \
@@ -244,6 +233,7 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/Terrain/OgreTerrainPrerequisites.h \
  /usr/local/include/OGRE/Terrain/OgreTerrain.h \
  /usr/local/include/OGRE/OgreAxisAlignedBox.h \
+ /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h \
  /usr/local/include/OGRE/OgrePixelFormat.h \
  /usr/local/include/OGRE/Terrain/OgreTerrainLayerBlendMap.h \
@@ -253,18 +243,22 @@ src/InputMgr.d: ../src/InputMgr.cpp \
  /usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h \
  /usr/local/include/OGRE/Terrain/OgreTerrain.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+ /usr/local/include/OGRE/OgreEntity.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
 
-/usr/local/include/OGRE/OgreVector3.h:
+/usr/local/include/OGRE/OgreRoot.h:
 
 /usr/local/include/OGRE/OgrePrerequisites.h:
 
@@ -288,55 +282,33 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/OgreMemoryNedPooling.h:
 
+/usr/local/include/OGRE/OgreSingleton.h:
+
+/usr/local/include/OGRE/OgreString.h:
+
+/usr/local/include/OGRE/OgreSceneManagerEnumerator.h:
+
+/usr/local/include/OGRE/OgreSceneManager.h:
+
+/usr/local/include/OGRE/OgreSceneNode.h:
+
+/usr/local/include/OGRE/OgreNode.h:
+
+/usr/local/include/OGRE/OgreCommon.h:
+
+/usr/local/include/OGRE/OgreMatrix3.h:
+
+/usr/local/include/OGRE/OgreVector3.h:
+
 /usr/local/include/OGRE/OgreMath.h:
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/usr/local/include/OGRE/OgreQuaternion.h:
-
-/usr/local/include/OGRE/OgreFrameListener.h:
-
-/usr/include/audio/wave.h:
-
-/usr/include/AL/al.h:
-
-/usr/include/AL/alc.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
-
-/usr/local/include/OGRE/OgreEntity.h:
-
-/usr/local/include/OGRE/OgreCommon.h:
-
-/usr/local/include/OGRE/OgreString.h:
-
-/usr/local/include/OGRE/OgreMovableObject.h:
-
-/usr/local/include/OGRE/OgreRenderQueue.h:
-
-/usr/local/include/OGRE/OgreIteratorWrappers.h:
-
-/usr/local/include/OGRE/OgreIteratorWrapper.h:
-
-/usr/local/include/OGRE/OgreIteratorRange.h:
-
-/usr/local/include/OGRE/OgreAxisAlignedBox.h:
-
-/usr/local/include/OGRE/OgreVector3.h:
-
 /usr/local/include/OGRE/OgreMatrix4.h:
-
-/usr/local/include/OGRE/OgreMatrix3.h:
 
 /usr/local/include/OGRE/OgreVector4.h:
 
 /usr/local/include/OGRE/OgrePlane.h:
-
-/usr/local/include/OGRE/OgreSphere.h:
-
-/usr/local/include/OGRE/OgreShadowCaster.h:
 
 /usr/local/include/OGRE/OgreRenderable.h:
 
@@ -374,6 +346,12 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h:
 
+/usr/local/include/OGRE/OgreIteratorWrappers.h:
+
+/usr/local/include/OGRE/OgreIteratorWrapper.h:
+
+/usr/local/include/OGRE/OgreIteratorRange.h:
+
 /usr/local/include/OGRE/OgreBlendMode.h:
 
 /usr/local/include/OGRE/OgreGpuProgram.h:
@@ -388,31 +366,21 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/OgreUserObjectBindings.h:
 
-/usr/local/include/OGRE/OgreFactoryObj.h:
-
-/usr/local/include/OGRE/OgreAnimable.h:
-
-/usr/local/include/OGRE/OgreVector2.h:
-
-/usr/local/include/OGRE/OgreStringVector.h:
-
-/usr/local/include/OGRE/OgreHardwareBufferManager.h:
-
-/usr/local/include/OGRE/OgreSingleton.h:
-
-/usr/local/include/OGRE/OgreHardwareCounterBuffer.h:
-
-/usr/local/include/OGRE/OgreHardwareUniformBuffer.h:
-
-/usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
-
 /usr/local/include/OGRE/OgreMesh.h:
+
+/usr/local/include/OGRE/OgreAxisAlignedBox.h:
 
 /usr/local/include/OGRE/OgreVertexBoneAssignment.h:
 
 /usr/local/include/OGRE/OgreSkeleton.h:
 
+/usr/local/include/OGRE/OgreStringVector.h:
+
 /usr/local/include/OGRE/OgreAnimation.h:
+
+/usr/local/include/OGRE/OgreAnimable.h:
+
+/usr/local/include/OGRE/OgreVector2.h:
 
 /usr/local/include/OGRE/OgreAnimationTrack.h:
 
@@ -428,17 +396,9 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/OgreController.h:
 
-/usr/local/include/OGRE/OgreResourceGroupManager.h:
-
-/usr/local/include/OGRE/OgreArchive.h:
-
-/usr/local/include/OGRE/OgreSceneManager.h:
-
-/usr/local/include/OGRE/OgreSceneNode.h:
-
-/usr/local/include/OGRE/OgreNode.h:
-
 /usr/local/include/OGRE/OgreSceneQuery.h:
+
+/usr/local/include/OGRE/OgreSphere.h:
 
 /usr/local/include/OGRE/OgreRay.h:
 
@@ -447,6 +407,14 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /usr/local/include/OGRE/OgreAutoParamDataSource.h:
 
 /usr/local/include/OGRE/OgreLight.h:
+
+/usr/local/include/OGRE/OgreMovableObject.h:
+
+/usr/local/include/OGRE/OgreRenderQueue.h:
+
+/usr/local/include/OGRE/OgreShadowCaster.h:
+
+/usr/local/include/OGRE/OgreFactoryObj.h:
 
 /usr/local/include/OGRE/OgreShadowCameraSetup.h:
 
@@ -479,6 +447,10 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /usr/local/include/OGRE/OgreRectangle2D.h:
 
 /usr/local/include/OGRE/OgreSimpleRenderable.h:
+
+/usr/local/include/OGRE/OgreResourceGroupManager.h:
+
+/usr/local/include/OGRE/OgreArchive.h:
 
 /usr/local/include/OGRE/OgreShadowTextureManager.h:
 
@@ -526,18 +498,6 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
-
-/usr/local/include/OGRE/OgreRoot.h:
-
-/usr/local/include/OGRE/OgreSceneManagerEnumerator.h:
-
-/usr/local/include/OGRE/OgreSceneManager.h:
-
 /usr/local/include/OGRE/OgreLodStrategyManager.h:
 
 /usr/local/include/OGRE/OgreLodStrategy.h:
@@ -563,6 +523,14 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /usr/local/include/OGRE/OgrePredefinedControllers.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
+
+/usr/local/include/OGRE/OgreHardwareBufferManager.h:
+
+/usr/local/include/OGRE/OgreHardwareCounterBuffer.h:
+
+/usr/local/include/OGRE/OgreHardwareUniformBuffer.h:
+
+/usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
 
 /usr/local/include/OGRE/OgreGpuProgramManager.h:
 
@@ -760,6 +728,10 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/include/OIS/OISForceFeedback.h:
 
+/usr/local/include/OGRE/OgreVector3.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:
 
 /usr/include/OIS/OISEvents.h:
@@ -777,6 +749,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /usr/local/include/OGRE/Terrain/OgreTerrain.h:
 
 /usr/local/include/OGRE/OgreAxisAlignedBox.h:
+
+/usr/local/include/OGRE/OgreSceneManager.h:
 
 /usr/local/include/OGRE/Terrain/OgreTerrainMaterialGenerator.h:
 
@@ -796,6 +770,8 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 
 /usr/local/include/OGRE/SdkCameraMan.h:
 
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
@@ -805,6 +781,12 @@ src/InputMgr.d: ../src/InputMgr.cpp \
 /usr/local/include/OGRE/OgreCamera.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+
+/usr/local/include/OGRE/OgreEntity.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
 

@@ -72,7 +72,9 @@ public:
 	void buttonHit(OgreBites::Button *b);
 
 	float keyboardTimer;
-	const float keyTime = 0.2f;
+
+	float keyTime = 0.2f;
+
 	float deltaDesiredSpeed, deltaDesiredHeading, deltaDesiredAltitude;
 	void UpdateCamera(float dt);
 	void UpdateVelocityAndSelection(float dt);

@@ -399,6 +399,6 @@ void InputMgr::buttonHit(OgreBites::Button *b)
 	    mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
 	    mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
 
-	    engine->gameMgr->cameraNode->setPosition(0, 20, 0);
+	    engine->gameMgr->cameraNode->setPosition(0, 30, 0);
 	}
 }

@@ -85,7 +85,7 @@ void GfxMgr::Init(){
   mCamera = mSceneMgr->createCamera("MainCam");
   mCamera->setPosition(0, 0, 80);
   mCamera->lookAt(0, 0, -300);
-  mCamera->setNearClipDistance(5);
+  mCamera->setNearClipDistance(0.1);
 
   Ogre::Viewport* vp = mWindow->addViewport(mCamera);
   vp->setBackgroundColour(Ogre::ColourValue(0, 0, 0));

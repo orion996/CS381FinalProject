@@ -1,7 +1,9 @@
 src/GameMgr.d: ../src/GameMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
- /usr/local/include/OGRE/OgreVector3.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+ /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
  /usr/local/include/OGRE/OgreConfig.h \
@@ -13,14 +15,6 @@ src/GameMgr.d: ../src/GameMgr.cpp \
  /usr/local/include/OGRE/OgreHeaderSuffix.h \
  /usr/local/include/OGRE/OgreMemorySTLAllocator.h \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
- /usr/local/include/OGRE/OgreMath.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
- /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
- /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreString.h \
  /usr/local/include/OGRE/OgreMovableObject.h \
@@ -29,7 +23,8 @@ src/GameMgr.d: ../src/GameMgr.cpp \
  /usr/local/include/OGRE/OgreIteratorWrapper.h \
  /usr/local/include/OGRE/OgreIteratorRange.h \
  /usr/local/include/OGRE/OgreAxisAlignedBox.h \
- /usr/local/include/OGRE/OgreVector3.h \
+ /usr/local/include/OGRE/OgreVector3.h /usr/local/include/OGRE/OgreMath.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreMatrix4.h \
  /usr/local/include/OGRE/OgreMatrix3.h \
  /usr/local/include/OGRE/OgreVector4.h \
@@ -129,9 +124,9 @@ src/GameMgr.d: ../src/GameMgr.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
+ /usr/local/include/OGRE/OgreVector3.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
@@ -245,9 +240,13 @@ src/GameMgr.d: ../src/GameMgr.cpp \
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
 
-/usr/local/include/OGRE/OgreVector3.h:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+
+/usr/local/include/OGRE/OgreEntity.h:
 
 /usr/local/include/OGRE/OgrePrerequisites.h:
 
@@ -271,26 +270,6 @@ src/GameMgr.d: ../src/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreMemoryNedPooling.h:
 
-/usr/local/include/OGRE/OgreMath.h:
-
-/usr/local/include/OGRE/OgreQuaternion.h:
-
-/usr/local/include/OGRE/OgreQuaternion.h:
-
-/usr/local/include/OGRE/OgreFrameListener.h:
-
-/usr/include/audio/wave.h:
-
-/usr/include/AL/al.h:
-
-/usr/include/AL/alc.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
-
-/usr/local/include/OGRE/OgreEntity.h:
-
 /usr/local/include/OGRE/OgreCommon.h:
 
 /usr/local/include/OGRE/OgreString.h:
@@ -308,6 +287,10 @@ src/GameMgr.d: ../src/GameMgr.cpp \
 /usr/local/include/OGRE/OgreAxisAlignedBox.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
+
+/usr/local/include/OGRE/OgreMath.h:
+
+/usr/local/include/OGRE/OgreQuaternion.h:
 
 /usr/local/include/OGRE/OgreMatrix4.h:
 
@@ -509,11 +492,11 @@ src/GameMgr.d: ../src/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
+/usr/local/include/OGRE/OgreVector3.h:
+
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
 

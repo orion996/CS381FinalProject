@@ -125,12 +125,7 @@ src/Aspect.d: ../src/Aspect.cpp \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
- /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
 
@@ -387,17 +382,3 @@ src/Aspect.d: ../src/Aspect.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
-
-/usr/local/include/OGRE/OgreQuaternion.h:
-
-/usr/local/include/OGRE/OgreFrameListener.h:
-
-/usr/include/audio/wave.h:
-
-/usr/include/AL/al.h:
-
-/usr/include/AL/alc.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:

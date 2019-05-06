@@ -127,10 +127,6 @@ src/EntityMgr.d: ../src/EntityMgr.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
- /usr/local/include/OGRE/OgreQuaternion.h \
- /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
- /usr/include/AL/al.h /usr/include/AL/alc.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
@@ -498,18 +494,6 @@ src/EntityMgr.d: ../src/EntityMgr.cpp \
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
-
-/usr/local/include/OGRE/OgreQuaternion.h:
-
-/usr/local/include/OGRE/OgreFrameListener.h:
-
-/usr/include/audio/wave.h:
-
-/usr/include/AL/al.h:
-
-/usr/include/AL/alc.h:
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
 
