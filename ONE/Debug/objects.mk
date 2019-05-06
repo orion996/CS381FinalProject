@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lOgreMain -lOgreOverlay -lOIS
+LIBS := -lOgreMain -lopenal -laudio -lOgreOverlay -lOIS
 

@@ -46,7 +46,7 @@ void Renderable::Tick(float dt){
 
 	//bounding boxes are rendered so...
 	if(entity->isSelected)
-		entity->sceneNode->showBoundingBox(true);
+		entity->sceneNode->showBoundingBox(false);
 	else
 		entity->sceneNode->showBoundingBox(false); //or we could do this in the entity mgr every time tab is pressed....
 

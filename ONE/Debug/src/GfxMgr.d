@@ -125,6 +125,15 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreConfigFile.h \
  /usr/local/include/OGRE/OgreException.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
+ /usr/local/include/OGRE/OgreVector3.h \
+ /usr/local/include/OGRE/OgreQuaternion.h \
+ /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
+ /usr/include/AL/al.h /usr/include/AL/alc.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
@@ -230,9 +239,7 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
  /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISJoyStick.h \
  /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
- /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
- /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h
+ /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h
 
 /usr/local/include/OGRE/OgreEntity.h:
 
@@ -492,6 +499,28 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
 
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+
+/usr/local/include/OGRE/OgreVector3.h:
+
+/usr/local/include/OGRE/OgreQuaternion.h:
+
+/usr/local/include/OGRE/OgreFrameListener.h:
+
+/usr/include/audio/wave.h:
+
+/usr/include/AL/al.h:
+
+/usr/include/AL/alc.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
@@ -721,7 +750,3 @@ src/GfxMgr.d: ../src/GfxMgr.cpp /usr/local/include/OGRE/OgreEntity.h \
 /usr/include/OIS/OISEffect.h:
 
 /usr/include/OIS/OISForceFeedback.h:
-
-/usr/local/include/OGRE/OgreVector3.h:
-
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:

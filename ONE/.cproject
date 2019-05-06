@@ -25,6 +25,8 @@
 								<option id="gnu.cpp.compiler.exe.debug.option.debugging.level.1570526828" name="Debug Level" superClass="gnu.cpp.compiler.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.341425403" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="/usr/local/include/OGRE"/>
+									<listOptionValue builtIn="false" value="/usr/include/audio"/>
+									<listOptionValue builtIn="false" value="/usr/include/AL"/>
 									<listOptionValue builtIn="false" value="/usr/local/lib/cegui-0.8"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="/usr/local/include/OGRE/Overlay"/>
@@ -41,6 +43,8 @@
 							<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.142116349" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
 								<option id="gnu.cpp.link.option.libs.1711473117" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="OgreMain"/>
+									<listOptionValue builtIn="false" value="openal"/>
+									<listOptionValue builtIn="false" value="audio"/>
 									<listOptionValue builtIn="false" value="OgreOverlay"/>
 									<listOptionValue builtIn="false" value="OIS"/>
 								</option>

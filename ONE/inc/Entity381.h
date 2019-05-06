@@ -38,6 +38,12 @@ public:
   bool hasHat;
   Entity381* bodyForHat;
 
+  //sound data
+  bool didSelectSoundPlay;
+  std::string soundFile;
+  bool playSound;
+  unsigned int auioId;
+
   bool isTarget;
 
   Description entityDescription;

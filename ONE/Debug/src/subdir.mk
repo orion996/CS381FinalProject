@@ -14,6 +14,7 @@ CPP_SRCS += \
 ../src/Mgr.cpp \
 ../src/Physics2D.cpp \
 ../src/Physics3D.cpp \
+../src/SoundMgr.cpp \
 ../src/UnitAI.cpp \
 ../src/Utils.cpp \
 ../src/main.cpp 
@@ -29,6 +30,7 @@ OBJS += \
 ./src/Mgr.o \
 ./src/Physics2D.o \
 ./src/Physics3D.o \
+./src/SoundMgr.o \
 ./src/UnitAI.o \
 ./src/Utils.o \
 ./src/main.o 
@@ -44,6 +46,7 @@ CPP_DEPS += \
 ./src/Mgr.d \
 ./src/Physics2D.d \
 ./src/Physics3D.d \
+./src/SoundMgr.d \
 ./src/UnitAI.d \
 ./src/Utils.d \
 ./src/main.d 
@@ -53,7 +56,7 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I/usr/local/include/OGRE -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

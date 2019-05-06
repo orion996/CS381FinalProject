@@ -5,17 +5,21 @@
  *      Author: sushil
  */
 
+
 #include <Engine.h>
 #include <EntityMgr.h>
 #include <GameMgr.h>
 #include <GfxMgr.h>
 #include <InputMgr.h>
+#include <SoundMgr.h>
+
 
 Engine::Engine() {
 	entityMgr = 0; //null
 	gameMgr   = 0;
 	gfxMgr    = 0;
 	inputMgr  = 0;
+	soundMgr  = 0;
 
 	keepRunning = true;
 	gameStart = false;
@@ -31,18 +35,23 @@ void Engine::Init(){
 	gameMgr   = new GameMgr(this);
 	gfxMgr    = new GfxMgr(this);
 	inputMgr  = new InputMgr(this);
+	soundMgr  = new OgreSND::SoundMgr(this);
 
 	//--------------------------------------------------------------
 	entityMgr->Init();
 	gfxMgr->Init();
 	gameMgr->Init();
 	inputMgr->Init(); // must initialize AFTER gfx manager
+	soundMgr->Init();
+
 
 	//--------------------------------------------------------------
 	entityMgr->LoadLevel();
 	gfxMgr->LoadLevel();
 	inputMgr->LoadLevel();
 	gameMgr->LoadLevel();
+	soundMgr->LoadLevel();
+
 
 	gameStart = true;
 }
@@ -53,6 +62,7 @@ void Engine::TickAll(float dt){
 	inputMgr->Tick(dt);
 	entityMgr->Tick(dt);
 	gameMgr->Tick(dt);
+	soundMgr->Tick(dt);
 }
 
 
@@ -81,5 +91,6 @@ void Engine::Cleanup(){
 	gfxMgr->Stop();
 	entityMgr->Stop();
 	gameMgr->Stop();
+	soundMgr->Stop();
 }
 

@@ -1,7 +1,7 @@
 #ifndef __Aspect_h_
 #define __Aspect_h_
 
-#include<OgreVector3.h>
+#include <OgreVector3.h>
 
 class Entity381;    //Forward declaration of the Entity381 class
 

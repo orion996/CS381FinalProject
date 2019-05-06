@@ -80,6 +80,10 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->climbRate = 0;
 	this->altitude = this->desiredAltitude = 0;
 
+	//Sound
+	this->playSound = false;
+	this->soundFile = "Boat-Sound.wav";
+	this->auioId = 0;
 
 
 }
