@@ -58,8 +58,6 @@ public:
 	OgreBites::Label* mLabel2;
 	OgreBites::Label* mTitle;
 	OgreBites::Label* mTimer;
-	OgreBites::Label* mLoseScreen;
-
 	double currentTime;
 	double maxTime;
 	OgreBites::Button* mButton;
@@ -75,7 +73,6 @@ public:
 
 	bool lmbDown;
 	bool rmbDown;
-	bool lostGame = false;
 
 	void Init();
 	void Stop();

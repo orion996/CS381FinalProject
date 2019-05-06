@@ -1,4 +1,4 @@
-20:28:22 **** Incremental Build of configuration Debug for project ONE ****
+20:44:46 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 Building file: ../src/InputMgr.cpp
 Invoking: GCC C++ Compiler
@@ -9,26 +9,29 @@ In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Inpu
   float boundConst = 10.0;
                      ^
 In file included from ../src/InputMgr.cpp:10:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:64:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:66:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:65:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:67:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool gameStarted = false;
                      ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:66:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:68:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool timerStart = false;
                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:82:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:78:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool lostGame = false;
+                  ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:88:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   float keyTime = 0.2f;
                   ^
 ../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
-../src/InputMgr.cpp:330:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/InputMgr.cpp:335:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
         for(int i = 2; i < engine->entityMgr->entities.size(); i++)
                          ^
-../src/InputMgr.cpp:337:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/InputMgr.cpp:342:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
         for(int i = 1; i < engine->entityMgr->entities.size(); i++)
                          ^
-../src/InputMgr.cpp:288:25: warning: unused variable ‘ms’ [-Wunused-variable]
+../src/InputMgr.cpp:293:25: warning: unused variable ‘ms’ [-Wunused-variable]
   const OIS::MouseState &ms = mMouse->getMouseState();
                          ^
 Finished building: ../src/InputMgr.cpp
@@ -39,5 +42,5 @@ g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/
 Finished building target: ONE
  
 
-20:28:27 Build Finished (took 4s.422ms)
+20:44:50 Build Finished (took 4s.252ms)
 

@@ -28,7 +28,7 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	mTrayMgr = 0;
 	lmbDown = rmbDown = false;
 	followMode = false;
-	maxTime = 60.0;
+	maxTime = 5.0;
 	currentTime = 0;
 }
 
@@ -115,7 +115,7 @@ void InputMgr::Tick(float dt){
 
 	mTrayMgr->refreshCursor();
 
-	if(timerStart && !lostGame)
+	if(timerStart)
 	{
 		currentTime -= dt;
 		std::ostringstream strx;
@@ -445,6 +445,6 @@ void InputMgr::loseSequence()
 	mLabel2->hide();
 	mTimer->hide();
 
-	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
+	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "Lose", "You Lose!", 750);
 	lostGame = true;
 }

@@ -115,11 +115,11 @@ void InputMgr::Tick(float dt){
 
 	mTrayMgr->refreshCursor();
 
-	if(timerStart && !lostGame)
+	if(timerStart)
 	{
 		currentTime -= dt;
 		std::ostringstream strx;
-		strx << currentTime;
+		strx << currentTime/60;
 		std::string time = strx.str();
 		mTimer->setCaption(time);
 //		std::cout << time << std::endl;
@@ -445,6 +445,6 @@ void InputMgr::loseSequence()
 	mLabel2->hide();
 	mTimer->hide();
 
-	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
+	mTitle = mTrayMgr->createLabel(OgreBites::TL_CENTER, "Lose", "You Lose!", 750);
 	lostGame = true;
 }

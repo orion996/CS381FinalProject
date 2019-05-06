@@ -28,7 +28,7 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	mTrayMgr = 0;
 	lmbDown = rmbDown = false;
 	followMode = false;
-	maxTime = 60.0;
+	maxTime = 120.0;
 	currentTime = 0;
 }
 
@@ -115,7 +115,7 @@ void InputMgr::Tick(float dt){
 
 	mTrayMgr->refreshCursor();
 
-	if(timerStart && !lostGame)
+	if(timerStart)
 	{
 		currentTime -= dt;
 		std::ostringstream strx;
@@ -126,7 +126,7 @@ void InputMgr::Tick(float dt){
 
 		if(currentTime <= 0.0)
 		{
-			loseSequence();
+			//lose
 		}
 	}
 
@@ -146,10 +146,10 @@ void InputMgr::UpdateCamera(float dt){
 
 	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_W))
 		  dirVec.z -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_S) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_S))
 		  dirVec.z += move;
 
 //	  if (mKeyboard->isKeyDown(OIS::KC_T))
@@ -158,16 +158,16 @@ void InputMgr::UpdateCamera(float dt){
 //	  if (mKeyboard->isKeyDown(OIS::KC_G))
 //		  dirVec.y -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_A) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_A))
 		  dirVec.x -= move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_D) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_D))
 		  dirVec.x += move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_Q))
 		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
 
-	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame)
+	  if (mKeyboard->isKeyDown(OIS::KC_E))
 	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
 
 //	  if (mKeyboard->isKeyDown(OIS::KC_R))
@@ -351,7 +351,6 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						//add a command that tell the target to follow the camera pos
 						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
 						mLabel->setCaption("You've Been Spotted!");
-//						loseSequence();
 					}
 
 			}
@@ -445,6 +444,6 @@ void InputMgr::loseSequence()
 	mLabel2->hide();
 	mTimer->hide();
 
-	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
+	mTitle = mTrayMgr->createLabel(OgreBites::TL_CENTER, "Lose", "You Lose!", 750);
 	lostGame = true;
 }
