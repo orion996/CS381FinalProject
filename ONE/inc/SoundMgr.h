@@ -26,11 +26,11 @@
 
 #include <Engine.h>
 
-/*namespace OgreSND {
+namespace OgreSND {
     const int soundPerEnt = 3;      // max different sounds to randomly choose per entity
 	const int maxAudioBuffers = 63; // + 1 for background music
 	const int maxAudioSources = 15; // + 1 for background music
-	const std::string backgroundMusicFilename = "backgroundMusic.wav";
+	const std::string backgroundMusicFilename = "SpyFunk.wav";
 	///home/sushil/workspace/fe1/
 
 
@@ -168,6 +168,6 @@
 
 
 }
-*/
+
 
 #endif /* SOUNDMANAGER_H_ */

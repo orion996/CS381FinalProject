@@ -103,7 +103,7 @@ void SoundMgr::initialize(void){
 
 	unsigned int sid;
         //background music
-	std::string filename = "backgroundMusic.wav";
+	std::string filename = "SpyFunk.wav";
 	if (this->reserveAudio(filename, true, sid)){
 		std::cout << "background music loaded" << std::endl;
                 backgroundMusicSource = sourceInfo[sid].source;
