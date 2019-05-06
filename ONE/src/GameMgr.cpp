@@ -71,7 +71,7 @@ void GameMgr::MakeEntities(){
 	Ogre::Vector3 pos = Ogre::Vector3(0,20,0);
 	int index = 0;
 
-	for(int i = 0 ; i < 20 ; i++)
+	for(int i = 0 ; i < 30 ; i++)
 	{
 		float hatTemp = rand()%2;
 		bool hat = false;

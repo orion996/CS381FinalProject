@@ -36,6 +36,7 @@ public:
 
   bool mIsHat;
   bool hasHat;
+  bool destroyed = false;
   Entity381* bodyForHat;
 
   //sound data

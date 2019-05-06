@@ -1,14 +1,20 @@
-22:44:03 **** Incremental Build of configuration Debug for project ONE ****
+23:15:32 **** Incremental Build of configuration Debug for project ONE ****
 make all 
-Building file: ../src/Engine.cpp
+Building file: ../src/InputMgr.cpp
 Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Engine.d" -MT"src/Engine.d" -o "src/Engine.o" "../src/Engine.cpp"
+g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/InputMgr.d" -MT"src/InputMgr.d" -o "src/InputMgr.o" "../src/InputMgr.cpp"
 In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:23:0,
-                 from ../src/Engine.cpp:13:
+                 from ../src/InputMgr.cpp:10:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:47:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   float boundConst = 15.0;
                      ^
-In file included from ../src/Engine.cpp:13:0:
+In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:25:0,
+                 from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:25,
+                 from ../src/InputMgr.cpp:10:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:39:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   bool destroyed = false;
+                    ^
+In file included from ../src/InputMgr.cpp:10:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:68:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   bool bulletFired = false;
                      ^
@@ -33,70 +39,119 @@ In file included from ../src/Engine.cpp:13:0:
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:93:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
   float keyTime = 0.2f;
                   ^
-Finished building: ../src/Engine.cpp
- 
-Building file: ../src/SoundMgr.cpp
-Invoking: GCC C++ Compiler
-g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/SoundMgr.d" -MT"src/SoundMgr.d" -o "src/SoundMgr.o" "../src/SoundMgr.cpp"
-In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:23:0,
-                 from ../src/SoundMgr.cpp:14:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:47:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  float boundConst = 15.0;
-                     ^
-In file included from ../src/SoundMgr.cpp:14:0:
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:68:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool bulletFired = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:69:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool gameStarted = false;
-                     ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:70:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool timerStart = false;
-                    ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:71:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool isSpotted = false;
-                   ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:76:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool Gunshot = true;
-                 ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:82:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool lostGame = false;
-                  ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:83:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  bool winGame = false;
-                 ^
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:93:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
-  float keyTime = 0.2f;
-                  ^
-../src/SoundMgr.cpp: In member function ‘void OgreSND::SoundMgr::attachSelectedNodeToSoundIndex(Entity381*, unsigned int)’:
-../src/SoundMgr.cpp:246:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-         if (index == -1) //if there is no defined sound for the specified type, don't do anything
-                   ^
-../src/SoundMgr.cpp: In member function ‘bool OgreSND::SoundMgr::loadAudio(std::__cxx11::string, int)’:
-../src/SoundMgr.cpp:585:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/SoundMgr.cpp: In member function ‘bool OgreSND::SoundMgr::isAudioPlaying(ALuint)’:
-../src/SoundMgr.cpp:730:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-../src/SoundMgr.cpp: At global scope:
-../src/SoundMgr.cpp:241:15: warning: ‘tmpT’ defined but not used [-Wunused-variable]
- double static tmpT = 0.0;
-               ^
-../src/SoundMgr.cpp:242:13: warning: ‘paused’ defined but not used [-Wunused-variable]
- bool static paused = false;
-             ^
-Finished building: ../src/SoundMgr.cpp
+../src/InputMgr.cpp: In member function ‘virtual bool InputMgr::mousePressed(const OIS::MouseEvent&, OIS::MouseButtonID)’:
+../src/InputMgr.cpp:346:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+                         ^
+../src/InputMgr.cpp:354:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+                         ^
+../src/InputMgr.cpp:304:25: warning: unused variable ‘ms’ [-Wunused-variable]
+  const OIS::MouseState &ms = mMouse->getMouseState();
+                         ^
+Finished building: ../src/InputMgr.cpp
  
 Building target: ONE
 Invoking: GCC C++ Linker
 g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/SoundMgr.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lopenal -laudio -lOgreOverlay -lOIS
 Finished building target: ONE
  
-22:44:11 **** Incremental Build of configuration Debug for project ONE ****
+23:15:37 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.
-22:44:48 **** Incremental Build of configuration Debug for project ONE ****
+23:15:43 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+23:15:52 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+23:16:02 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+make: Nothing to be done for 'all'.
+23:16:59 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/GameMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
+In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:6:0,
+                 from ../src/GameMgr.cpp:10:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:39:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   bool destroyed = false;
+                    ^
+../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
+../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
+                 ^
+Finished building: ../src/GameMgr.cpp
+ 
+Building file: ../src/UnitAI.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/UnitAI.d" -MT"src/UnitAI.d" -o "src/UnitAI.o" "../src/UnitAI.cpp"
+In file included from ../src/UnitAI.cpp:8:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:47:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float boundConst = 15.0;
+                     ^
+In file included from ../src/UnitAI.cpp:9:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:39:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   bool destroyed = false;
+                    ^
+In file included from ../src/UnitAI.cpp:11:0:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:68:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool bulletFired = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:69:21: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool gameStarted = false;
+                     ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:70:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool timerStart = false;
+                    ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:71:19: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool isSpotted = false;
+                   ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:76:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool Gunshot = true;
+                 ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:82:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool lostGame = false;
+                  ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:83:17: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  bool winGame = false;
+                 ^
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:93:18: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+  float keyTime = 0.2f;
+                  ^
+../src/UnitAI.cpp: In member function ‘virtual void UnitAI::Tick(float)’:
+../src/UnitAI.cpp:130:20: warning: unused variable ‘parentNode’ [-Wunused-variable]
+   Ogre::SceneNode* parentNode = entity->engine->gameMgr->gunNode->getParentSceneNode();
+                    ^
+Finished building: ../src/UnitAI.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/SoundMgr.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lopenal -laudio -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+23:17:27 **** Incremental Build of configuration Debug for project ONE ****
+make all 
+Building file: ../src/GameMgr.cpp
+Invoking: GCC C++ Compiler
+g++ -I/usr/local/include/OGRE -I/usr/include/audio -I/usr/include/AL -I/usr/local/lib/cegui-0.8 -I"/home/orion996/Documents/CS/CS381FinalProject/ONE/inc" -I/usr/local/include/OGRE/Overlay -I/usr/include/OIS -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/GameMgr.d" -MT"src/GameMgr.d" -o "src/GameMgr.o" "../src/GameMgr.cpp"
+In file included from /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:6:0,
+                 from ../src/GameMgr.cpp:10:
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:39:20: warning: non-static data member initializers only available with -std=c++11 or -std=gnu++11
+   bool destroyed = false;
+                    ^
+../src/GameMgr.cpp: In member function ‘void GameMgr::MakeEntities()’:
+../src/GameMgr.cpp:110:17: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)
+                 ^
+Finished building: ../src/GameMgr.cpp
+ 
+Building target: ONE
+Invoking: GCC C++ Linker
+g++ -L/usr/local/lib -L/usr/lib/x86_64-linux-gnu -o "ONE"  ./src/Aspect.o ./src/Engine.o ./src/Entity381.o ./src/EntityMgr.o ./src/GameMgr.o ./src/GfxMgr.o ./src/InputMgr.o ./src/Mgr.o ./src/Physics2D.o ./src/Physics3D.o ./src/SoundMgr.o ./src/UnitAI.o ./src/Utils.o ./src/main.o   -lOgreMain -lopenal -laudio -lOgreOverlay -lOIS
+Finished building target: ONE
+ 
+23:17:50 **** Incremental Build of configuration Debug for project ONE ****
 make all 
 make: Nothing to be done for 'all'.

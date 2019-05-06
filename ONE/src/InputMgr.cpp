@@ -345,19 +345,21 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						{
 							for(int i = 2; i < engine->entityMgr->entities.size(); i++)
 							{
-								engine->entityMgr->DestroyEntity(i);
+								if(engine->entityMgr->entities.at(i))
+									engine->entityMgr->DestroyEntity(i);
 							}
 						}
 						else
 						{
 							for(int i = 1; i < engine->entityMgr->entities.size(); i++)
 							{
-								engine->entityMgr->DestroyEntity(i);
+								if(engine->entityMgr->entities.at(i))
+									engine->entityMgr->DestroyEntity(i);
 							}
 						}
 
 
-						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
+//						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
 
 						//add a command that tell the target to follow the camera pos
 //						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
@@ -365,13 +367,13 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 						isSpotted = true;
 						loseSequence();
 					}
-
+					break;
 			}
 		}
 
 		mLabel2->setCaption("Bullets: 0/1");
 		bulletFired = true;
-		if(bulletFired = true && Gunshot == true)
+		if(bulletFired == true && Gunshot == true)
 		{
 			engine->soundMgr->playAudio(engine->soundMgr->gunshotSource, false);
 		}

@@ -1,0 +1,493 @@
+/*
+ * InputMgr.cpp
+ *
+ *  Created on: Mar 4, 2018
+ *      Author: sushil
+ */
+
+#include <Engine.h>
+#include <GfxMgr.h>
+#include <InputMgr.h>
+#include <EntityMgr.h>
+#include <GameMgr.h>
+#include <SoundMgr.h>
+
+#include <Utils.h>
+
+using namespace OgreSND;
+
+InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
+
+	this->mInputMgr = 0;
+	this->mKeyboard = 0;
+	this->mMouse = 0;
+	this->keyboardTimer = keyTime;
+	deltaDesiredSpeed = 3.0f;
+	deltaDesiredHeading = 3.0f;
+	deltaDesiredAltitude = 3.0f;
+	mMoveableFound = false;
+	mRayScnQuery = 0;
+	mCameraMan = 0;
+	mTrayMgr = 0;
+	lmbDown = rmbDown = false;
+	followMode = false;
+	maxTime = 60.0;
+	currentTime = 0;
+	soundMgr = 0;
+}
+
+InputMgr::~InputMgr() {
+
+}
+
+void InputMgr::Init(){
+
+	  OIS::ParamList pl;
+	  size_t windowHandle = 0;
+	  std::ostringstream windowHandleStr;
+
+	  engine->gfxMgr->mWindow->getCustomAttribute("WINDOW", &windowHandle);
+	  windowHandleStr << windowHandle;
+	  pl.insert(std::make_pair(std::string("WINDOW"), windowHandleStr.str()));
+
+	  #if defined OIS_WIN32_PLATFORM
+	  	  pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_FOREGROUND" )));
+	  	  pl.insert(std::make_pair(std::string("w32_mouse"), std::string("DISCL_NONEXCLUSIVE")));
+	  	  pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_FOREGROUND")));
+	  	  pl.insert(std::make_pair(std::string("w32_keyboard"), std::string("DISCL_NONEXCLUSIVE")));
+	  #elif defined OIS_LINUX_PLATFORM
+	  	  pl.insert(std::make_pair(std::string("x11_mouse_grab"), std::string("false")));
+	  	  pl.insert(std::make_pair(std::string("x11_mouse_hide"), std::string("false")));
+	  	  pl.insert(std::make_pair(std::string("x11_keyboard_grab"), std::string("false")));
+	  	  pl.insert(std::make_pair(std::string("XAutoRepeatOn"), std::string("true")));
+	  #endif
+	  mInputMgr = OIS::InputManager::createInputSystem(pl);
+
+	  mKeyboard = static_cast<OIS::Keyboard*>(
+	    mInputMgr->createInputObject(OIS::OISKeyboard, false));
+	  mMouse = static_cast<OIS::Mouse*>(
+	    mInputMgr->createInputObject(OIS::OISMouse, true));
+
+	  int left, top;
+	  unsigned int width, height, depth;
+
+	  engine->gfxMgr->mWindow->getMetrics(width, height, depth, left, top);
+	  const OIS::MouseState &ms = mMouse->getMouseState();
+	  ms.width = width;
+	  ms.height = height;
+
+	  mMouse->setEventCallback(this);
+	  mKeyboard->setEventCallback(this);
+
+	  mCameraMan = new OgreBites::SdkCameraMan(
+			  engine->gfxMgr->mCamera);
+
+	   mInputContext.mKeyboard = mKeyboard;
+	   mInputContext.mMouse = mMouse;
+
+	   mTrayMgr = new OgreBites::SdkTrayManager("InterfaceName",
+			   engine->gfxMgr->mWindow,
+			   mInputContext,
+			   this);
+//	   mTrayMgr->hideCursor(); //DO NOT HIDE CURSOR!!!
+
+	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
+
+	   mTitle = mTrayMgr->createTextBox(OgreBites::TL_CENTER, "Title",
+			   "ONE\n\nInstructions:\nWASD - Move\nQE-Rotate Camera\nLeft Click - Shoot\nESC - Quit", 750, 150);
+
+	   mTrayMgr->createButton(OgreBites::TL_CENTER, "MyButton", "Play", 250);
+//	   mTrayMgr->showBackdrop("Texture/Flooring");
+
+}
+
+
+
+void InputMgr::Stop(){
+	if(mInputMgr){
+		mInputMgr->destroyInputObject(mMouse);
+		mInputMgr->destroyInputObject(mKeyboard);
+
+		OIS::InputManager::destroyInputSystem(mInputMgr);
+		mInputMgr = 0;
+   	}
+}
+
+void InputMgr::Tick(float dt){
+	//Must capture both every tick for buffered input to work
+	mMouse->capture();
+	mKeyboard->capture();
+
+	mTrayMgr->refreshCursor();
+
+	if(timerStart && !lostGame && !isSpotted && !winGame)
+	{
+		currentTime -= dt;
+		std::ostringstream strx;
+		strx << currentTime;
+		std::string time = strx.str();
+		mTimer->setCaption("Time: " + time);
+//		std::cout << time << std::endl;
+
+		if(currentTime <= 0.0)
+		{
+			loseSequence();
+		}
+	}
+
+	if(isSpotted)
+	{
+		Ogre::Vector3 tPos = engine->entityMgr->entities.at(0)->position;
+		engine->gfxMgr->mCamera->lookAt(tPos);
+	}
+
+	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
+		engine->keepRunning = false;
+	}
+
+//	mTrayMgr->frameRenderingQueued(fe);
+
+	UpdateCamera(dt);
+	UpdateVelocityAndSelection(dt);
+}
+
+void InputMgr::UpdateCamera(float dt){
+	float move = 100.0f;
+	float rotate = 0.1f;
+
+	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame && !winGame)
+		  dirVec.z -= move;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_S) && !lostGame && !winGame)
+		  dirVec.z += move;
+
+//	  if (mKeyboard->isKeyDown(OIS::KC_T))
+//		  dirVec.y += move;
+//
+//	  if (mKeyboard->isKeyDown(OIS::KC_G))
+//		  dirVec.y -= move;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_A) && !lostGame && !winGame)
+		  dirVec.x -= move;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_D) && !lostGame && !winGame)
+		  dirVec.x += move;
+
+	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
+		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame)
+	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
+
+//	  if (mKeyboard->isKeyDown(OIS::KC_R))
+//	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(5 * rotate));
+//
+//	  if (mKeyboard->isKeyDown(OIS::KC_F))
+//	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(-5 * rotate));
+//
+//	  if (mKeyboard->isKeyDown(OIS::KC_Z))
+//	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(5 * rotate));
+//
+//	  if (mKeyboard->isKeyDown(OIS::KC_X))
+//	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(-5 * rotate));
+
+	  //follow Mode
+//	  keyboardTimer -= dt;
+//	  if ((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_C))
+//	  {
+//		  keyboardTimer = .5;
+//
+//		  if(!followMode)
+//			  followMode = true;
+//		  else if(followMode)
+//		  {
+//			  engine->gfxMgr->mCamera->setPosition(0, 0, 80);
+//			  engine->gfxMgr->mCamera->lookAt(0, 0, -300);
+//			  followMode = false;
+//		  }
+//
+//	  }
+
+	  if(followMode)
+	  {
+//		  std::cout << "*** Following ***" << std::endl;
+		  const Ogre::Vector3 pos = engine->entityMgr->selectedEntity->position;
+		  engine->gfxMgr->mCamera->setPosition(pos.x, pos.y, pos.z + 80);
+		  engine->gfxMgr->mCamera->lookAt(pos.x, pos.y, pos.z);
+	  }
+
+	  else if(!followMode)
+		  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
+}
+
+void InputMgr::UpdateVelocityAndSelection(float dt){
+//	keyboardTimer -= dt;
+//	UnitAI* uai = (UnitAI*) engine->entityMgr->selectedEntity->aspects.at(1);
+//
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_I)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredSpeed += deltaDesiredSpeed;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_K)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredSpeed -= deltaDesiredSpeed;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_J)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredHeading -= deltaDesiredHeading;
+//		uai->clearCommands();
+//	//turn left is decreasing degrees, turn right is increasing degrees because increasing degrees gives us the +ive Z axis
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_L)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredHeading += deltaDesiredHeading;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_U))
+//	{
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredAltitude += deltaDesiredAltitude;
+//		uai->clearCommands();
+//	}
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_O))
+//	{
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->desiredAltitude -= deltaDesiredAltitude;
+//		uai->clearCommands();
+//	}
+//	engine->entityMgr->selectedEntity->desiredHeading = FixAngle(engine->entityMgr->selectedEntity->desiredHeading);
+//	engine->entityMgr->selectedEntity->desiredAltitude = FixAngle(engine->entityMgr->selectedEntity->desiredAltitude);
+//
+//	//Set velocity to zero....
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_SPACE)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->selectedEntity->velocity = Ogre::Vector3::ZERO;
+//		engine->entityMgr->selectedEntity->desiredSpeed = engine->entityMgr->selectedEntity->speed = 0;
+//		engine->entityMgr->selectedEntity->desiredHeading = engine->entityMgr->selectedEntity->heading;
+//		uai->clearCommands();
+//	}
+//
+//	//tab handling
+//	if((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_TAB)){
+//		keyboardTimer = keyTime;
+//		engine->entityMgr->SelectNextEntity();
+//	}
+}
+
+void InputMgr::LoadLevel(){
+
+}
+
+bool InputMgr::keyPressed(const OIS::KeyEvent& ke){
+
+	return true;
+}
+
+bool InputMgr::keyReleased(const OIS::KeyEvent& ke){
+	return true;
+}
+
+bool InputMgr::mouseMoved(const OIS::MouseEvent& me){
+
+	mTrayMgr->injectMouseMove(me);
+//	if(rmbDown) mCameraMan->injectMouseMove(me);
+
+	return true;
+}
+
+bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
+
+	const OIS::MouseState &ms = mMouse->getMouseState();
+
+	if(mid == OIS::MB_Left && lmbDown == false && !bulletFired && gameStarted)
+	{
+		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+
+		std::vector<Entity381*> ent = engine->entityMgr->entities;
+
+		for(unsigned int iter = 0 ; iter < engine->entityMgr->entities.size() ; iter++)
+		{
+			std::pair<bool, float> result = mouseRay.intersects(
+					engine->entityMgr->entities[iter]->sceneNode->_getWorldAABB());
+
+			if(result.first)
+			{
+					if((engine->entityMgr->GetEntityAt(iter)->isTarget) && !(engine->entityMgr->GetEntityAt(iter)->mIsHat))
+					{
+						//win
+						std::cout << " *** Target Hit! ***" << std::endl;
+						if(engine->entityMgr->GetEntityAt(1)->mIsHat)
+							engine->entityMgr->DestroyEntity(1);
+
+						engine->entityMgr->DestroyEntity(0);
+
+						winSequence();
+						mLabel->setCaption("Target Eliminated");
+					}
+					else if((engine->entityMgr->GetEntityAt(iter - 1)->isTarget) && (engine->entityMgr->GetEntityAt(iter)->mIsHat))
+					{
+						//win
+						std::cout << " *** Target Hit 2! ***" << std::endl;
+						engine->entityMgr->DestroyEntity(iter);
+						engine->entityMgr->DestroyEntity(iter - 1);
+						mLabel->setCaption("Target Eliminated");
+					}
+					else
+					{
+						//target comes after you
+						std::cout << " *** you Lose ***" << std::endl;
+
+						if(engine->entityMgr->GetEntityAt(1)->mIsHat)
+						{
+							for(int i = 2; i < engine->entityMgr->entities.size(); i++)
+							{
+								if(engine->entityMgr->entities.at(i))
+									engine->entityMgr->DestroyEntity(i);
+							}
+						}
+						else
+						{
+							for(int i = 1; i < engine->entityMgr->entities.size(); i++)
+							{
+								if(engine->entityMgr->entities.at(i))
+									engine->entityMgr->DestroyEntity(i);
+							}
+						}
+
+
+						UnitAI* uai = (UnitAI*)engine->entityMgr->GetEntityAt(0)->aspects.at(1);
+
+						//add a command that tell the target to follow the camera pos
+//						uai->SetCommand("INTERCEPT", Ogre::Vector3::ZERO, NULL);
+						mLabel->setCaption("You've Been Spotted!");
+						isSpotted = true;
+						loseSequence();
+					}
+
+			}
+		}
+
+		mLabel2->setCaption("Bullets: 0/1");
+		bulletFired = true;
+		if(bulletFired == true && Gunshot == true)
+		{
+			engine->soundMgr->playAudio(engine->soundMgr->gunshotSource, false);
+		}
+
+		Gunshot = false;
+		lmbDown = true;
+	}
+
+	else if (mid == OIS::MB_Right)
+	{
+		rmbDown = true;
+	}
+
+	if (this->mTrayMgr->injectMouseDown(me, mid)){std::cout << "***Button Hit***" << std::endl;}
+	return true;
+}
+
+bool InputMgr::mouseReleased(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
+
+	if (mid == OIS::MB_Right)
+	{
+		rmbDown = false;
+	}
+	else if (mid == OIS::MB_Left)
+	{
+		lmbDown = false;
+	}
+
+	if (this->mTrayMgr->injectMouseUp(me, mid)) return true;
+
+	return true;
+}
+
+void InputMgr::buttonHit(OgreBites::Button *b)
+{
+//	std::cout << "***Button Hit***" << std::endl;
+
+	if(b->getName() == "MyButton")
+	{
+		mTrayMgr->removeWidgetFromTray("MyButton");
+		mTrayMgr->removeWidgetFromTray("Title");
+		mTitle->hide();
+		b->hide();
+//		mTrayMgr->hideBackdrop();
+		this->gameStarted = true;
+		mTrayMgr->setListener(engine->gfxMgr);
+
+
+		static const std::string ShirtStrings[] = {"Red Shirt", "Blue Shirt", "Black Shirt", "White Shirt", "Orange Shirt"};
+	    static const std::string HatStrings[] = {"No Hat", "Black Hat", "Yellow Hat", "Red Hat", "Purple Hat"};
+	    static const std::string SkinStrings[] = {"Purple Skin", "Green Skin", "Red Skin", "Yellow Skin", "Blue Skin"};
+
+//	    mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n-Hat\n-Black Shirt\n-Blue Skin", 250, 100);
+	    mTextBox = mTrayMgr->createTextBox(OgreBites::TL_BOTTOMLEFT, "TDesc", "Target Description:\n\n" +
+			   ShirtStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dShirt] + "\n" +
+			   HatStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dHat] + "\n" +
+			   SkinStrings[engine->entityMgr->GetEntityAt(0)->entityDescription.dSkin],
+			   250, 100);
+
+	    mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
+	    mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
+
+	    engine->gameMgr->cameraNode->setPosition(0, 25, 0);
+
+	    mTimer = mTrayMgr->createLabel(OgreBites::TL_TOPRIGHT, "Timer", "Time", 250);
+
+	    currentTime = maxTime;
+
+	    std::ostringstream strs;
+	    strs << currentTime/1000000;
+	    std::string time = strs.str();
+	    mTimer->setCaption(time);
+
+	    timerStart = true;
+
+	    engine->gameMgr->MakeGun();
+
+	}
+}
+
+void InputMgr::loseSequence()
+{
+	mTrayMgr->removeWidgetFromTray("Objective");
+	mTrayMgr->removeWidgetFromTray("BCount");
+	mTrayMgr->removeWidgetFromTray("Timer");
+	mTrayMgr->removeWidgetFromTray("TDesc");
+
+	mTextBox->hide();
+	mLabel->hide();
+	mLabel2->hide();
+	mTimer->hide();
+
+	engine->gameMgr->gunNode->removeAndDestroyAllChildren();
+	engine->gfxMgr->mSceneMgr->destroyMovableObject(engine->gameMgr->gun);
+
+	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "lost", "You Lose!", 750);
+	lostGame = true;
+}
+
+void InputMgr::winSequence()
+{
+	mTrayMgr->removeWidgetFromTray("Objective");
+	mTrayMgr->removeWidgetFromTray("BCount");
+	mTrayMgr->removeWidgetFromTray("Timer");
+	mTrayMgr->removeWidgetFromTray("TDesc");
+
+	mTextBox->hide();
+	mLabel->hide();
+	mLabel2->hide();
+	mTimer->hide();
+
+	engine->gameMgr->gunNode->removeAndDestroyAllChildren();
+	engine->gfxMgr->mSceneMgr->destroyMovableObject(engine->gameMgr->gun);
+
+	mLoseScreen = mTrayMgr->createLabel(OgreBites::TL_CENTER, "win", "You Win!", 750);
+	winGame = true;
+}

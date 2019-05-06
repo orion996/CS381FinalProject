@@ -57,9 +57,15 @@ void Physics2D::Tick(float dt){
 		entity->velocity.z = Ogre::Math::Sin(Ogre::Degree(entity->heading)) * entity->speed; //opposite/hyp
 
 		//This does not change!
-		entity->position = entity->position + entity->velocity * dt;
-
-		this->checkForCollisions(dt);
+		if(!entity->destroyed)
+		{
+			entity->position = entity->position + entity->velocity * dt;
+			this->checkForCollisions(dt);
+		}
+		else
+		{
+			entity->position = Ogre::Vector3(9000,-9000,9000);
+		}
 	}
 	else
 	{
