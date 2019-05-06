@@ -56,7 +56,7 @@ public:
 	OgreBites::TextBox* mTextBox;
 	OgreBites::Label* mLabel;
 	OgreBites::Label* mLabel2;
-	OgreBites::Label* mTitle;
+	OgreBites::TextBox* mTitle;
 	OgreBites::Label* mTimer;
 	OgreBites::Label* mLoseScreen;
 

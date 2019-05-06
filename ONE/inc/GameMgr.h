@@ -28,6 +28,7 @@ public:
 	void MakeGround();
 	void MakeSky();
 	void MakeEntities();
+	void MakeGun();
 
 	Ogre::SceneNode *cameraNode;
 	Ogre::Plane* plane;//(Ogre::Vector3::UNIT_Y, 0);

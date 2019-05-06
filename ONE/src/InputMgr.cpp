@@ -89,7 +89,8 @@ void InputMgr::Init(){
 
 	   mRayScnQuery = engine->gfxMgr->mSceneMgr->createRayQuery(Ogre::Ray());
 
-	   mTitle = mTrayMgr->createLabel(OgreBites::TL_CENTER, "Title", "ONE", 750);
+	   mTitle = mTrayMgr->createTextBox(OgreBites::TL_CENTER, "Title",
+			   "ONE\n\nInstructions:\nWASD - Move\nQE-Rotate Camera\nLeft Click - Shoot\nESC - Quit", 750, 150);
 
 	   mTrayMgr->createButton(OgreBites::TL_CENTER, "MyButton", "Play", 250);
 //	   mTrayMgr->showBackdrop("Texture/Flooring");
@@ -121,7 +122,7 @@ void InputMgr::Tick(float dt){
 		std::ostringstream strx;
 		strx << currentTime;
 		std::string time = strx.str();
-		mTimer->setCaption(time);
+		mTimer->setCaption("Time: " + time);
 //		std::cout << time << std::endl;
 
 		if(currentTime <= 0.0)
@@ -436,6 +437,8 @@ void InputMgr::buttonHit(OgreBites::Button *b)
 	    mTimer->setCaption(time);
 
 	    timerStart = true;
+
+	    engine->gameMgr->MakeGun();
 
 	}
 }

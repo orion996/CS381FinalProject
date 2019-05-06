@@ -87,8 +87,8 @@ void Physics2D::checkForCollisions(float dt)
 				{
 //					entity->desiredSpeed = entity->speed = (entity->speed/2);
 					worldPoint = uaiThis->commands.front()->point;
-					worldPoint.x *= -1;
-					worldPoint.z *= -1;
+					worldPoint.x *= -1.5;
+					worldPoint.z *= -1.5;
 					uaiThis->SetCommand("MOVETO", worldPoint, NULL);
 				}
 				else
