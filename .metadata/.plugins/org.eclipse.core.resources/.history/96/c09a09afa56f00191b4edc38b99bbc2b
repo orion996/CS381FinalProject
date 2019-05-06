@@ -1,0 +1,14 @@
+material Texture/Stars
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          texture stars.png
+          scale .75 .75
+        }
+      } 
+    }
+  }

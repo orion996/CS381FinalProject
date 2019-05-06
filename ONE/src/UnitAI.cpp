@@ -9,6 +9,7 @@
 #include <Entity381.h>
 #include <GfxMgr.h>
 #include <InputMgr.h>
+#include <GameMgr.h>
 
 
 UnitAI::UnitAI(Entity381* ent) : Aspect(ent)
@@ -123,6 +124,17 @@ void UnitAI::Tick(float dt)
 		//update the point to the target's position
 		commands.front()->point.x = this->camNode->getRealPosition().x;
 		commands.front()->point.z = this->camNode->getRealPosition().z;
+
+
+		Ogre::SceneNode* parentNode = entity->engine->gameMgr->gunNode->getParentSceneNode();
+
+//		Ogre::Vector3 worldPos = parentNode->_getDerivedPosition() +
+//				parentNode->_getDerivedOrientation() * entity->engine->gameMgr->gunNode->_getDerivedPosition();
+//
+//		commands.front()->point.x = worldPos.x;
+//		commands.front()->point.z = worldPos.z;
+
+
 		commands.front()->point.y = 0;
 
 		//update point bounds

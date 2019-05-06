@@ -28,6 +28,8 @@ InputMgr::InputMgr(Engine *engine) : Mgr(engine) {
 	mTrayMgr = 0;
 	lmbDown = rmbDown = false;
 	followMode = false;
+	maxTime = 120.0;
+	currentTime = 0;
 }
 
 InputMgr::~InputMgr() {
@@ -112,6 +114,21 @@ void InputMgr::Tick(float dt){
 	mKeyboard->capture();
 
 	mTrayMgr->refreshCursor();
+
+	if(timerStart)
+	{
+		currentTime -= dt;
+		std::ostringstream strx;
+		strx << currentTime;
+		std::string time = strx.str();
+		mTimer->setCaption(time);
+//		std::cout << time << std::endl;
+
+		if(currentTime <= 0.0)
+		{
+			//lose
+		}
+	}
 
 	if(mKeyboard->isKeyDown(OIS::KC_ESCAPE)){
 		engine->keepRunning = false;
@@ -399,6 +416,18 @@ void InputMgr::buttonHit(OgreBites::Button *b)
 	    mLabel2 = mTrayMgr->createLabel(OgreBites::TL_BOTTOMRIGHT, "BCount", "Bullets: 1/1", 250);
 	    mLabel = mTrayMgr->createLabel(OgreBites::TL_TOP, "Objective", "Find Your Target", 250);
 
-	    engine->gameMgr->cameraNode->setPosition(0, 30, 0);
+	    engine->gameMgr->cameraNode->setPosition(0, 25, 0);
+
+	    mTimer = mTrayMgr->createLabel(OgreBites::TL_TOPRIGHT, "Timer", "Time", 250);
+
+	    currentTime = maxTime;
+
+	    std::ostringstream strs;
+	    strs << currentTime/1000000;
+	    std::string time = strs.str();
+	    mTimer->setCaption(time);
+
+	    timerStart = true;
+
 	}
 }

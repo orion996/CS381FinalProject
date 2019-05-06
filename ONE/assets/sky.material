@@ -1,0 +1,14 @@
+material Texture/Stars
+  {
+    technique
+    {
+      pass
+      {
+        texture_unit
+        {
+          texture milky-way-starry-sky-night-sky-star-956981.jpg
+          scale .75 .75
+        }
+      } 
+    }
+  }

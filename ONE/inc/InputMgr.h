@@ -21,6 +21,7 @@
 #include <Mgr.h>
 #include <Aspect.h>
 #include <UnitAI.h>
+#include <string>
 
 class Engine;
 
@@ -56,9 +57,14 @@ public:
 	OgreBites::Label* mLabel;
 	OgreBites::Label* mLabel2;
 	OgreBites::Label* mTitle;
+	OgreBites::Label* mTimer;
+	double currentTime;
+	double maxTime;
 	OgreBites::Button* mButton;
 	bool bulletFired = false;
 	bool gameStarted = false;
+	bool timerStart = false;
+
 
 	bool followMode;
 

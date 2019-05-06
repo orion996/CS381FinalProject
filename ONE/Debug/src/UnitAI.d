@@ -252,7 +252,8 @@ src/UnitAI.d: ../src/UnitAI.cpp \
  /usr/local/include/OGRE/Terrain/OgreTerrainLodManager.h \
  /usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h \
  /usr/local/include/OGRE/Terrain/OgreTerrain.h \
- /usr/local/include/OGRE/SdkCameraMan.h
+ /usr/local/include/OGRE/SdkCameraMan.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
 
@@ -785,3 +786,5 @@ src/UnitAI.d: ../src/UnitAI.cpp \
 /usr/local/include/OGRE/Terrain/OgreTerrain.h:
 
 /usr/local/include/OGRE/SdkCameraMan.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h:

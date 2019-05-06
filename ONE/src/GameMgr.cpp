@@ -41,7 +41,7 @@ void GameMgr::Init(){
 	  cameraNode->attachObject(engine->gfxMgr->mCamera);
 
 	  Ogre::Entity* gun = engine->gfxMgr->mSceneMgr->createEntity("glock.mesh");
-	  Ogre::SceneNode* gunNode = cameraNode->createChildSceneNode();
+	  gunNode = cameraNode->createChildSceneNode();
 	  gunNode->attachObject(gun);
 	  gunNode->setPosition(20, -15, 10);
 	  gunNode->pitch(Ogre::Degree(-90));
@@ -96,7 +96,7 @@ void GameMgr::MakeEntities(){
 		else
 			neg = -1;
 
-		pos = Ogre::Vector3(rand()%500 * neg, 20, rand()%500 * neg);
+		pos = Ogre::Vector3(rand()%500 * neg, 25, rand()%500 * neg);
 
 		if(hat)
 		{
