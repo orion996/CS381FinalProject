@@ -201,8 +201,8 @@ void GameMgr::MakeGun()
 	  gun = engine->gfxMgr->mSceneMgr->createEntity("glock.mesh");
 	  gunNode = cameraNode->createChildSceneNode();
 	  gunNode->attachObject(gun);
-	  gunNode->setPosition(20, -15, 10);
+	  gunNode->setPosition(1,-1,76);
 	  gunNode->pitch(Ogre::Degree(-90));
 	  gunNode->yaw(Ogre::Degree(90));
-	  gunNode->setScale(4,4,4);
+	  gunNode->setScale(.2,.2,.2);
 }
