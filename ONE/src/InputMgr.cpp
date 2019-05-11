@@ -155,7 +155,7 @@ void InputMgr::UpdateCamera(float dt){
 	float move = 100.0f;
 	float rotate = 0.1f;
 
-	 Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
+	Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame && !winGame)
 		  dirVec.z -= move;
@@ -175,51 +175,30 @@ void InputMgr::UpdateCamera(float dt){
 	  if (mKeyboard->isKeyDown(OIS::KC_D) && !lostGame && !winGame)
 		  dirVec.x += move;
 
-	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
-		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
 
-	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame)
-	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
+	  bool playerColliding = false;
+	  Ogre::Vector3 camPos = engine->gfxMgr->mCamera->getDerivedPosition();
 
-//	  if (mKeyboard->isKeyDown(OIS::KC_R))
-//	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(5 * rotate));
-//
-//	  if (mKeyboard->isKeyDown(OIS::KC_F))
-//	  		  engine->gameMgr->cameraNode->pitch(Ogre::Degree(-5 * rotate));
-//
-//	  if (mKeyboard->isKeyDown(OIS::KC_Z))
-//	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(5 * rotate));
-//
-//	  if (mKeyboard->isKeyDown(OIS::KC_X))
-//	  		  engine->gameMgr->cameraNode->roll(Ogre::Degree(-5 * rotate));
-
-	  //follow Mode
-//	  keyboardTimer -= dt;
-//	  if ((keyboardTimer < 0) && mKeyboard->isKeyDown(OIS::KC_C))
-//	  {
-//		  keyboardTimer = .5;
-//
-//		  if(!followMode)
-//			  followMode = true;
-//		  else if(followMode)
-//		  {
-//			  engine->gfxMgr->mCamera->setPosition(0, 0, 80);
-//			  engine->gfxMgr->mCamera->lookAt(0, 0, -300);
-//			  followMode = false;
-//		  }
-//
-//	  }
-
-	  if(followMode)
+	  if(camPos.z >= 740 || camPos.z <= -740)
 	  {
-//		  std::cout << "*** Following ***" << std::endl;
-		  const Ogre::Vector3 pos = engine->entityMgr->selectedEntity->position;
-		  engine->gfxMgr->mCamera->setPosition(pos.x, pos.y, pos.z + 80);
-		  engine->gfxMgr->mCamera->lookAt(pos.x, pos.y, pos.z);
+		  dirVec.z *= -1;
+		  playerColliding = true;
+	  }
+	  if(camPos.x >= 740 || camPos.x <= -740)
+	  {
+	  	  dirVec.x *= -1;
+	  	  playerColliding = true;
 	  }
 
-	  else if(!followMode)
-		  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
+
+	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame && !playerColliding)
+		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
+
+	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame && !playerColliding)
+	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
+
+
+	  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);
 }
 
 void InputMgr::UpdateVelocityAndSelection(float dt){
@@ -384,38 +363,6 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	else if (mid == OIS::MB_Right)
 	{
-		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
-
-//		std::vector<Entity381*> ent = engine->entityMgr->entities;
-		Ogre::Plane* wall1 = engine->gameMgr->wall1;
-		Ogre::Plane* wall2 = engine->gameMgr->wall2;
-		Ogre::Plane* wall3 = engine->gameMgr->wall3;
-		Ogre::Plane* wall4 = engine->gameMgr->wall4;
-
-
-		std::pair<bool, float> wallres1 = mouseRay.intersects(*wall1);
-		std::pair<bool, float> wallres2 = mouseRay.intersects(*wall2);
-		std::pair<bool, float> wallres3 = mouseRay.intersects(*wall3);
-		std::pair<bool, float> wallres4 = mouseRay.intersects(*wall4);
-
-		if(wallres1.first)
-		{
-			std::cout << "*** Wall 1: " << mouseRay.getPoint(wallres1.second) << " ***" << std::endl;
-		}
-		if(wallres2.first)
-		{
-			std::cout << "*** Wall 2: " << mouseRay.getPoint(wallres2.second) << " ***" << std::endl;
-		}
-		if(wallres3.first)
-		{
-			std::cout << "*** Wall 3: " << mouseRay.getPoint(wallres3.second) << " ***" << std::endl;
-		}
-		if(wallres4.first)
-		{
-			std::cout << "*** Wall 4: " << mouseRay.getPoint(wallres4.second) << " ***" << std::endl;
-		}
-
-
 		rmbDown = true;
 	}
 
