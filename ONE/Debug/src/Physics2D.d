@@ -256,7 +256,10 @@ src/Physics2D.d: ../src/Physics2D.cpp \
  /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
- /usr/include/AL/al.h /usr/include/AL/alc.h
+ /usr/include/AL/al.h /usr/include/AL/alc.h \
+ /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /usr/local/include/OGRE/OgreRoot.h \
+ /usr/local/include/OGRE/OgreWindowEventUtilities.h
 
 /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:
 
@@ -801,3 +804,9 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 /usr/include/AL/al.h:
 
 /usr/include/AL/alc.h:
+
+/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+
+/usr/local/include/OGRE/OgreRoot.h:
+
+/usr/local/include/OGRE/OgreWindowEventUtilities.h:

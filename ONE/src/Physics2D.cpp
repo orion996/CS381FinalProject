@@ -12,6 +12,7 @@
 #include <EntityMgr.h>
 #include <UnitAI.h>
 #include <InputMgr.h>
+#include <GfxMgr.h>
 
 Physics2D::Physics2D(Entity381* ent):Aspect(ent){
 
@@ -80,6 +81,7 @@ void Physics2D::checkForCollisions(float dt)
 	UnitAI* uaiThis = (UnitAI*) entity->aspects.at(1);
 	Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
 
+	//check collisions with other entities
 	for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
 	{
 		if(Distance(entity->engine->entityMgr->entities.at(i)->position, entity->position) != 0 && !(entity->engine->entityMgr->entities.at(i)->mIsHat) && collisionTimer < 0)
@@ -104,6 +106,7 @@ void Physics2D::checkForCollisions(float dt)
 		}
 	}
 
+	//check collisions with walls
 	if(entity->position.z >= 750 - entity->collisionRadius && collisionTimer <= 0)
 	{
 		if(!uaiThis->commands.empty())
@@ -168,4 +171,26 @@ void Physics2D::checkForCollisions(float dt)
 
 		collisionTimer = 1;
 	}
+
+	//check collision with player
+	if(Distance(entity->engine->gfxMgr->mCamera->getDerivedPosition(), entity->position) != 0 && !(entity->mIsHat) && collisionTimer < 0)
+			{
+				if(Distance(entity->engine->gfxMgr->mCamera->getDerivedPosition(), entity->position) < ((entity->collisionRadius) * 2))
+				{
+					if(!uaiThis->commands.empty())
+					{
+	//					entity->desiredSpeed = entity->speed = (entity->speed/2);
+						worldPoint = uaiThis->commands.front()->point;
+						worldPoint.x *= -1.5;
+						worldPoint.z *= -1.5;
+						uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+					}
+					else
+					{
+						entity->desiredSpeed = entity->speed = 0;
+					}
+
+					collisionTimer = 1;
+				}
+			}
 }

@@ -31,13 +31,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.cpp" partName="InputMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/InputMgr.cpp" title="InputMgr.cpp" tooltip="ONE/src/InputMgr.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InputMgr.cpp" partName="InputMgr.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/InputMgr.cpp" title="InputMgr.cpp" tooltip="ONE/src/InputMgr.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/InputMgr.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4936" selectionTopPixel="2462"/>
+<editorState selectionHorizontalPixel="0" selectionLength="46" selectionOffset="4718" selectionTopPixel="2374"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Physics2D.cpp" partName="Physics2D.cpp" path="/home/orion996/Documents/CS/CS381FinalProject/ONE/src/Physics2D.cpp" title="Physics2D.cpp" tooltip="ONE/src/Physics2D.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ONE/src/Physics2D.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4606" selectionTopPixel="2252"/>
 </editor>
 </editors>
 <views>
@@ -51,8 +56,7 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings (42 items)"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (43 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="270" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -384,10 +388,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Entity381.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/GameMgr.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/inc/Entity381.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/EntityMgr.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/UnitAI.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/GameMgr.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/GfxMgr.cpp"/>
@@ -400,156 +400,157 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/UnitAI.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Physics2D.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/InputMgr.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/ONE/src/Physics2D.cpp"/>
 </editors>
-<item historyLabel="EntityMgr.cpp" index="3">
-<position info="not_deleted" x="620" y="0"/>
-</item>
-<item historyLabel="Entity381.h" index="2">
-<position info="not_deleted" x="1678" y="0"/>
-</item>
-<item historyLabel="Entity381.cpp" index="0">
-<position info="not_deleted" x="3592" y="0"/>
-</item>
-<item historyLabel="GameMgr.cpp" index="1">
-<position info="not_deleted" x="2570" y="0"/>
-</item>
-<item historyLabel="UnitAI.cpp" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="UnitAI.cpp" index="4">
+<item historyLabel="UnitAI.cpp" index="0">
 <position info="not_deleted" x="2020" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GfxMgr.cpp" index="6">
+<item historyLabel="GfxMgr.cpp" index="2">
 <position info="not_deleted" x="1208" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="6349" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="5956" y="0"/>
 </item>
-<item historyLabel="GameMgr.h" index="7">
+<item historyLabel="GameMgr.h" index="3">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="3009" y="221"/>
 </item>
-<item historyLabel="GameMgr.h" index="7">
+<item historyLabel="GameMgr.h" index="3">
 <position info="not_deleted" x="804" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="4967" y="0"/>
 </item>
-<item historyLabel="GameMgr.h" index="7">
+<item historyLabel="GameMgr.h" index="3">
 <position info="not_deleted" x="774" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="4474" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="8">
+<item historyLabel="UnitAI.cpp" index="4">
 <position info="not_deleted" x="2013" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="5170" y="0"/>
 </item>
-<item historyLabel="Physics2D.h" index="9">
+<item historyLabel="Physics2D.h" index="5">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position info="not_deleted" x="1936" y="0"/>
 </item>
-<item historyLabel="Physics2D.h" index="9">
+<item historyLabel="Physics2D.h" index="5">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="Physics2D.h" index="9">
+<item historyLabel="Physics2D.h" index="5">
 <position info="not_deleted" x="298" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position info="not_deleted" x="1936" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="5170" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="UnitAI.cpp" index="8">
+<item historyLabel="UnitAI.cpp" index="4">
 <position info="not_deleted" x="2013" y="0"/>
 </item>
-<item historyLabel="Physics2D.h" index="9">
+<item historyLabel="Physics2D.h" index="5">
 <position info="not_deleted" x="298" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="3048" y="7"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="Utils.h" index="11">
+<item historyLabel="Utils.h" index="7">
 <position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="3048" y="7"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position/>
 </item>
-<item historyLabel="GameMgr.cpp" index="5">
+<item historyLabel="GameMgr.cpp" index="1">
 <position info="not_deleted" x="6241" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="10">
+<item historyLabel="Physics2D.cpp" index="6">
 <position info="not_deleted" x="2750" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="12">
+<item historyLabel="InputMgr.cpp" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="12">
+<item historyLabel="InputMgr.cpp" index="8">
 <position info="not_deleted" x="11868" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="12">
+<item historyLabel="InputMgr.cpp" index="8">
 <position info="not_deleted" x="11903" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="12">
+<item historyLabel="InputMgr.cpp" index="8">
 <position info="not_deleted" x="11966" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="12">
+<item historyLabel="InputMgr.cpp" index="8">
 <position info="not_deleted" x="11334" y="0"/>
 </item>
-<item historyLabel="UnitAI.cpp" index="13">
+<item historyLabel="UnitAI.cpp" index="9">
 <position info="not_deleted" x="3044" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="14">
+<item historyLabel="Physics2D.cpp" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Physics2D.cpp" index="14">
+<item historyLabel="Physics2D.cpp" index="10">
 <position info="not_deleted" x="3721" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="15">
+<item historyLabel="InputMgr.cpp" index="11">
 <position info="not_deleted" x="5027" y="0"/>
 </item>
-<item historyLabel="InputMgr.cpp" index="15">
+<item historyLabel="InputMgr.cpp" index="11">
 <position/>
 </item>
-<item active="true" historyLabel="InputMgr.cpp" index="15">
+<item historyLabel="InputMgr.cpp" index="11">
 <position/>
+</item>
+<item historyLabel="Physics2D.cpp" index="12">
+<position info="not_deleted" x="4685" y="45"/>
+</item>
+<item historyLabel="InputMgr.cpp" index="11">
+<position info="not_deleted" x="4718" y="46"/>
+</item>
+<item historyLabel="Physics2D.cpp" index="12">
+<position info="not_deleted" x="4685" y="45"/>
+</item>
+<item historyLabel="Physics2D.cpp" index="12">
+<position info="not_deleted" x="4766" y="0"/>
+</item>
+<item active="true" historyLabel="Physics2D.cpp" index="12">
+<position info="not_deleted" x="228" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
