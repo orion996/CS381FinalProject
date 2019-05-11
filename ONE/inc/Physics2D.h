@@ -19,6 +19,7 @@ public:
 	void Tick(float dt);
 
 	void checkForCollisions(float dt);
+	void avoidWalls();
 
 	float collisionTimer = 0.0;
 };

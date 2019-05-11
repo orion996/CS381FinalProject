@@ -77,6 +77,8 @@ void Physics2D::Tick(float dt){
 void Physics2D::checkForCollisions(float dt)
 {
 	collisionTimer -= dt;
+	UnitAI* uaiThis = (UnitAI*) entity->aspects.at(1);
+	Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
 
 	for(int i=0 ; i < entity->engine->entityMgr->entities.size() ; i++)
 	{
@@ -84,11 +86,6 @@ void Physics2D::checkForCollisions(float dt)
 		{
 			if(Distance(entity->engine->entityMgr->entities.at(i)->position, entity->position) < (entity->engine->entityMgr->entities.at(i)->collisionRadius + entity->collisionRadius))
 			{
-				UnitAI* uaiThis = (UnitAI*) entity->aspects.at(1);
-				UnitAI* uaiOther = (UnitAI*) entity->engine->entityMgr->entities.at(i)->aspects.at(1);
-
-				Ogre::Vector3 worldPoint = Ogre::Vector3::ZERO;
-
 				if(!uaiThis->commands.empty())
 				{
 //					entity->desiredSpeed = entity->speed = (entity->speed/2);
@@ -105,5 +102,70 @@ void Physics2D::checkForCollisions(float dt)
 				collisionTimer = 1;
 			}
 		}
+	}
+
+	if(entity->position.z >= 750 - entity->collisionRadius && collisionTimer <= 0)
+	{
+		if(!uaiThis->commands.empty())
+		{
+			worldPoint = uaiThis->commands.front()->point;
+//			worldPoint.x *= -1.5;
+			worldPoint.z *= -1.5;
+			uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+		}
+		else
+		{
+			entity->desiredSpeed = entity->speed = 0;
+		}
+
+		collisionTimer = 1;
+	}
+	if(entity->position.z <= -750 + entity->collisionRadius && collisionTimer <= 0)
+	{
+		if(!uaiThis->commands.empty())
+		{
+			worldPoint = uaiThis->commands.front()->point;
+//			worldPoint.x *= -1.5;
+			worldPoint.z *= -1.5;
+			uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+		}
+		else
+		{
+			entity->desiredSpeed = entity->speed = 0;
+		}
+
+		collisionTimer = 1;
+	}
+	if(entity->position.x >= 750 - entity->collisionRadius && collisionTimer <= 0)
+	{
+		if(!uaiThis->commands.empty())
+		{
+			worldPoint = uaiThis->commands.front()->point;
+			worldPoint.x *= -1.5;
+//			worldPoint.z *= -1.5;
+			uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+		}
+		else
+		{
+			entity->desiredSpeed = entity->speed = 0;
+		}
+
+		collisionTimer = 1;
+	}
+	if(entity->position.x <= -750 + entity->collisionRadius && collisionTimer <= 0)
+	{
+		if(!uaiThis->commands.empty())
+		{
+			worldPoint = uaiThis->commands.front()->point;
+			worldPoint.x *= -1.5;
+//			worldPoint.z *= -1.5;
+			uaiThis->SetCommand("MOVETO", worldPoint, NULL);
+		}
+		else
+		{
+			entity->desiredSpeed = entity->speed = 0;
+		}
+
+		collisionTimer = 1;
 	}
 }

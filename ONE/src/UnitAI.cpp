@@ -92,6 +92,7 @@ void UnitAI::Tick(float dt)
 		worldPoint.z = rand()%500 * neg;
 
 		this->SetCommand("MOVETO", worldPoint, NULL);
+		this->AddCommand("MOVETO", worldPoint, NULL);//should prevent empty commands queue
 //		return;
 	}
 	if(commands.empty() && entity->mIsHat)

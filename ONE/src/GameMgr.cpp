@@ -117,10 +117,10 @@ void GameMgr::MakeEntities(){
 void GameMgr::MakeGround(){
 
 	 plane = new Ogre::Plane(Ogre::Vector3::UNIT_Y, 0);
-	 Ogre::Plane* wall1 = new Ogre::Plane(Ogre::Vector3(0,0,1), -750);
-	 Ogre::Plane* wall2 = new Ogre::Plane(Ogre::Vector3(1,0,0), -750);
-	 Ogre::Plane* wall3 = new Ogre::Plane(Ogre::Vector3(-1,0,0), -750);
-	 Ogre::Plane* wall4 = new Ogre::Plane(Ogre::Vector3(0,0,-1), -750);
+	 wall1 = new Ogre::Plane(Ogre::Vector3(0,0,1), -750);
+	 wall2 = new Ogre::Plane(Ogre::Vector3(1,0,0), -750);
+	 wall3 = new Ogre::Plane(Ogre::Vector3(-1,0,0), -750);
+	 wall4 = new Ogre::Plane(Ogre::Vector3(0,0,-1), -750);
 
 	  Ogre::MeshManager::getSingleton().createPlane(
 	    "ground",
@@ -175,19 +175,19 @@ void GameMgr::MakeGround(){
 	  //groundEntity->setMaterialName("NavyCg");
 
 
-	  Ogre::Entity* wallEntity1 = engine->gfxMgr->mSceneMgr->createEntity("wall1");
+	  wallEntity1 = engine->gfxMgr->mSceneMgr->createEntity("wall1");
 	  engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(wallEntity1);
 	  wallEntity1->setMaterialName("Texture/Walls");
 
-	  Ogre::Entity* wallEntity2 = engine->gfxMgr->mSceneMgr->createEntity("wall2");
+	  wallEntity2 = engine->gfxMgr->mSceneMgr->createEntity("wall2");
 	  engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(wallEntity2);
 	  wallEntity2->setMaterialName("Texture/Walls");
 
-	  Ogre::Entity* wallEntity3 = engine->gfxMgr->mSceneMgr->createEntity("wall3");
+	  wallEntity3 = engine->gfxMgr->mSceneMgr->createEntity("wall3");
 	  engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(wallEntity3);
 	  wallEntity3->setMaterialName("Texture/Walls");
 
-	  Ogre::Entity* wallEntity4 = engine->gfxMgr->mSceneMgr->createEntity("wall4");
+	  wallEntity4 = engine->gfxMgr->mSceneMgr->createEntity("wall4");
 	  engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject(wallEntity4);
 	  wallEntity4->setMaterialName("Texture/Walls");
 }

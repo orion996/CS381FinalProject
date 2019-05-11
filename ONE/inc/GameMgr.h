@@ -35,6 +35,16 @@ public:
 	Ogre::Entity* gun;
 	Ogre::SceneNode* gunNode;
 
+	Ogre::Plane* wall1;
+	Ogre::Plane* wall2;
+	Ogre::Plane* wall3;
+	Ogre::Plane* wall4;
+	Ogre::Entity* wallEntity1;
+	Ogre::Entity* wallEntity2;
+	Ogre::Entity* wallEntity3;
+	Ogre::Entity* wallEntity4;
+
+
 };
 
 #endif /* GAMEMGR_H_ */

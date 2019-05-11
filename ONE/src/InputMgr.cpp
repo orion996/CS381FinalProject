@@ -384,6 +384,38 @@ bool InputMgr::mousePressed(const OIS::MouseEvent& me, OIS::MouseButtonID mid){
 
 	else if (mid == OIS::MB_Right)
 	{
+		Ogre::Ray mouseRay = mTrayMgr->getCursorRay(engine->gfxMgr->mCamera);
+
+//		std::vector<Entity381*> ent = engine->entityMgr->entities;
+		Ogre::Plane* wall1 = engine->gameMgr->wall1;
+		Ogre::Plane* wall2 = engine->gameMgr->wall2;
+		Ogre::Plane* wall3 = engine->gameMgr->wall3;
+		Ogre::Plane* wall4 = engine->gameMgr->wall4;
+
+
+		std::pair<bool, float> wallres1 = mouseRay.intersects(*wall1);
+		std::pair<bool, float> wallres2 = mouseRay.intersects(*wall2);
+		std::pair<bool, float> wallres3 = mouseRay.intersects(*wall3);
+		std::pair<bool, float> wallres4 = mouseRay.intersects(*wall4);
+
+		if(wallres1.first)
+		{
+			std::cout << "*** Wall 1: " << mouseRay.getPoint(wallres1.second) << " ***" << std::endl;
+		}
+		if(wallres2.first)
+		{
+			std::cout << "*** Wall 2: " << mouseRay.getPoint(wallres2.second) << " ***" << std::endl;
+		}
+		if(wallres3.first)
+		{
+			std::cout << "*** Wall 3: " << mouseRay.getPoint(wallres3.second) << " ***" << std::endl;
+		}
+		if(wallres4.first)
+		{
+			std::cout << "*** Wall 4: " << mouseRay.getPoint(wallres4.second) << " ***" << std::endl;
+		}
+
+
 		rmbDown = true;
 	}
 
