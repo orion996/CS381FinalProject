@@ -19,7 +19,7 @@ std::string IntToString(int x){
 	return std::string(tmp);
 }
 
-Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool hasHat, bool isHat, Entity381* bfh){
+Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool hasHat, bool isHat, Entity381* bfh, bool stat){
 
 	this->engine = engine;
 
@@ -33,6 +33,11 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	identity = ident;
 	isSelected = false;
 	collisionRadius = 18;
+
+	if(stat)
+		this->isStatic = true;
+	else
+		this->isStatic = false;
 
 	this->setDescription("SHIRT");
 	this->setDescription("HAT");
@@ -130,8 +135,8 @@ void Entity381::Tick(float dt){
 //}
 //-------------------------------------------------------------------------------------------------------------------------------
 
-SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool isHat, Entity381* body, bool hasHat):
-		Entity381(engine, meshfname, pos, ident, hasHat, isHat, body){
+SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, int ident, bool isHat, Entity381* body, bool hasHat, bool stat):
+		Entity381(engine, meshfname, pos, ident, hasHat, isHat, body, stat){
 	this->minSpeed = 0;
 	this->maxSpeed = 30.0f;//meters per second...
 	this->acceleration = 5.0f; // slow

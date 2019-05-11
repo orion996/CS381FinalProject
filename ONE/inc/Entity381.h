@@ -12,7 +12,7 @@
 class Entity381
 {
 public:
-  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool hasHat, bool isHat, Entity381* bfh);
+  Entity381(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool hasHat, bool isHat, Entity381* bfh, bool);
   virtual ~Entity381();
 
   Engine *engine;
@@ -26,6 +26,7 @@ public:
   float acceleration, turnRate, climbRate;
   float minSpeed, maxSpeed;
   float collisionRadius;
+  bool isStatic;
 
   //dynamic data
   Ogre::Vector3 position;
@@ -76,7 +77,7 @@ public:
 
 class SpeedBoat: Entity381 {
 public:
-	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body, bool hasHat);
+	SpeedBoat(Engine *engine, std::string meshfilename, Ogre::Vector3 pos, int identity, bool isHat, Entity381* body, bool hasHat, bool);
 	virtual ~SpeedBoat();
 
 };

@@ -20,7 +20,7 @@ public:
 
   //Ogre::SceneManager *sceneMgr;
 
-  void CreateEntityOfTypeAtPosition(EntityTypes type, Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat);
+  void CreateEntityOfTypeAtPosition(EntityTypes type, Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat, bool);
   void SelectNextEntity();
   void SelectEntity(int id);
   Entity381* GetEntityAt(int id);
@@ -35,7 +35,7 @@ private:
   void CreateEntity(std::string meshfilename, Ogre::Vector3 pos);
   void CreateDDG51(Ogre::Vector3 pos);
   void CreateCarrier(Ogre::Vector3 pos);
-  void CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat);
+  void CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat, bool);
   void CreateFrigate(Ogre::Vector3 pos);
   void CreateAlien(Ogre::Vector3 pos);
   void CreateBanshee(Ogre::Vector3 pos);

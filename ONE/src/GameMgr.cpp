@@ -91,20 +91,23 @@ void GameMgr::MakeEntities(){
 
 		if(hat)
 		{
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, true);
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, true, false);
 			index++;
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1), false);
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, true, engine->entityMgr->GetEntityAt(index - 1), false, false);
 //			engine->entityMgr->GetEntityAt(i)->hasHat = true;
 		}
 		else
 		{
-			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false);
+			engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false, false);
 //			engine->entityMgr->GetEntityAt(i)->hasHat = false;
 
 		}
 		pos.x += 20;
 		index++;
 	}
+
+//	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false, true);
+
 	engine->entityMgr->SelectNextEntity(); //sets selection
 	engine->entityMgr->GetEntityAt(0)->isTarget = true;
 	for(int i=1 ; i<engine->entityMgr->entities.size() ; i++)

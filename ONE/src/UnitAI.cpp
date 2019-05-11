@@ -98,6 +98,8 @@ void UnitAI::Tick(float dt)
 	{
 		return;
 	}
+	if(entity->isStatic)
+		return;
 
 	if(commands.front()->type == "MOVETO")
 	{

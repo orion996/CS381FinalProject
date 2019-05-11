@@ -19,12 +19,12 @@ EntityMgr::~EntityMgr(){
 
 }
 
-void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat){
+void EntityMgr::CreateSpeedBoat(Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat, bool stat){
 	SpeedBoat *ent;
 	if(!isHat)
-		ent = new SpeedBoat(this->engine, "blueSkin_lightblueShirt.mesh", pos, count, isHat, body, hasHat);
+		ent = new SpeedBoat(this->engine, "blueSkin_lightblueShirt.mesh", pos, count, isHat, body, hasHat, stat);
 	else
-		ent = new SpeedBoat(this->engine, "blackHat.mesh", pos, count, isHat, body, hasHat);
+		ent = new SpeedBoat(this->engine, "blackHat.mesh", pos, count, isHat, body, hasHat, stat);
 
 	count++;
 	entities.push_back((Entity381 *) ent);
@@ -54,9 +54,9 @@ void EntityMgr::SelectEntity(int id)
 }
 
 
-void EntityMgr::CreateEntityOfTypeAtPosition(EntityTypes entType, Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat){
+void EntityMgr::CreateEntityOfTypeAtPosition(EntityTypes entType, Ogre::Vector3 pos, bool isHat, Entity381* body, bool hasHat, bool stat){
 
-	CreateSpeedBoat(pos, isHat, body, hasHat);
+	CreateSpeedBoat(pos, isHat, body, hasHat, stat);
 
 }
 
