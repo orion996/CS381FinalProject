@@ -75,6 +75,11 @@ public:
 
 	bool Gunshot = true;
 
+	  bool playerCollidingWall1;
+	  bool playerCollidingWall2;
+	  bool playerCollidingWall3;
+	  bool playerCollidingWall4;
+
 	bool followMode;
 
 	bool lmbDown;

@@ -157,17 +157,12 @@ void InputMgr::UpdateCamera(float dt){
 
 	Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
+
 	  if (mKeyboard->isKeyDown(OIS::KC_W) && !lostGame && !winGame)
 		  dirVec.z -= move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_S) && !lostGame && !winGame)
 		  dirVec.z += move;
-
-//	  if (mKeyboard->isKeyDown(OIS::KC_T))
-//		  dirVec.y += move;
-//
-//	  if (mKeyboard->isKeyDown(OIS::KC_G))
-//		  dirVec.y -= move;
 
 	  if (mKeyboard->isKeyDown(OIS::KC_A) && !lostGame && !winGame)
 		  dirVec.x -= move;
@@ -176,25 +171,34 @@ void InputMgr::UpdateCamera(float dt){
 		  dirVec.x += move;
 
 
-	  bool playerColliding = false;
 	  Ogre::Vector3 camPos = engine->gfxMgr->mCamera->getDerivedPosition();
 
-	  if(camPos.z >= 740 || camPos.z <= -740)
-	  {
-		  dirVec.z *= -1;
-		  playerColliding = true;
-	  }
-	  if(camPos.x >= 740 || camPos.x <= -740)
-	  {
-	  	  dirVec.x *= -1;
-	  	  playerColliding = true;
-	  }
+//	  if(camPos.z >= 740)
+//		  playerCollidingWall1 = true;
+//	  else
+//		  playerCollidingWall1 = false;
+//
+//	  if(camPos.z <= -740)
+//		  playerCollidingWall4 = true;
+//	  else
+//		  playerCollidingWall4 = false;
+
+//	  if(camPos.z >= 740 || camPos.z <= -740)
+//	  {
+//		  dirVec.z *= -1;
+//		  playerColliding = true;
+//	  }
+//	  if(camPos.x >= 740 || camPos.x <= -740)
+//	  {
+//	  	  dirVec.x *= -1;
+//	  	  playerColliding = true;
+//	  }
 
 
-	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame && !playerColliding)
+	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
 		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
 
-	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame && !playerColliding)
+	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame)
 	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
 
 

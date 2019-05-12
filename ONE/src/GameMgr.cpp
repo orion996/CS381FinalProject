@@ -87,7 +87,14 @@ void GameMgr::MakeEntities(){
 		else
 			neg = -1;
 
-		pos = Ogre::Vector3(rand()%500 * neg, 25, rand()%500 * neg);
+		negTemp = rand()%2;
+				int neg2 = 1;
+				if(negTemp)
+					neg2 = 1;
+				else
+					neg2 = -1;
+
+		pos = Ogre::Vector3(rand()%500 * neg, 23, rand()%500 * neg2);
 
 		if(hat)
 		{
@@ -106,7 +113,25 @@ void GameMgr::MakeEntities(){
 		index++;
 	}
 
-//	engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false, true);
+	for(int i=0 ; i<20 ; i++)
+	{
+		float negTemp = rand()%2;
+		int neg = 1;
+		if(negTemp)
+			neg = 1;
+		else
+			neg = -1;
+
+		negTemp = rand()%2;
+		int neg2 = 1;
+		if(negTemp)
+			neg2 = 1;
+		else
+			neg2 = -1;
+
+		pos = Ogre::Vector3(rand()%700 * neg, 15, rand()%700 * neg2);
+		engine->entityMgr->CreateEntityOfTypeAtPosition(SpeedBoatType, pos, false, NULL, false, true);
+	}
 
 	engine->entityMgr->SelectNextEntity(); //sets selection
 	engine->entityMgr->GetEntityAt(0)->isTarget = true;
@@ -199,6 +224,7 @@ void GameMgr::MakeSky(){
 void GameMgr::MakeGun()
 {
 	  gun = engine->gfxMgr->mSceneMgr->createEntity("glock.mesh");
+	  gun->setMaterialName("gun1");
 	  gunNode = cameraNode->createChildSceneNode();
 	  gunNode->attachObject(gun);
 	  gunNode->setPosition(1,-1,76);
