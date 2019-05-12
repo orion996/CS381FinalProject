@@ -1,6 +1,6 @@
-src/Physics2D.d: ../src/Physics2D.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
+src/Physics2D.o: ../src/Physics2D.cpp \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Physics2D.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Aspect.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -15,7 +15,7 @@ src/Physics2D.d: ../src/Physics2D.cpp \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreString.h \
@@ -125,15 +125,15 @@ src/Physics2D.d: ../src/Physics2D.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Description.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Utils.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Types381.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/UnitAI.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/InputMgr.h \
  /usr/include/OIS/OISEvents.h /usr/include/OIS/OISPrereqs.h \
  /usr/include/OIS/OISConfig.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISObject.h \
@@ -253,17 +253,17 @@ src/Physics2D.d: ../src/Physics2D.cpp \
  /usr/include/OIS/OISException.h /usr/include/OIS/OISEffect.h \
  /usr/include/OIS/OISForceFeedback.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/SoundMgr.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
  /usr/include/AL/al.h /usr/include/AL/alc.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreWindowEventUtilities.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Physics2D.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Physics2D.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Aspect.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -293,7 +293,7 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
 
@@ -515,25 +515,25 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Description.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Utils.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/EntityMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Types381.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/UnitAI.h:
 
 /usr/local/include/OGRE/OgreNode.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/InputMgr.h:
 
 /usr/include/OIS/OISEvents.h:
 
@@ -793,7 +793,7 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 
 /usr/local/include/OGRE/SdkCameraMan.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/SoundMgr.h:
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
@@ -805,7 +805,7 @@ src/Physics2D.d: ../src/Physics2D.cpp \
 
 /usr/include/AL/alc.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 

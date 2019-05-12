@@ -58,7 +58,7 @@ void InputMgr::Init(){
 	  #elif defined OIS_LINUX_PLATFORM
 	  	  pl.insert(std::make_pair(std::string("x11_mouse_grab"), std::string("false")));
 	  	  pl.insert(std::make_pair(std::string("x11_mouse_hide"), std::string("false")));
-	  	  pl.insert(std::make_pair(std::string("x11_keyboard_grab"), std::string("false")));
+	  	  pl.insert(std::make_pair(std::string("x11_keyboard_grab"), std::string("true")));
 	  	  pl.insert(std::make_pair(std::string("XAutoRepeatOn"), std::string("true")));
 	  #endif
 	  mInputMgr = OIS::InputManager::createInputSystem(pl);
@@ -153,7 +153,7 @@ void InputMgr::Tick(float dt){
 
 void InputMgr::UpdateCamera(float dt){
 	float move = 100.0f;
-	float rotate = 0.1f;
+	float rotate = 20.0f;
 
 	Ogre::Vector3 dirVec = Ogre::Vector3::ZERO;
 
@@ -196,10 +196,10 @@ void InputMgr::UpdateCamera(float dt){
 
 
 	  if (mKeyboard->isKeyDown(OIS::KC_Q) && !lostGame)
-		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate));
+		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(5 * rotate * dt));
 
 	  if (mKeyboard->isKeyDown(OIS::KC_E) && !lostGame)
-	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate));
+	  		  engine->gameMgr->cameraNode->yaw(Ogre::Degree(-5 * rotate * dt));
 
 
 	  engine->gameMgr->cameraNode->translate(dirVec * dt, Ogre::Node::TS_LOCAL);

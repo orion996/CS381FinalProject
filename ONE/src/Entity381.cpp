@@ -150,7 +150,7 @@ SpeedBoat::SpeedBoat(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	this->minSpeed = 0;
 	this->maxSpeed = 30.0f;//meters per second...
 	this->acceleration = 5.0f; // slow
-	this->turnRate = 300.0f; //2 degrees per second
+	this->turnRate = 600.0f; //2 degrees per second
 	this->mIsHat = isHat;
 	this->sceneNode->scale(5,5,5);
 //	this->bodyForHat = body;

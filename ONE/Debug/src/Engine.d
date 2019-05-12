@@ -1,8 +1,8 @@
-src/Engine.d: ../src/Engine.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h \
+src/Engine.o: ../src/Engine.cpp \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/EntityMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Entity381.h \
  /usr/local/include/OGRE/OgreEntity.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -125,11 +125,11 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
  /usr/local/include/OGRE/OgreVector3.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Aspect.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Description.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Types381.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/GameMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
@@ -235,7 +235,7 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/include/OIS/OISMultiTouch.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISFactoryCreator.h /usr/include/OIS/OISException.h \
  /usr/include/OIS/OISEffect.h /usr/include/OIS/OISForceFeedback.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/InputMgr.h \
  /usr/include/OIS/OISEvents.h /usr/include/OIS/OISInputManager.h \
  /usr/include/OIS/OISKeyboard.h /usr/include/OIS/OISMouse.h \
  /usr/local/include/OGRE/Terrain/OgreTerrainGroup.h \
@@ -251,21 +251,21 @@ src/Engine.d: ../src/Engine.cpp \
  /usr/local/include/OGRE/Terrain/OgreTerrainAutoUpdateLod.h \
  /usr/local/include/OGRE/Terrain/OgreTerrain.h \
  /usr/local/include/OGRE/SdkCameraMan.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/UnitAI.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Utils.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCamera.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/SoundMgr.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
  /usr/local/include/OGRE/OgreFrameListener.h /usr/include/audio/wave.h \
  /usr/include/AL/al.h /usr/include/AL/alc.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/EntityMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/EntityMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Entity381.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreEntity.h:
 
@@ -515,15 +515,15 @@ src/Engine.d: ../src/Engine.cpp \
 
 /usr/local/include/OGRE/OgreVector3.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Aspect.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Aspect.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Description.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Description.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Types381.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Types381.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GameMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/GameMgr.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/GfxMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -753,7 +753,7 @@ src/Engine.d: ../src/Engine.cpp \
 
 /usr/include/OIS/OISForceFeedback.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/InputMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/InputMgr.h:
 
 /usr/include/OIS/OISEvents.h:
 
@@ -789,15 +789,15 @@ src/Engine.d: ../src/Engine.cpp \
 
 /usr/local/include/OGRE/SdkCameraMan.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/UnitAI.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/UnitAI.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Utils.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Utils.h:
 
 /usr/local/include/OGRE/OgreNode.h:
 
 /usr/local/include/OGRE/OgreCamera.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/SoundMgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/SoundMgr.h:
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 

@@ -1,7 +1,7 @@
-src/Mgr.d: ../src/Mgr.cpp \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h \
- /home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h
+src/Mgr.o: ../src/Mgr.cpp \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h \
+ /samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Engine.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Engine.h:
 
-/home/orion996/Documents/CS/CS381FinalProject/ONE/inc/Mgr.h:
+/samba/njordy/Documents/CS381FinalProject/ONE/inc/Mgr.h:
