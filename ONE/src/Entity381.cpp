@@ -32,12 +32,6 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	velocity = Ogre::Vector3(0, 0, 0);
 	identity = ident;
 	isSelected = false;
-	collisionRadius = 18;
-
-	if(stat)
-		this->isStatic = true;
-	else
-		this->isStatic = false;
 
 	this->setDescription("SHIRT");
 	this->setDescription("HAT");
@@ -63,10 +57,26 @@ Entity381::Entity381(Engine *engine, std::string meshfname, Ogre::Vector3 pos, i
 	//TODO Add some function here that sets mesh file based on the description
 	this->setMeshWithDescription();
 
+	if(stat)
+	{
+		this->isStatic = true;
+		this->meshfilename = "Table.mesh";
+		//randomize obstaces
+		collisionRadius = 25;
+	}
+	else
+	{
+		this->isStatic = false;
+		collisionRadius = 18;
+	}
+
 	ogreEntity = engine->gfxMgr->mSceneMgr->createEntity(meshfilename);
 	name = meshfname + IntToString(identity);
 	sceneNode = engine->gfxMgr->mSceneMgr->getRootSceneNode()->createChildSceneNode(pos);
 	sceneNode->attachObject(ogreEntity);
+
+
+
 
 	//index 2
 //	Physics2D* phx2d = new Physics2D(this);
